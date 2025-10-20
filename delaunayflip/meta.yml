@@ -1,0 +1,34 @@
+fullname : Formal Proofs od Delaunay Regularisation by successive edge flips
+shortname : DelaunayFlip
+
+doi: 10.1007/978-3-642-14052-5_16
+
+publications:
+- pub_doi: 10.1007/978-3-642-14052-5_16
+  pub_url: https://link.springer.com/chapter/10.1007/978-3-642-14052-5_16
+  pub_title: Formal Study of Plane Delaunay Triangulation
+
+authors:
+- name: Jean-François Dufourd
+  initial: true
+- name: Yves Bertot
+  initial: true
+
+maintainers:
+- name: Yves Bertot
+
+license:
+  fullname: MIT License
+  identifier: MIT
+
+supported_coq_versions:
+  text: 8.11 or later
+
+keywords:
+- name: computational geometry
+- name: triangulation
+- name: hypermaps
+- name: Delaunay criterion
+
+categories:
+- name: Computer Science/geometry

@@ -1,0 +1,15 @@
+# compiled files
+*.vo
+*.vos
+*.glob
+*.vok
+*.diags
+
+# byproducts of compilation
+
+*.aux
+*~
+.lia.cache
+
+# misc
+.DS_Store

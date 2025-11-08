@@ -165,7 +165,7 @@ Fixpoint exd(m:fmap)(x:dart){struct m} : Prop:=
 Lemma exd_dec: forall (m:fmap)(x:dart),
   {exd m x}+{~exd m x}.
 Proof.
-induction m.
+induction m. (*as [| m IHm d t p  | m IHm d0 d1].*)
  right.
    intro.
    inversion H.

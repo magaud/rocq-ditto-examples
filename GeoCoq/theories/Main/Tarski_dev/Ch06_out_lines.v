@@ -443,20 +443,20 @@ Proof.
   intros A B C A' B' C' HBet HBet' HleAB HleBC.
 
   elim(eq_dec_points A B).
-  (*{*) intro.
+  { intro.
     subst B.
     apply (le_transitivity _ _ B' C'); auto.
     apply le_comm.
     exists B'.
     split; Between; Cong.
-  (*}*)
+  }
   intro.
   elim(eq_dec_points B C).
-  (*{*) intro.
+  { intro.
     subst C.
     apply (le_transitivity _ _ A' B'); auto.
     exists B'; Cong.
-  (*}*)
+  }
   intro.
 
   assert(A' <> B') by (intro; subst B'; assert(A = B); auto; apply (le_zero _ _ A'); auto).
@@ -472,10 +472,10 @@ Proof.
   assert(Bet B0 B' C') by (apply between_symmetry; apply (between_inner_transitivity _ _ _ A'); Between).
   apply l6_13_1.
   - elim(eq_dec_points B0 B').
-    (*{*) intro.
+    { intro.
       subst.
       apply (l6_2 _ _ A'); Between.
-    (*}*)
+    }
     intro.
     apply (l6_7 _ _ B').
     apply (l6_2 _ _ A'); Between.
@@ -492,10 +492,10 @@ Lemma bet2_le2__le2356 : forall A B C A' B' C', Bet A B C -> Bet A' B' C' ->
 Proof.
   intros A B C A' B' C' HBet HBet' HLe1 HLe2.
   elim(eq_dec_points A B).
-  (*{*) intro; treat_equalities.
+  { intro; treat_equalities.
     apply (le_transitivity _ _ A' C'); auto.
     destruct (l5_12_a A' B' C'); auto.
-  (*}*)
+  }
   intro.
   assert (A<>C) by (intro; treat_equalities; auto).
   destruct (l5_5_1 A B A' B' HLe1) as [B0 [HBet1 HCong1]].
@@ -503,11 +503,11 @@ Proof.
   destruct HLe2 as [C0 [HBet2 HCong2]].
     assert (A<>C0) by (intro; treat_equalities; auto).
   assert (Bet A B0 C0).
-  (*{*) apply l6_13_1.
+  { apply l6_13_1.
       apply (l6_7 _ _ B); [|apply (l6_7 _ _ C)]; [apply l6_6| |apply l6_6]; apply bet_out; auto.
     apply (l5_6 A' B' A' C'); Cong.
     destruct (l5_12_a A' B' C'); auto.
-  (*}*)
+  }
   apply (l5_6 B0 C0 B C); Cong; [apply (le_transitivity _ _ B C0)|].
     destruct (l5_12_a B B0 C0); eBetween.
     destruct (l5_12_a B C0 C); eBetween.

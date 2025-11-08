@@ -31,19 +31,19 @@ Proof.
   exists A.
   exists B.
   elim (col_dec A B C).
-  (*{*) intro HColB.
+  { intro HColB.
     destruct (angle_construction_4 D E F C B A) as [J [HConga HCop]]; auto.
     assert_diffs.
     exists J.
     exists J.
     repeat (split; CongA); Cop.
     apply (col123__nos); Col.
-  (*}*)
+  }
   intro HNColB.
   elim (col_dec D E F).
-  (*{*) intro HColE.
+  { intro HColE.
     elim (bet_dec D E F).
-    (*{*) intro HEBet.
+    { intro HEBet.
       assert (HJ : exists J, Midpoint B C J) by (apply symmetric_point_construction).
       destruct HJ as [J HMid].
       assert_diffs.
@@ -54,7 +54,7 @@ Proof.
       split.
         apply col124__nos; Col.
       split; CongA; Cop.
-    (*}*)
+    }
     intro HENBet.
     assert (HEOut : Out E D F) by (apply l6_4_2; auto).
     exists C.
@@ -64,7 +64,7 @@ Proof.
     split.
       apply col124__nos; Col.
     split; CongA; Cop.
-  (*}*)
+  }
   intro HNColE.
   assert (HJ : exists J, CongA D E F C B J /\ TS C B J A) by (apply ex_conga_ts; Col).
   destruct HJ as [J [HConga HTwo]].
@@ -84,35 +84,35 @@ Proof.
   assert_diffs.
   assert (HcongaC : CongA C B J C B J') by (apply (conga_trans C B J D E F); auto; apply conga_sym; auto).
   assert (HcongaA : CongA A B J A B J').
-  (*{*) elim (col_dec A B C).
-    (*{*) intro HColB.
+  { elim (col_dec A B C).
+    { intro HColB.
       elim (bet_dec A B C).
-      (*{*) intro HBBet.
+      { intro HBBet.
         apply (l11_13 C B J C B J'); Between.
-      (*}*)
+      }
       intro HBNBet.
       assert (HBOut : Out B A C) by (apply l6_4_2; auto).
       apply (l11_10 C B J C B J'); try (apply out_trivial); auto.
-    (*}*)
+    }
     intro HNColB.
     elim (col_dec D E F).
-    (*{*) intro HColE.
+    { intro HColE.
       apply out2__conga; [apply out_trivial|]; auto.
       elim (bet_dec D E F).
-      (*{*) intro HEBet.
+      { intro HEBet.
         apply l6_3_2; repeat split; auto.
         exists C.
         split; auto; split; apply (bet_conga__bet D E F); CongA.
-      (*}*)
+      }
       intro HENBet.
       assert (HEOut : Out E D F) by (apply l6_4_2; auto).
       apply l6_7 with C; apply (l11_21_a D E F); CongA.
-    (*}*)
+    }
     intro HNColE.
     apply (l11_22a A B J C A B J' C); auto.
     repeat (split; try (apply cop_nos__ts); CongA); Cop;
     apply (ncol_conga_ncol D E F); CongA.
-  (*}*)
+  }
   apply (conga_trans G H I A B J).
     CongA.
   apply (conga_trans A B J A B J'); auto.
@@ -126,9 +126,9 @@ Proof.
   destruct Hsuma as [J [HCongaBCJ [HNOne [HCongaABJ HCop]]]].
   assert_diffs.
   elim (col_dec A B C).
-  (*{*) intro HColB.
+  { intro HColB.
     elim (bet_dec A B C).
-    (*{*) intro HBBet.
+    { intro HBBet.
       assert (HK : exists K, Midpoint E F K) by (apply symmetric_point_construction).
       destruct HK as [K [HKBet HCong]].
       assert_diffs.
@@ -139,7 +139,7 @@ Proof.
       split; Cop.
       apply (conga_trans D E K A B J); auto.
       apply conga_left_comm; apply (l11_13 F E D C B J); Between; CongA.
-    (*}*)
+    }
     intro HBNBet.
     assert (HBOut : Out B A C) by (apply l6_4_2; auto).
     exists F.
@@ -151,11 +151,11 @@ Proof.
     apply (conga_trans D E F A B J); auto.
     apply conga_sym.
     apply (l11_10 C B J D E F); try (apply out_trivial); auto.
-  (*}*)
+  }
 
   intro HNColB.
   elim (col_dec D E F).
-  (*{*) intro HColE.
+  { intro HColE.
     assert (HK : exists K, CongA A B C F E K) by (apply angle_construction_3; auto).
     destruct HK as [K HConga].
     assert_diffs.
@@ -166,17 +166,17 @@ Proof.
     split; Cop.
     apply (conga_trans D E K A B J); auto.
     elim (bet_dec D E F).
-    (*{*) intro HEBet.
+    { intro HEBet.
       apply conga_sym; apply conga_left_comm.
       apply (l11_13 C B A F); CongA; Between.
       apply (bet_conga__bet D E F); CongA.
-    (*}*)
+    }
     intro HENBet.
     assert (HEOut : Out E D F) by (apply l6_4_2; auto).
     apply conga_sym.
     apply (l11_10 A B C F E K); try (apply out_trivial); auto.
     apply (l11_21_a D E F); CongA.
-  (*}*)
+  }
 
   intro HNColE.
   assert (HK : exists K, CongA A B C F E K /\ TS F E K D) by (apply ex_conga_ts; Col).
@@ -208,7 +208,7 @@ Lemma conga3_suma__suma : forall A B C D E F G H I A' B' C' D' E' F' G' H' I',
 Proof.
   intros A B C D E F G H I A' B' C' D' E' F' G' H' I' Hsuma HCongaB HCongaE HCongaH.
   assert (Hsuma' : SumA D' E' F' A B C G' H' I').
-  (*{*) apply suma_sym.
+  { apply suma_sym.
     destruct Hsuma as [J [HJ1 [HJ2 [HJ3 HCop]]]].
     exists J.
     split.
@@ -216,7 +216,7 @@ Proof.
     split; auto.
     split; auto.
     apply (conga_trans A B J G H I); auto.
-  (*}*)
+  }
   apply suma_sym.
   destruct Hsuma' as [J [HJ1 [HJ2 [HJ3 HCop]]]].
   exists J.
@@ -368,16 +368,16 @@ Proof.
     destruct HUn as [HEOut | HBNBet].
     apply l11_31_1; auto.
     elim (col_dec A B C).
-    (*{*) intro HColB.
+    { intro HColB.
       apply l11_31_2; auto.
       apply (bet_out_out_bet A B A'); try (apply out_trivial); auto.
       apply l6_4_2; auto.
-    (*}*)
+    }
     intro HNColB.
     elim (col_dec D E F).
-    (*{*) intro HColE.
+    { intro HColE.
       elim (bet_dec D E F).
-      (*{*) intro HDEF.
+      { intro HDEF.
         exfalso.
         apply HJ3.
         assert (HCBJ : Bet C B J) by (apply (bet_conga__bet D E F); CongA).
@@ -385,18 +385,18 @@ Proof.
           intro; apply HNColB; apply (l6_16_1 B J C A); Col.
         exists B.
         split; Col; Between.
-      (*}*)
+      }
       intro; apply l11_31_1; auto; apply l6_4_2; auto.
-    (*}*)
+    }
     intro HNColE.
     apply lea_trans with C B J; [Lea|].
     exists J.
     split; CongA.
     apply l11_24; apply (in_angle_reverse A); auto.
     assert (HTwo : TS B C A J).
-    (*{*) apply cop_nos__ts; Cop.
+    { apply cop_nos__ts; Cop.
       apply (ncol_conga_ncol D E F); CongA.
-    (*}*)
+    }
     destruct HTwo as [_ [_ [X [HXCol HXBet]]]].
     repeat split; auto.
     exists X.
@@ -407,11 +407,11 @@ Proof.
     apply (col_one_side_out B A X C); Col.
     apply invert_one_side.
     apply (one_side_transitivity A B X J).
-    (*{*) apply out_one_side.
+    { apply out_one_side.
       left; intro; apply HNColB; apply (l6_16_1 B X); Col.
       assert (HAX : A<>X) by (intro; treat_equalities; Col).
       apply bet_out; auto.
-    (*}*)
+    }
     apply one_side_symmetry.
     apply cop_nts__os; Col; Cop.
     intro; apply HNColB; apply (l6_16_1 B X); Col; apply (col_transitivity_2 J); Col.
@@ -421,15 +421,15 @@ Proof.
     assert_diffs.
     split; auto.
     elim (col_dec A B C).
-    (*{*) intro HColB.
+    { intro HColB.
       elim (bet_dec A B C).
-      (*{*) intro HBBet.
+      { intro HBBet.
         assert (HEOut : Out E D F).
-        (*{*) assert (Out B C A') by (apply (l6_3_2); repeat split; auto; exists A; repeat split; Between).
+        { assert (Out B C A') by (apply (l6_3_2); repeat split; auto; exists A; repeat split; Between).
           apply (l11_21_a C B A'); auto.
           apply lea_asym; auto.
           apply l11_31_1; auto.
-        (*}*)
+        }
         split; try left; auto.
         exists C.
         split.
@@ -438,7 +438,7 @@ Proof.
         apply col124__nos; Col.
         split; Cop.
         apply not_two_sides_id.
-      (*}*)
+      }
       intro HBNBet.
       assert (HBOut : Out B A C) by (apply not_bet_out; auto).
       split.
@@ -451,18 +451,18 @@ Proof.
       apply col123__nos; Col.
       split; Cop.
       intro HTwo; destruct HTwo as [HBA [HNCol _]]; Col.
-    (*}*)
+    }
     intro HNColB.
     assert (HNColB' : ~ Col A' B C) by (intro; apply HNColB; apply (l6_16_1 B A'); Col).
     elim (col_dec D E F).
-    (*{*) intro HNColE.
+    { intro HNColE.
       assert (HEOut : Out E D F).
-      (*{*) apply not_bet_out; auto.
+      { apply not_bet_out; auto.
         intro HEBet.
         apply HNColB'.
         apply bet_col; apply between_symmetry.
         apply (bet_lea__bet D E F); auto.
-      (*}*)
+      }
       split.
       left; auto.
       exists C.
@@ -472,7 +472,7 @@ Proof.
       apply col124__nos; Col.
       split; Cop.
       apply not_two_sides_id.
-    (*}*)
+    }
     intro HNColE.
     split.
     right; intro; Col.
@@ -484,15 +484,15 @@ Proof.
     split.
     apply l9_9; apply l9_2; apply invert_two_sides; auto.
     elim (col_dec A B J).
-    (*{*) intro HColJ.
+    { intro HColJ.
       split; Cop.
       intro HTwo'.
       destruct HTwo' as [HBA [HNColC [HNColJ _]]].
       Col.
-    (*}*)
+    }
     intro HNColJ.
     assert (HF : ~ TS A' B C J).
-    (*{*) apply l9_9_bis.
+    { apply l9_9_bis.
       apply one_side_symmetry.
       apply (in_angle_one_side); auto.
       intro; apply HNColJ; apply (l6_16_1 B A'); Col.
@@ -502,7 +502,7 @@ Proof.
       apply (conga_trans C B K D E F); CongA.
       exists A; split; auto.
       apply l9_2, invert_two_sides, bet__ts; Col.
-    (*}*)
+    }
     split; Cop.
     intro; apply HF.
     apply (col_preserves_two_sides A B); Col.
@@ -543,10 +543,10 @@ Proof.
   destruct Hisi as [HAB [HUn [J [HJ1 [HJ2 HJ3]]]]].
   split; auto.
   split.
-  (*{*) destruct HUn.
+  { destruct HUn.
     left; apply l6_6; auto.
     right; auto.
-  (*}*)
+  }
   exists J.
   split.
   apply conga_right_comm; auto.
@@ -611,10 +611,10 @@ Proof.
   assert_diffs.
   repeat split; auto.
   - elim (bet_dec A B C).
-    (*{*) intro HBet'; left.
+    { intro HBet'; left.
       apply (l11_21_a C B A'); trivial.
       apply l6_2 with A; Between.
-    (*}*)
+    }
     intro HNBet; auto.
   - exists A'; repeat (split; trivial).
     intros [_ [HNCol _]]; apply HNCol; Col.
@@ -870,34 +870,34 @@ Proof.
   assert_diffs.
   spliter.
   elim(col_dec A B C).
-  (*{*) intro HColB.
+  { intro HColB.
     elim(bet_dec A B C).
-    (*{*) intro HBBet.
+    { intro HBBet.
       destruct Hisi as [_[[HEout|]]]; try solve[exfalso; auto].
       apply conga__lea.
       apply (out546_suma__conga _ _ _ D E F); auto.
-    (*}*)
+    }
     intro HBout.
     apply l11_31_1; auto.
     apply not_bet_out; auto.
-  (*}*)
+  }
   intro HNColB.
   elim(col_dec D E F).
-  (*{*) intro HColE.
+  { intro HColE.
     elim(bet_dec D E F).
-    (*{*) intro HEBet.
+    { intro HEBet.
       apply sams_sym in Hisi.
       destruct Hisi as [_[[HBout|]]]; try solve[exfalso; auto].
       apply l11_31_1; auto.
-    (*}*)
+    }
     intro HEout.
     apply conga__lea.
     apply (out546_suma__conga _ _ _ D E F); auto.
     apply not_bet_out; auto.
-  (*}*)
+  }
   intro HNColE.
   elim(col_dec G H I).
-  (*{*) intro HColH.
+  { intro HColH.
     elim(bet_dec G H I).
       apply l11_31_2; auto.
     intro HHout.
@@ -911,25 +911,25 @@ Proof.
     apply conga_sym in HJ4.
     apply l11_21_a in HJ4; auto.
     apply (l9_19 _ _ _ _ B); try split; Col.
-  (*}*)
+  }
   intro HNColH.
   destruct Hisi as [_ [_ [J [HJ1 [HJ2 [HJ3 HJ4]]]]]].
   assert_diffs.
   assert(HNColJ : ~ Col J B C).
-  (*{*) intro HColJ.
+  { intro HColJ.
     apply HNColE.
     apply (col_conga_col J B C); CongA.
-  (*}*)
+  }
   assert(HCongaJ : CongA A B J G H I).
-  (*{*) apply (suma2__conga A B C D E F); auto.
+  { apply (suma2__conga A B C D E F); auto.
     exists J.
     repeat (split; CongA).
-  (*}*)
+  }
   assert(HNColJ2 : ~ Col J B A).
-  (*{*) intro HColJ.
+  { intro HColJ.
     apply HNColH.
     apply (col_conga_col A B J); Col.
-  (*}*)
+  }
   apply (l11_30 A B C A B J); CongA.
   exists C.
   split; CongA.
@@ -940,11 +940,11 @@ Proof.
   split; auto.
   right.
   assert(HNColX : ~Col X A B).
-  (*{*) intro.
+  { intro.
     apply HNColJ2.
     apply col_permutation_1; apply (col_transitivity_1 A X); Col.
     intro; subst X; Col.
-  (*}*)
+  }
   assert_diffs.
   apply (col_one_side_out _ A); Col.
   apply invert_one_side.
@@ -992,41 +992,41 @@ Proof.
   intros A B C D E F G H I D' E' F' G' H' I' Hlea Hisi' Hsuma Hsuma'.
   assert_diffs.
   elim(out_dec E' D' F').
-  (*{*) intro HE'out.
+  { intro HE'out.
     apply conga__lea.
     apply (conga_trans _ _ _ A B C).
     apply conga_sym; apply (out546_suma__conga _ _ _ D E F); auto; apply (out_lea__out _ _ _ D' E' F'); auto.
     apply (out546_suma__conga _ _ _ D' E' F'); auto.
-  (*}*)
+  }
   intro HE'Nout.
   elim(col_dec A B C).
-  (*{*) intro HColB.
+  { intro HColB.
     destruct Hisi' as [_ [[HE'out|HBNBet]_]].
     exfalso; auto.
     apply not_bet_out in HColB; auto.
     apply (l11_30 D E F D' E' F'); auto; apply (out213_suma__conga A B C); auto.
-  (*}*)
+  }
   intro HNColB.
   elim(col_dec D' E' F').
-  (*{*) intro HColE'.
+  { intro HColE'.
     apply sams_sym in Hisi'.
     destruct Hisi' as [_ [[HBout|HE'NBet]_]]; exfalso.
     apply HNColB; Col.
     apply not_bet_out in HColE'; auto.
-  (*}*)
+  }
   intro HNColE'.
   clear HE'Nout.
   elim(col_dec D E F).
-  (*{*) intro HColE.
+  { intro HColE.
     assert(~ Bet D E F) by (intro; apply HNColE'; apply bet_col; apply (bet_lea__bet D E F); auto).
     apply (l11_30 A B C G' H' I'); try (apply conga_refl); auto.
     apply (sams_suma__lea123789 _ _ _ D' E' F'); auto.
     apply (out546_suma__conga _ _ _ D E F); auto.
     apply not_bet_out; auto.
-  (*}*)
+  }
   intro HNColE.
   elim(col_dec G' H' I').
-  (*{*) intro HColH'.
+  { intro HColH'.
     elim(bet_dec G' H' I').
     apply l11_31_2; auto.
     intro HH'out.
@@ -1037,7 +1037,7 @@ Proof.
     apply out_col.
     apply (out_lea__out _ _ _ G' H' I'); auto.
     apply (sams_suma__lea123789 _ _ _ D' E' F'); auto.
-  (*}*)
+  }
   intro HNColH'.
   destruct Hisi' as [_[_[F'1]]].
   spliter.
@@ -1070,12 +1070,12 @@ Proof.
 
   - apply (suma2__conga A B C D E F); auto.
     assert (TS B C F1 A).
-    (*{*) apply (l9_8_2 _ _ F'1).
+    { apply (l9_8_2 _ _ F'1).
         apply l9_2; apply cop_nos__ts; Col; Cop.
       apply invert_one_side; apply one_side_symmetry.
       apply in_angle_one_side; Col.
       apply not_col_permutation_4; apply (ncol_conga_ncol D E F); auto.
-    (*}*)
+    }
     exists F1.
     repeat (split; CongA); Side; Cop.
 Qed.
@@ -1115,20 +1115,20 @@ Proof.
   intros A B C D E F D' E' F' G H I Hisi Hisi' Hsuma Hsuma'.
   assert_diffs.
   elim(col_dec A B C).
-  (*{*) intro HColB.
+  { intro HColB.
     elim(bet_dec A B C).
-    (*{*) intro HBBet.
+    { intro HBBet.
       destruct Hisi as [_ [[HEout|]_]]; try solve [exfalso; Between].
       destruct Hisi' as [_ [[HE'out|]_]]; try solve [exfalso; Between].
       apply l11_21_b; auto.
-    (*}*)
+    }
     intro HBout.
     apply not_bet_out in HBout; auto.
     apply (conga_trans _ _ _ G H I).
-    (*-*) apply (out213_suma__conga A B C); auto.
-    (*-*) apply conga_sym.
+    - apply (out213_suma__conga A B C); auto.
+    - apply conga_sym.
       apply (out213_suma__conga A B C); auto.
-  (*}*)
+  }
   intro HNColB.
   destruct Hisi as [_[_[J [HJ1 [HJ2 [HJ3 HJ4]]]]]].
   destruct Hisi' as [_[_[J' [HJ'1 [HJ'2 [HJ'3 HJ'4]]]]]].
@@ -1136,10 +1136,10 @@ Proof.
   apply (conga_trans _ _ _ C B J); try solve [apply conga_sym; auto].
   apply (conga_trans _ _ _ C B J'); auto.
   assert(CongA A B J A B J').
-  (*{*) apply (conga_trans _ _ _ G H I).
+  { apply (conga_trans _ _ _ G H I).
       apply (suma2__conga A B C D E F); auto; exists J; repeat (split; CongA).
     apply (suma2__conga A B C D' E' F'); auto; exists J'; repeat (split; CongA).
-  (*}*)
+  }
   assert(HJJ' : Out B J J' \/ TS A B J J').
     apply conga_cop__or_out_ts; auto; apply coplanar_trans_1 with C; Cop; Col.
   destruct HJJ' as [Hout|Hts].
@@ -1175,14 +1175,14 @@ Proof.
   destruct HD0 as [D0 []].
   assert_diffs.
   elim(col_dec A B C).
-  (*{*) intro HColB.
+  { intro HColB.
     elim(bet_dec A B C).
-    (*{*) intro HBBet.
+    { intro HBBet.
       destruct HisiBE as [_ [[HEout | HBNBet] HJ]]; try solve [exfalso; Between].
       apply (conga3_suma__suma A' B' C' G H I K L M); try (apply conga_refl); auto.
       apply conga_sym; apply (out546_suma__conga _ _ _ D E F); auto.
       apply (out213_suma__conga D E F); auto.
-    (*}*)
+    }
     intro HBout.
     apply not_bet_out in HBout; auto.
     assert(Hexsuma : exists K0 L0 M0, SumA A B C D' E' F' K0 L0 M0) by (apply ex_suma; auto).
@@ -1194,68 +1194,68 @@ Proof.
     apply (conga3_suma__suma A' B' C' G H I K L M); try (apply conga_refl); auto.
     apply conga_sym.
     apply (out213_suma__conga A B C); auto.
-  (*}*)
+  }
   intro HNColB.
   assert(~ Col C B A0) by (intro; apply HNColB; apply (l6_16_1 _ A0); Col).
   elim(col_dec D E F).
-  (*{*) intro HColE.
+  { intro HColE.
     elim(bet_dec D E F).
-    (*{*) intro HEBet.
+    { intro HEBet.
       destruct HisiEH as [_ [[HHout | HENBet] HJ]]; try solve [exfalso; Between].
       apply (conga3_suma__suma A B C D E F A' B' C'); try (apply conga_refl); try (apply (out546_suma__conga _ _ _ G H I)); auto.
-    (*}*)
+    }
     intro HEout.
     apply not_bet_out in HEout; auto.
     apply (conga3_suma__suma A' B' C' G H I K L M); try (apply conga_refl); auto.
     apply conga_sym; apply (out546_suma__conga _ _ _ D E F); auto.
     apply (out213_suma__conga D E F); auto.
-  (*}*)
+  }
   intro HNColE.
   assert(~ Col F E D0) by (intro; apply HNColE; apply (l6_16_1 _ D0); Col).
   elim(col_dec G H I).
-  (*{*) intro HColH.
+  { intro HColH.
     elim(bet_dec G H I).
-    (*{*) intro HHBet.
+    { intro HHBet.
       apply sams_sym in HisiEH.
       destruct HisiEH as [_ [[HEout | HHNBet] HJ]]; try solve [exfalso; Between].
       exfalso.
       apply HNColE.
       apply col_permutation_4.
       apply out_col; auto.
-    (*}*)
+    }
     intro HHout.
     apply not_bet_out in HHout; auto.
     apply (conga3_suma__suma A B C D E F A' B' C'); try (apply conga_refl); try (apply (out546_suma__conga _ _ _ G H I)); auto.
-  (*}*)
+  }
   intro HNColH.
   assert(~ OS B C A A0).
-  (*{*) apply l9_9.
+  { apply l9_9.
     repeat split; Col.
     exists B.
     split; Col; Between.
-  (*}*)
+  }
   assert(TS E F D D0) by (apply bet__ts; Col).
   elim(col_dec A' B' C').
-  (*{*) intro HColB'.
+  { intro HColB'.
     elim(bet_dec A' B' C').
-    (*{*) intro HB'Bet.
+    { intro HB'Bet.
       elim(col_dec D' E' F').
-      (*{*) intro HColE'.
+      { intro HColE'.
         elim(bet_dec D' E' F').
-        (*{*) intro HE'Bet.
+        { intro HE'Bet.
           apply suma_sym.
           apply (conga3_suma__suma A' B' C' G H I K L M); [CongA..| |CongA].
           apply conga_sym.
           apply (conga_trans _ _ _ D0 E F).
-          (*-*) apply (sams2_suma2__conga123 _ _ _ _ _ _ D E F A' B' C'); [SumA..|].
+          - apply (sams2_suma2__conga123 _ _ _ _ _ _ D E F A' B' C'); [SumA..|].
             apply suma_sym.
             exists D0.
             repeat (split; CongA); Side; Cop.
-          (*-*) apply (sams2_suma2__conga456 D E F _ _ _ _ _ _ D' E' F'); auto.
+          - apply (sams2_suma2__conga456 D E F _ _ _ _ _ _ D' E' F'); auto.
               SumA.
             exists D0.
             repeat (split; CongA); Side; Cop.
-        (*}*)
+        }
         intro HE'out.
         apply not_bet_out in HE'out; auto.
         exfalso.
@@ -1264,48 +1264,48 @@ Proof.
         apply out_col.
         apply (out_lea__out _ _ _ D' E' F'); auto.
         apply (sams_suma__lea123789 _ _ _ G H I); auto.
-      (*}*)
+      }
       intro HNColE'.
       assert(CongA D E F C B A0).
-      (*{*) apply (sams2_suma2__conga456 A B C _ _ _ _ _ _ A' B' C'); auto.
+      { apply (sams2_suma2__conga456 A B C _ _ _ _ _ _ A' B' C'); auto.
           SumA.
         apply (conga3_suma__suma A B C C B A0 A B A0); [SumA|CongA..].
-      (*}*)
+      }
       assert(HJ : SAMS C B A0 G H I) by (apply (conga2_sams__sams D E F G H I); try (apply conga_refl); auto).
       destruct HJ as [_ [_ [J]]].
       destruct HisiEH as [_ [_ [F1]]].
       spliter.
       assert_diffs.
       assert(CongA C B J D' E' F').
-      (*{*) apply (conga_trans _ _ _ D E F1); auto.
-        (*-*) apply (l11_22 _ _ _ A0 _ _ _ F); auto.
+      { apply (conga_trans _ _ _ D E F1); auto.
+        - apply (l11_22 _ _ _ A0 _ _ _ F); auto.
           split.
             left; split; apply cop_nos__ts; Cop; apply (ncol_conga_ncol G H I); CongA.
           split.
             CongA.
           apply (conga_trans _ _ _ G H I); CongA.
 
-        (*-*) apply (suma2__conga D E F G H I); auto.
+        - apply (suma2__conga D E F G H I); auto.
           exists F1.
           repeat (split; CongA).
-      (*}*)
+      }
       apply (conga3_suma__suma A B C D' E' F' A B J); [|apply conga_refl; auto..|].
-      (*{*) exists J.
+      { exists J.
         assert (TS C B J A).
-        (*{*) apply (l9_8_2 _ _ A0).
+        { apply (l9_8_2 _ _ A0).
             apply l9_2, invert_two_sides, bet__ts; Col.
           apply cop_nts__os; Col.
           apply not_col_permutation_2.
           apply (ncol_conga_ncol D' E' F'); CongA.
-        (*}*)
+        }
         repeat (split; CongA); Side; Cop.
-      (*}*)
+      }
       apply (suma2__conga A' B' C' G H I); auto.
       apply (conga3_suma__suma A B A0 A0 B J A B J); [|CongA..].
       exists J.
       repeat (split; CongA); Cop.
       apply col123__nos; Col.
-    (*}*)
+    }
     intro HB'out.
     apply not_bet_out in HB'out; auto.
     exfalso.
@@ -1314,38 +1314,38 @@ Proof.
     apply out_col.
     apply (out_lea__out _ _ _ A' B' C'); auto.
     apply (sams_suma__lea123789 _ _ _ D E F); auto.
-  (*}*)
+  }
   intro HNColB'.
   clear dependent A0.
   destruct HisiBE as [_ [_ [C1 HC1]]].
   spliter.
   assert_diffs.
   assert(CongA A' B' C' A B C1).
-  (*{*) apply (suma2__conga A B C D E F); auto.
+  { apply (suma2__conga A B C D E F); auto.
     apply (conga3_suma__suma A B C C B C1 A B C1); CongA.
     exists C1.
     repeat (split; CongA).
-  (*}*)
+  }
   assert(OS B C1 C A).
-  (*{*) apply one_side_symmetry.
+  { apply one_side_symmetry.
     apply os_ts1324__os.
-    (*-*) apply invert_one_side.
+    - apply invert_one_side.
       apply cop_nts__os; Col.
       apply not_col_permutation_2; apply (ncol_conga_ncol A' B' C'); auto.
-    (*-*) apply cop_nos__ts; Col; Cop.
+    - apply cop_nos__ts; Col; Cop.
       apply (ncol_conga_ncol D E F); CongA.
-  (*}*)
+  }
   elim(col_dec D' E' F').
-  (*{*) intro HColE'.
+  { intro HColE'.
     elim(bet_dec D' E' F').
-    (*{*) intro HE'Bet.
+    { intro HE'Bet.
       assert(HC0 : exists C0, Midpoint B C C0) by apply symmetric_point_construction.
       destruct HC0 as [C0 []].
       assert_diffs.
       assert(TS B C1 C C0).
-      (*{*) apply bet__ts; auto.
+      { apply bet__ts; auto.
         apply not_col_permutation_1, (ncol_conga_ncol D E F); CongA.
-      (*}*)
+      }
       apply (conga3_suma__suma A B C C B C0 A B C0); [|CongA..|].
         exists C0; repeat (split; CongA); Cop; apply col124__nos; Col.
       apply (suma2__conga A' B' C' G H I); auto.
@@ -1356,7 +1356,7 @@ Proof.
         apply (conga2_sams__sams D E F G H I); CongA.
         SumA.
         apply (conga3_suma__suma D E F G H I D' E' F'); CongA.
-    (*}*)
+    }
     intro HE'out.
     apply not_bet_out in HE'out; auto.
     exfalso.
@@ -1365,7 +1365,7 @@ Proof.
     apply out_col.
     apply (out_lea__out _ _ _ D' E' F'); auto.
     apply (sams_suma__lea123789 _ _ _ G H I); auto.
-  (*}*)
+  }
   intro HNColE'.
   clear dependent D0.
   assert(HJ : SAMS C B C1 G H I) by (apply (conga2_sams__sams D E F G H I); CongA).
@@ -1374,8 +1374,8 @@ Proof.
   spliter.
   assert_diffs.
   assert(CongA C B J D' E' F').
-  (*{*) apply (conga_trans _ _ _ D E F1); auto.
-    (*-*) apply (l11_22 _ _ _ C1 _ _ _ F); auto.
+  { apply (conga_trans _ _ _ D E F1); auto.
+    - apply (l11_22 _ _ _ C1 _ _ _ F); auto.
       split.
         left; split; apply cop_nos__ts; Cop;
         [apply (ncol_conga_ncol D E F)|apply (ncol_conga_ncol G H I)..]; CongA.
@@ -1383,28 +1383,28 @@ Proof.
       CongA.
       apply (conga_trans _ _ _ G H I); CongA.
 
-    (*-*) apply (suma2__conga D E F G H I); auto.
+    - apply (suma2__conga D E F G H I); auto.
       exists F1.
       repeat (split; CongA).
-  (*}*)
+  }
   assert (~ Col C B C1) by (apply (ncol_conga_ncol D E F); CongA).
   apply (conga3_suma__suma A B C C B J A B J); try (apply conga_refl); auto.
-  (*-*) assert (TS B C J A).
-    (*{*) apply (l9_8_2 _ _ C1).
+  - assert (TS B C J A).
+    { apply (l9_8_2 _ _ C1).
         apply l9_2; apply cop_nos__ts; Col; Cop.
       apply invert_one_side.
       apply cop_nts__os; Col; Cop.
       apply not_col_permutation_2, (ncol_conga_ncol D' E' F'); CongA.
-    (*}*)
+    }
     exists J.
     repeat (split; CongA); Side; Cop.
-  (*-*) apply (suma2__conga A' B' C' G H I); auto.
+  - apply (suma2__conga A' B' C' G H I); auto.
     apply (conga3_suma__suma A B C1 C1 B J A B J); CongA.
     assert (TS B C1 A J).
-    (*{*) apply (l9_8_2 _ _ C); auto.
+    { apply (l9_8_2 _ _ C); auto.
       apply cop_nos__ts; Cop.
       apply (ncol_conga_ncol G H I); CongA.
-    (*}*)
+    }
     exists J.
     repeat (split; CongA); Side; Cop.
 Qed.
@@ -1442,13 +1442,13 @@ Proof.
   intros A B C D E F G H I A' B' C' D' E' F' Hsams1 Hsams2 Hs1 Hs2 Hsams1'.
   assert_diffs.
   elim(col_dec A B C).
-  (*{*) intro HColB.
+  { intro HColB.
     destruct Hsams1 as [_ [[HEout|HBout]_]].
-    (*-*) apply (conga2_sams__sams A' B' C' G H I); auto.
+    - apply (conga2_sams__sams A' B' C' G H I); auto.
       apply conga_sym; apply (out546_suma__conga _ _ _ D E F); auto.
       apply (out213_suma__conga D E F); auto.
 
-    (*-*) apply not_bet_out in HBout; auto.
+    - apply not_bet_out in HBout; auto.
       apply sams_sym.
       repeat split; auto.
       exists F'.
@@ -1458,35 +1458,35 @@ Proof.
         apply col124__nos; Col.
       split; Cop.
       apply not_two_sides_id.
-  (*}*)
+  }
   intro HNColB.
   elim(col_dec D E F).
-  (*{*) intro HColE.
+  { intro HColE.
     destruct Hsams2 as [_ [[HHout|HEout]_]].
-    (*-*) apply (conga2_sams__sams A B C D E F); try (apply conga_refl); auto.
+    - apply (conga2_sams__sams A B C D E F); try (apply conga_refl); auto.
       apply (out546_suma__conga _ _ _ G H I); auto.
 
-    (*-*) apply not_bet_out in HEout; auto.
+    - apply not_bet_out in HEout; auto.
       apply (conga2_sams__sams A' B' C' G H I); auto.
       apply conga_sym; apply (out546_suma__conga _ _ _ D E F); auto.
       apply (out213_suma__conga D E F); auto.
-  (*}*)
+  }
   intro HNColE.
   elim(col_dec G H I).
-  (*{*) intro HColH.
+  { intro HColH.
     apply sams_sym in Hsams2.
     destruct Hsams2 as [_ [[|HHout] _]].
       exfalso; apply HNColE; Col.
     apply not_bet_out in HHout; auto.
     apply (conga2_sams__sams A B C D E F); try (apply conga_refl); auto.
     apply (out546_suma__conga _ _ _ G H I); auto.
-  (*}*)
+  }
   intro HNColH.
   split; auto.
   split.
     right; intro; apply HNColB; Col.
   assert(~ Col A' B' C').
-  (*{*) intro.
+  { intro.
     exfalso.
     destruct Hsams1' as [_ [[|HB'out] _]].
       apply HNColH; Col.
@@ -1496,7 +1496,7 @@ Proof.
     apply out_col.
     apply (out_lea__out _ _ _ A' B' C'); auto.
     apply (sams_suma__lea123789 _ _ _ D E F); auto.
-  (*}*)
+  }
   assert(HC1 : exists C1, CongA C B C1 D E F /\ ~ OS B C A C1 /\ ~ TS A B C C1 /\ Coplanar A B C C1).
     destruct Hsams1 as [_ []]; auto.
   destruct HC1 as [C1].
@@ -1505,9 +1505,9 @@ Proof.
   assert(CongA A B C1 A' B' C').
     apply (suma2__conga A B C D E F); auto; exists C1; repeat (split; CongA).
   assert(HJ : exists J, CongA C1 B J G H I /\ ~ OS B C1 C J /\ ~ TS C B C1 J /\ Coplanar C B C1 J).
-  (*{*) apply (conga2_sams__sams _ _ _ _ _ _ C B C1 G H I) in Hsams2; CongA.
+  { apply (conga2_sams__sams _ _ _ _ _ _ C B C1 G H I) in Hsams2; CongA.
     destruct Hsams2 as [_ [_ HJ]]; auto.
-  (*}*)
+  }
   destruct HJ as [J [HJ1 [HJ2 [HJ3 HJ4]]]].
   spliter.
   apply (conga2_sams__sams _ _ _ _ _ _ A B C1 C1 B J) in Hsams1'; CongA.
@@ -1521,14 +1521,14 @@ Proof.
     apply conga_cop__or_out_ts; auto.
     apply coplanar_trans_1 with A; Cop; Col.
   destruct HUn as [HJJ'|Hts].
-  (*{*) exists J.
+  { exists J.
     split; [|repeat split].
-    (*-*) apply (suma2__conga D E F G H I); auto.
+    - apply (suma2__conga D E F G H I); auto.
       apply (conga3_suma__suma C B C1 C1 B J C B J); try (apply conga_refl); auto.
       exists J.
       repeat (split; CongA).
 
-    (*-*) elim(col_dec C B J).
+    - elim(col_dec C B J).
       intro; apply col124__nos; Col.
       intro.
       apply l9_9.
@@ -1538,7 +1538,7 @@ Proof.
       apply invert_one_side.
       apply cop_nts__os; Col; Cop.
 
-    (*-*) elim(col_dec A B J).
+    - elim(col_dec A B J).
         intro; intro Hts; destruct Hts; spliter; Col.
       intro.
       apply l9_9_bis.
@@ -1550,8 +1550,8 @@ Proof.
       apply not_col_permutation_2; apply (ncol_conga_ncol A B J); auto.
       apply out2__conga; [apply out_trivial|]; auto.
 
-    (*-*) apply coplanar_trans_1 with C1; Cop; Col.
-  (*}*)
+    - apply coplanar_trans_1 with C1; Cop; Col.
+  }
   exfalso.
   apply l9_2 in Hts.
   apply invert_two_sides in Hts.
@@ -1559,10 +1559,10 @@ Proof.
   exists J'.
   split; auto.
   apply (l9_8_2 _ _ A).
-  (*-*) apply cop_nos__ts; Cop.
+  - apply cop_nos__ts; Cop.
     apply (ncol_conga_ncol G H I); auto.
     apply (conga_trans _ _ _ C1 B J); CongA.
-  (*-*) apply os_ts1324__os.
+  - apply os_ts1324__os.
     apply invert_one_side; apply cop_nts__os; Col.
     apply cop_nos__ts; Col; Cop.
 Qed.
@@ -1820,18 +1820,18 @@ Proof.
   assert_diffs.
   apply (sams_chara _ _ _ _ _ _ A'); Between.
   elim(col_dec A B C).
-  (*{*) intro HCol.
+  { intro HCol.
     elim(bet_dec A C B).
-    (*{*) intro HCBet.
+    { intro HCBet.
       apply conga__lea.
       apply conga_line; Between.
       apply (between_exchange3 A); Between.
-    (*}*)
+    }
     intro.
     apply l11_31_1; auto.
     apply l6_6.
     apply not_bet_out; Col.
-  (*}*)
+  }
   intro.
   apply lta__lea.
   apply l11_41_aux; Col; Between.
@@ -1996,12 +1996,12 @@ Qed.
 Lemma acute2__sams : forall A B C D E F, Acute A B C -> Acute D E F -> SAMS A B C D E F.
 Proof.
   assert (Haux : forall A B C D E F, Acute A B C -> LeA D E F A B C -> SAMS A B C D E F).
-  (*{*) intros A B C D E F HAcute HLea.
+  { intros A B C D E F HAcute HLea.
     apply sams_lea2__sams with A B C A B C.
       apply acute__sams, HAcute.
       assert_diffs; apply lea_refl; auto.
       assumption.
-  (*}*)
+  }
   intros A B C D E F HAcute1 HAcute2.
   assert_diffs.
   destruct (lea_total A B C D E F); SumA.
@@ -2012,7 +2012,7 @@ Lemma acute2_suma__nbet : forall A B C D E F G H I,
 Proof.
   assert (Haux : forall A B C D E F G H I, Acute A B C -> LeA D E F A B C -> SumA A B C D E F G H I ->
     ~ Bet G H I).
-  (*{*) intros A B C D E F G H I HAcute HLea HSuma HBet.
+  { intros A B C D E F G H I HAcute HLea HSuma HBet.
     assert_diffs.
     destruct (ex_suma A B C A B C) as [A' [B' [C']]]; auto.
     apply (acute_suma__nbet A B C A' B' C'); trivial.
@@ -2020,7 +2020,7 @@ Proof.
     apply sams_lea2_suma2__lea with A B C D E F A B C A B C; trivial.
       apply lea_refl; auto.
       apply acute__sams, HAcute.
-  (*}*)
+  }
   intros A B C D E F G H I HAcute1 HAcute2 HSuma.
   assert_diffs.
   destruct (lea_total A B C D E F); auto.
@@ -2110,9 +2110,9 @@ Proof.
     split.
       apply conga_right_comm; apply conga_sym; apply l11_18_1; Between; Perp.
     split.
-    (*{*) apply l9_9.
+    { apply l9_9.
       apply bet__ts; Between; Col.
-    (*}*)
+    }
     split; Cop.
     intros [_ [HNCol']]; apply HNCol'; Col.
 Qed.
@@ -2273,23 +2273,23 @@ Proof.
   revert A' B' C'.
   assert (Haux : forall A' B' C', Acute A' B' C' -> SumA A' B' C' A' B' C' D E F ->
     CongA A B C A' B' C' \/ CongA A0 B C A' B' C').
-  (*{*) intros A' B' C' HAcute' HSuma'.
+  { intros A' B' C' HAcute' HSuma'.
     assert_diffs.
     destruct (angle_partition A B C) as [HAcute|[HPer|HObtuse]]; auto.
-    (*-*) left; apply acute2_suma2__conga with D E F; auto.
-    (*-*) exfalso.
+    - left; apply acute2_suma2__conga with D E F; auto.
+    - exfalso.
       apply (acute_suma__nbet A' B' C' D E F); [..|apply (per2_suma__bet A B C A B C)]; assumption.
-    (*-*) right; apply acute2_suma2__conga with D E F; auto.
+    - right; apply acute2_suma2__conga with D E F; auto.
         apply (bet_obtuse__acute A); auto.
         apply bet2_suma__suma with A A; auto.
-  (*}*)
+  }
   intros A' B' C' HSuma'.
   assert_diffs.
   destruct (angle_partition A' B' C') as [HAcute|[HPer|HObtuse]]; auto.
-  (*-*) left.
+  - left.
     apply l11_16; auto.
     apply bet_suma__per with D E F; [apply (per2_suma__bet A' B' C' A' B' C')|]; assumption.
-  (*-*) destruct (segment_construction A' B' A' B') as [A0' []].
+  - destruct (segment_construction A' B' A' B') as [A0' []].
     assert_diffs.
     destruct (Haux A0' B' C').
       apply (bet_obtuse__acute A'); auto.

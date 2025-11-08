@@ -37,10 +37,10 @@ Proof.
         apply (par_strict_col_par_strict _ _ _ C2); Col).
   assert_diffs.
   assert(HB3 : exists B3, Col B1 B2 B3 /\ B3 <> P).
-  (*{*) elim(eq_dec_points B1 P).
+  { elim(eq_dec_points B1 P).
     intro; subst B1; exists B2; Col.
     intro; exists B1; Col.
-  (*}*)
+  }
   destruct HB3 as [B3 []].
   assert(Col P C1 B3); [|ColR].
   assert_diffs.
@@ -49,13 +49,13 @@ Proof.
   apply per_perp; auto.
 
   assert(HA3 : exists A3, Col A1 A2 A3 /\ TS P Q C1 A3).
-  (*{*) elim(col_dec P Q A1);
+  { elim(col_dec P Q A1);
     [|intro; apply (cop_not_par_other_side _ _ _ _ Q); Col; clear HNC2; CopR].
     intro.
     assert(HA3 := cop_not_par_other_side P Q A2 A1 Q C1).
     destruct HA3 as [A3 []]; Col; [intro; apply HNC1; ColR|clear HNC2; CopR|].
     exists A3; Col.
-  (*}*)
+  }
 
   destruct HA3 as [A3 [HA3 Hts]].
   assert(~ Col A3 P Q) by (destruct Hts as [_ []]; auto).

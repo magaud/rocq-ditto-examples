@@ -192,9 +192,9 @@ Proof with Col.
     unfold TS.
     intros.
     spliter.
-    repeat split;Col.
+    repeat split...
     ex_and H1 T.
-    exists T;split;Col.
+    exists T;split...
 Qed.
 
 
@@ -220,9 +220,9 @@ Proof with Col.
     assert (T = M).
       assert_bets.
       assert_cols.
-      eapply l6_21 with P Q A C;Col.
+      eapply l6_21 with P Q A C...
     subst T.
-    repeat split;Col.
+    repeat split...
       induction(eq_dec_points C M).
         subst M.
         intuition.
@@ -238,11 +238,11 @@ Proof with Col.
       assert (Col P R A).
         induction (eq_dec_points P B).
           subst B.
-          assert_cols;Col.
+          assert_cols...
         apply col_permutation_2.
         eapply col_transitivity_2.
           apply H0.
-          assert_cols;Col.
+          assert_cols...
         Col.
       induction (eq_dec_points P R).
         subst R.
@@ -252,7 +252,7 @@ Proof with Col.
           assert_diffs; intuition.
           apply col_permutation_4.
           assumption.
-        assert_cols;Col.
+        assert_cols...
       assert (Col P B A ).
         eapply col_transitivity_1.
           apply H13.
@@ -887,10 +887,10 @@ Proof.
       ColR.
     ex_and H7 T.
     assert (I = T).
-     (*{*)
+     {
       apply l6_21 with A B X Y; Col.
       intro; treat_equalities; Col.
-      (*}*)
+      }
     subst I.
     exists T.
     split.
@@ -2958,12 +2958,12 @@ Proof.
   assert (HNCol : ~ Col A B C) by (apply one_side_not_col123 with D, HOS).
   destruct (segment_construction C B B C) as [C'[]].
   assert (HT : TS A B D C').
-  (*{*) apply l9_8_2 with C; [|assumption].
+  { apply l9_8_2 with C; [|assumption].
     split; [|split].
       Col.
       intro; apply HNCol; ColR.
       exists B; split; Col.
-  (*}*)
+  }
   destruct HT as [HNCol1 [HNCol2 [T []]]].
   assert (C' <> T) by (intro; treat_equalities; auto).
   destruct (col_dec T B C) as [|HNCol3].
@@ -2991,14 +2991,14 @@ Proof.
   destruct (col_dec Q A B).
     exists Q; left; split; Col.
   assert (HDij : TS Q R A B \/ OS Q R A B).
-  (*{*) assert (HA : TS Q R P A \/ OS Q R P A) by (apply cop__one_or_two_sides; Col; Cop).
+  { assert (HA : TS Q R P A \/ OS Q R P A) by (apply cop__one_or_two_sides; Col; Cop).
     assert (HB : TS Q R P B \/ OS Q R P B) by (apply cop__one_or_two_sides; Col; Cop).
     destruct HA; destruct HB.
-    (*-*) right; apply l9_8_1 with P; apply l9_2; assumption.
-    (*-*) left; apply l9_2, l9_8_2 with P; assumption.
-    (*-*) left; apply l9_8_2 with P; assumption.
-    (*-*) right; apply one_side_transitivity with P; [apply one_side_symmetry|]; assumption.
-  (*}*)
+    - right; apply l9_8_1 with P; apply l9_2; assumption.
+    - left; apply l9_2, l9_8_2 with P; assumption.
+    - left; apply l9_8_2 with P; assumption.
+    - right; apply one_side_transitivity with P; [apply one_side_symmetry|]; assumption.
+  }
   destruct HDij; [apply ts__coplanar|apply os__coplanar]; assumption.
 Qed.
 
@@ -3038,11 +3038,11 @@ Proof.
   revert A B.
   assert (Haux : forall A B C, ~ Col A B C -> ~ Col U A B ->
   Coplanar A B C U -> Coplanar A B C V -> Coplanar A B C P).
-  (*{*) intros A B C HNCol HNCol' HU HV.
+  { intros A B C HNCol HNCol' HU HV.
     apply (coplanar_trans_1 U); [Cop..|].
     apply coplanar_perm_12, col_cop__cop with V; auto.
     apply (coplanar_trans_1 C); Col; Cop.
-  (*}*)
+  }
   intros A B C HU HV HNCol.
   destruct (col_dec U A B); [destruct (col_dec U A C)|].
   - apply coplanar_perm_12, Haux; Col; Cop.
@@ -3071,14 +3071,14 @@ Proof.
 assert (Haux : forall P Q R A B C,
   ~ Col P Q R -> Coplanar P Q R A -> Coplanar P Q R B -> Coplanar P Q R C ->
   Coplanar A B C R).
-  (*{*)
+  {
   intros P Q R A B C HNC HCop1 HCop2 HCop3.
   assert_diffs.
   elim (col_dec R Q A); intro HQRA.
     apply coplanar_perm_18, col_cop__cop with Q; auto.
     apply coplanar_perm_17, (coplanar_trans_1 P); assumption.
   apply coplanar_perm_9, (coplanar_trans_1 Q); [Col|apply (coplanar_trans_1 P); assumption..].
-  (*}*)
+  }
 intros A B C D P Q R HNC HCop1 HCop2 HCop3 HCop4.
 elim (col_dec P Q D); intro HPQD.
   apply col_cop2__cop with P Q; [assert_diffs|apply (Haux Q R)|apply (Haux P R)|]; Col; Cop.
@@ -3112,138 +3112,138 @@ destruct HC as [I HC].
 elim HC; clear HC; intro HC; try (elim HC; clear HC);
 try (intros HCol1 HCol2); try (intro H; destruct H as [HCol1 HCol2]).
 
-  (*{*)
+  {
   elim (eq_dec_points X I); intro HXI; treat_equalities; Col.
   assert (HCong3 : Cong I A I B) by (apply l4_17 with Y Z; unfold Midpoint in *; spliter; Cong).
   elim HCol1; clear HCol1; intro HCol1; try (elim HCol1; clear HCol1; intro HCol1).
 
-    (*{*)
+    {
     assert (HLe : Le A X B I).
-      (*{*)
+      {
       apply l5_6 with A X A I; Cong.
       apply l6_13_2; Col.
       split; try (intro; treat_equalities; Col).
       split; try (intro; treat_equalities; Col); Col.
-      (*}*)
+      }
     assert (H := le_bet B I A X HLe); destruct H as [X' [HBet HCong4]]; clear HLe.
     assert (HCong5 : Cong A X' B X).
-      (*{*)
+      {
       apply five_segment with I I X X'; Cong; Between.
       apply l4_3 with A B; Cong; Between.
       apply l4_3 with B A; Cong; Between.
-      (*}*)
+      }
     assert (H : X = X'); treat_equalities.
-      (*{*)
+      {
       apply l4_18 with A I; try (intro; treat_equalities); Col.
         apply cong_transitivity with B X; Cong.
       apply l4_3 with A B; Cong; Between.
-      (*}*)
+      }
     assert (H : A = B) by (apply construction_uniqueness with I X X A; Cong; Between);
     treat_equalities; intuition.
-    (*}*)
+    }
 
-    (*{*)
+    {
     assert (H := segment_construction B I I X); destruct H as [X' [HBet HCong4]].
     assert (HCong5 : Cong A X' B X).
-      (*{*)
+      {
       apply five_segment with X X' I I; Cong; Between.
-      (*}*)
+      }
     assert (H : X = X'); treat_equalities.
-      (*{*)
+      {
       apply l4_18 with A I; try (intro; treat_equalities); Col; Cong.
       apply cong_transitivity with B X; Cong.
-      (*}*)
+      }
     assert (H : A = B) by (apply construction_uniqueness with X I I A; Cong; Between);
     treat_equalities; intuition.
-    (*}*)
+    }
 
-    (*{*)
+    {
     assert (H := segment_construction I B A X); destruct H as [X' [HBet HCong4]].
     assert (HCong5 : Cong X B X' A).
-      (*{*)
+      {
       apply five_segment with I I A B; Cong; intro; treat_equalities; Col.
-      (*}*)
+      }
     assert (H : X = X'); treat_equalities.
-      (*{*)
+      {
       apply l4_18 with A I; try (intro; treat_equalities); Col.
         apply cong_transitivity with B X; Cong.
       apply l2_11 with A B; Cong.
-      (*}*)
+      }
     assert (H : A = B) by (apply between_cong_2 with I X; Col).
     treat_equalities; intuition.
-    (*}*)
-  (*}*)
+    }
+  }
 
-  (*{*)
+  {
   elim (eq_dec_points Y I); intro HYI; treat_equalities; Col.
   assert (HCong3 : Cong I A I B) by (apply l4_17 with X Z; unfold Midpoint in *; spliter; Cong).
   elim HCol1; clear HCol1; intro HCol1; try (elim HCol1; clear HCol1; intro HCol1).
 
-    (*{*)
+    {
     assert (HLe : Le A Y B I).
-      (*{*)
+      {
       apply l5_6 with A Y A I; Cong.
       apply l6_13_2; Col.
       split; try (intro; treat_equalities; Col).
       split; try (intro; treat_equalities; Col); Col.
-      (*}*)
+      }
     assert (H := le_bet B I A Y HLe); destruct H as [Y' [HBet HCong4]]; clear HLe.
     assert (HCong5 : Cong A Y' B Y).
-      (*{*)
+      {
       apply five_segment with I I Y Y'; Cong; Between.
       apply l4_3 with A B; Cong; Between.
       apply l4_3 with B A; Cong; Between.
-      (*}*)
+      }
     assert (H : Y = Y'); treat_equalities.
-      (*{*)
+      {
       apply l4_18 with A I; try (intro; treat_equalities); Col.
         apply cong_transitivity with B Y; Cong.
       apply l4_3 with A B; Cong; Between.
-      (*}*)
+      }
     assert (H : A = B) by (apply construction_uniqueness with I Y Y A; Cong; Between);
     treat_equalities; intuition.
-    (*}*)
+    }
 
-    (*{*)
+    {
     assert (H := segment_construction B I I Y); destruct H as [Y' [HBet HCong4]].
     assert (HCong5 : Cong A Y' B Y).
-      (*{*)
+      {
       apply five_segment with Y Y' I I; Cong; Between.
-      (*}*)
+      }
     assert (H : Y = Y'); treat_equalities.
-      (*{*)
+      {
       apply l4_18 with A I; try (intro; treat_equalities); Col; Cong.
       apply cong_transitivity with B Y; Cong.
-      (*}*)
+      }
     assert (H : A = B) by (apply construction_uniqueness with Y I I A; Cong; Between);
     treat_equalities; intuition.
-    (*}*)
+    }
 
-    (*{*)
+    {
     assert (H := segment_construction I B A Y); destruct H as [Y' [HBet HCong4]].
     assert (HCong5 : Cong Y B Y' A).
-      (*{*)
+      {
       apply five_segment with I I A B; Cong; intro; treat_equalities; Col.
-      (*}*)
+      }
     assert (H : Y = Y'); treat_equalities.
-      (*{*)
+      {
       apply l4_18 with A I; try (intro; treat_equalities); Col.
         apply cong_transitivity with B Y; Cong.
       apply l2_11 with A B; Cong.
-      (*}*)
+      }
     assert (H : A = B) by (apply between_cong_2 with I Y; Col).
     treat_equalities; intuition.
-    (*}*)
-  (*}*)
+    }
+  }
 
-  (*{*)
+  {
   elim (eq_dec_points Z I); intro HZI; treat_equalities; Col.
   assert (HCong3 : Cong I A I B) by (apply l4_17 with X Y; unfold Midpoint in *; spliter; Cong).
   assert (H := l7_20 I A B).
   elim H; [| |ColR..]; intro.
     treat_equalities; exfalso; auto.
   ColR.
-  (*}*)
+  }
 Qed.
 
 Lemma cop_perp2__col : forall X Y Z A B,
@@ -3355,27 +3355,27 @@ Proof.
       destruct (eq_dec_points C0 D0); [treat_equalities; Col|ColR].
     destruct (l6_11_existence D0 C0 C D) as [D' []]; auto.
     destruct (bet_dec C M D') as [|HNBet].
-    (*{*) left; apply l9_2, l9_5 with D' D0; Col.
+    { left; apply l9_2, l9_5 with D' D0; Col.
       repeat split; auto.
         intro; apply HNCol; ColR.
       exists M; split; Between.
-    (*}*)
+    }
     right; intro HTS.
     apply HNBet.
     assert (HTS1 : TS A B D' C).
       apply l9_5 with D D0; [apply l9_2|Col|apply l6_6]; assumption.
     destruct (eq_dec_points C0 D0).
-    (*{*) treat_equalities.
+    { treat_equalities.
       assert (Col M C D) by (apply cop_perp2__col with A B; Perp; Cop).
       destruct (distinct A B M); auto.
-      (*-*) apply col_two_sides_bet with A.
+      - apply col_two_sides_bet with A.
           ColR.
         apply invert_two_sides, col_two_sides with B; Col; apply l9_2, HTS1.
-      (*-*) apply col_two_sides_bet with B.
+      - apply col_two_sides_bet with B.
           ColR.
         apply invert_two_sides, col_two_sides with A; Col.
         apply l9_2, invert_two_sides, HTS1.
-    (*}*)
+    }
     destruct HTS1 as [HNCol' [_ [M' []]]].
     destruct (l8_22 C0 D0 C D' M') as [_ []]; Between; Cong; Col.
       apply perp_per_1, perp_col2 with A B; auto.
@@ -3526,13 +3526,13 @@ Proof.
   destruct (eq_dec_points D T).
     subst T; exists D; split; [|apply (bet_out__bet P)]; assumption.
   assert (HTS : TS D T Q R).
-  (*{*) assert (~ Col P D T) by (intro; apply HP, col_cop2__cop with D T; Col).
+  { assert (~ Col P D T) by (intro; apply HP, col_cop2__cop with D T; Col).
     apply l9_8_2 with P.
-    (*-*) repeat split; auto.
+    - repeat split; auto.
         intro; apply HR, col_cop2__cop with D T; Col.
         exists T; split; Col.
-    (*-*) apply out_one_side; Col.
-  (*}*)
+    - apply out_one_side; Col.
+  }
   destruct HTS as [HNCol1 [HNCol2 [T' []]]].
   exists T'; split; [|assumption].
   apply col_cop2__cop with D T; Col.
@@ -3549,11 +3549,11 @@ Proof.
   intros A B C P Q R HPR [S [[HP [_ [X []]]] [HQ [HS [Y []]]]]].
   assert (P <> X /\ S <> X /\ Q <> Y /\ S <> Y) by (repeat split; intro; subst; auto); spliter.
   destruct (col_dec P Q S) as [|HNCol].
-  (*{*) assert (X = Y) by (assert_diffs; apply (col2_cop2__eq A B C Q S); ColR).
+  { assert (X = Y) by (assert_diffs; apply (col2_cop2__eq A B C Q S); ColR).
     subst Y.
     apply l9_39 with X P; trivial.
     apply l6_2 with S; auto.
-  (*}*)
+  }
   destruct (inner_pasch P Q S X Y) as [Z []]; trivial.
   assert (X <> Z) by (intro; subst; apply HNCol; ColR).
   apply l9_39 with X Z; [|assumption|apply bet_out; auto].
@@ -3682,7 +3682,7 @@ Lemma osp_bet__osp : forall A B C P Q R, OSP A B C P R -> Bet P Q R -> OSP A B C
 Proof.
   intros A B C P Q R [S [HPS [HR [_ [Y []]]]]] HBet.
   destruct (col_dec P R S) as [|HNCol].
-  (*{*) exists S.
+  { exists S.
     split; [assumption|].
     apply l9_39 with Y P; trivial.
     destruct HPS as [HP [HS [X []]]].
@@ -3691,16 +3691,16 @@ Proof.
     subst Y.
     apply out_bet_out_1 with R; [|assumption].
     apply l6_2 with S; auto.
-  (*}*)
+  }
   destruct HPS as [HP [HS [X []]]].
   assert (HOS : OS X Y P Q).
-  (*{*) apply l9_17 with R; [|assumption].
+  { apply l9_17 with R; [|assumption].
     assert (P <> X /\ S <> X /\ R <> Y /\ S <> Y) by (repeat split; intro; subst; auto); spliter.
     assert (~ Col S X Y) by (intro; apply HNCol; ColR).
     exists S; repeat split; trivial; try (intro; apply HNCol; ColR).
       exists X; split; Col.
       exists Y; split; Col.
-  (*}*)
+  }
   destruct HOS as [S' [[HNCol1 [HNCol2 [X' []]]] [HNCol3 [_ [Y' []]]]]].
   assert (Coplanar A B C X') by (assert_diffs; apply col_cop2__cop with X Y; Col).
   assert (Coplanar A B C Y') by (assert_diffs; apply col_cop2__cop with X Y; Col).
@@ -3826,11 +3826,11 @@ Lemma cop_tsp__ex_cop2 : forall A B C D E P,
 Proof.
   intros A B C D E P HCop HTSP.
   destruct (col_dec D E P) as [|HNCol].
-  (*{*) apply tsp_distincts in HTSP; spliter.
+  { apply tsp_distincts in HTSP; spliter.
     destruct (eq_dec_points P A).
       subst; exists B; repeat split; Cop.
       exists A; repeat split; Cop.
-  (*}*)
+  }
   destruct HTSP as [_ [_ [Q []]]].
   exists Q; repeat split; Cop.
   intro; subst; apply HNCol; Col.
@@ -3842,18 +3842,18 @@ Lemma cop_osp__ex_cop2 : forall A B C D E P,
 Proof.
   intros A B C D E P HCop HOSP.
   destruct (col_dec D E P) as [|HNCol].
-  (*{*) apply osp_distincts in HOSP; spliter.
+  { apply osp_distincts in HOSP; spliter.
     destruct (eq_dec_points P A).
       subst; exists B; repeat split; Cop.
       exists A; repeat split; Cop.
-  (*}*)
+  }
   destruct (segment_construction E P P E) as [E' []].
   assert (~ Col D E' P) by (intro; apply HNCol; ColR).
   destruct (cop_tsp__ex_cop2 A B C D E' P) as [Q [HQ1 [HQ2 HPQ]]]; [assumption|..].
-  (*{*) apply l9_41_2 with E.
+  { apply l9_41_2 with E.
       assert_diffs; destruct HOSP as [F [_ [HE]]]; apply bet_cop__tsp with P; Cop.
       apply osp_symmetry, HOSP.
-  (*}*)
+  }
   exists Q; repeat split; auto.
   apply coplanar_perm_2, coplanar_trans_1 with E'; Col; Cop.
 Qed.

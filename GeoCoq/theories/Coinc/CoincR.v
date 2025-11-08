@@ -30,27 +30,27 @@ Lemma pick_variety_auxCP_forallT {m : nat} :
 Proof.
 induction m; intros s cp; [unfold InCP|]; simpl; split.
 
-  (*{*)
+  {
   intro Hmem; apply andb_true_iff in Hmem; destruct Hmem as [Hmem1 Hmem2].
   intros p H; do 2 (try (elim H; clear H; intro; subst)); auto.
-  (*}*)
+  }
 
-  (*{*)
+  {
   intro H; apply andb_true_iff; split;
   [apply (H (fst cp))|apply (H (snd cp))]; auto.
-  (*}*)
+  }
 
-  (*{*)
+  {
   intro Hmem; apply andb_true_iff in Hmem; destruct Hmem as [Hmem1 Hmem2].
   intros p H; apply InCPOK in H; elim H; clear H; intro HIn; subst; simpl; auto.
   destruct (IHm s (tailCP cp)) as [H _]; apply H; auto.
-  (*}*)
+  }
 
-  (*{*)
+  {
   destruct (IHm s (tailCP cp)) as [_ H]; clear IHm; rename H into IHm.
   intro H; apply andb_true_iff; split;
   [apply (H (fst cp))|apply IHm; intros p HIn; apply H]; apply InCPOK; auto.
-  (*}*)
+  }
 Qed.
 
 Lemma pick_variety_auxCP_existsF {m : nat} :
@@ -59,37 +59,37 @@ Lemma pick_variety_auxCP_existsF {m : nat} :
 Proof.
 induction m; intros s cp; [unfold InCP|]; simpl; split.
 
-  (*{*)
+  {
   intro H; apply andb_false_iff in H; elim H; clear H; intro H;
   [exists (fst cp)|exists (snd cp)]; auto.
-  (*}*)
+  }
 
-  (*{*)
+  {
   intro H; destruct H as [p [H Hmem]]; apply andb_false_iff.
   do 2 (try (elim H; clear H; intro H; subst)); intuition.
-  (*}*)
+  }
 
-  (*{*)
+  {
   intro H; apply andb_false_iff in H.
   destruct (IHm s (tailCP cp)) as [H' _]; clear IHm; rename H' into IHm.
   elim H; clear H; intro Hmem.
 
-    (*{*)
+    {
     exists (fst cp); unfold InCP; simpl; auto.
-    (*}*)
+    }
 
-    (*{*)
+    {
     destruct (IHm Hmem) as [p [HIn Hmem']]; exists p;
     split; try apply InCPOK; auto.
-    (*}*)
-  (*}*)
+    }
+  }
 
-  (*{*)
+  {
   destruct (IHm s (tailCP cp)) as [_ H]; clear IHm; rename H into IHm.
   intro H; destruct H as [p [HIn Hmem]]; apply InCPOK in HIn; apply andb_false_iff.
   elim HIn; clear HIn; intro HIn; subst; auto.
   right; apply IHm; exists p; auto.
-  (*}*)
+  }
 Qed.
 
 Lemma proper_00 :
@@ -103,25 +103,25 @@ unfold pick_variety_aux, eqST.
 intros s t1 t2 HEq.
 case_eq (pick_variety_auxCP s t1); intro Ht1.
 
-  (*{*)
+  {
   destruct (pick_variety_auxCP_forallT s t1) as [H1 H2]; clear H2.
   assert (H := H1 Ht1); clear H1; clear Ht1; rename H into Ht1.
   destruct (pick_variety_auxCP_forallT s t2) as [H1 H2]; clear H1.
   rewrite H2; try reflexivity; clear H2; intros p HIn; apply Ht1.
   clear Ht1; apply InCPOCP; apply InCPOCP in HIn.
   assert (H : eqList (CPToList (OCP t1)) (CPToList (OCP t2))).
-    (*{*)
+    {
     assert (Ht1 := eqListSortOCP t1).
     assert (Ht2 := eqListSortOCP t2).
     apply eqListTrans with (PosSort.sort (CPToList t1)); try assumption.
     apply eqListTrans with (PosSort.sort (CPToList t2)); try assumption.
     apply eqListSym; assumption.
-    (*}*)
+    }
   clear HEq; rename H into HEq; apply eqListOK in HEq.
   unfold InCP in *; rewrite HEq; auto.
-  (*}*)
+  }
 
-  (*{*)
+  {
   destruct (pick_variety_auxCP_existsF s t1) as [H1 H2]; clear H2.
   assert (H := H1 Ht1); clear H1; clear Ht1; rename H into Ht1.
   destruct (pick_variety_auxCP_existsF s t2) as [H1 H2]; clear H1.
@@ -129,16 +129,16 @@ case_eq (pick_variety_auxCP s t1); intro Ht1.
   destruct Ht1 as [p [HIn Hmem]]; exists p; split; auto.
   apply InCPOCP; apply InCPOCP in HIn.
   assert (H : eqList (CPToList (OCP t1)) (CPToList (OCP t2))).
-    (*{*)
+    {
     assert (Ht1 := eqListSortOCP t1).
     assert (Ht2 := eqListSortOCP t2).
     apply eqListTrans with (PosSort.sort (CPToList t1)); try assumption.
     apply eqListTrans with (PosSort.sort (CPToList t2)); try assumption.
     apply eqListSym; assumption.
-    (*}*)
+    }
   clear HEq; rename H into HEq; apply eqListOK in HEq.
   unfold InCP in *; rewrite <- HEq; auto.
-  (*}*)
+  }
 Qed.
 
 Definition pick_variety (s : SS.elt) (st : STt) :=

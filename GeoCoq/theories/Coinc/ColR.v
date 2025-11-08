@@ -442,26 +442,26 @@ apply SWP.FM.mem_2, SWP.FM.union_1 in Hmemp2.
 apply SWP.FM.mem_2, SWP.FM.union_1 in Hmemp3.
 apply CTcol3 with (interp (fstpp(x))) (interp (sndpp(x))); [auto|..].
 
-  (*{*)
+  {
   elim (Hmemp1); intro HInp1; [apply HSS with s1|apply HSS with s2];
   try (apply SSWP.FM.mem_1; assumption);
   do 2 (rewrite andb_true_iff);
   repeat split; apply SWP.FM.mem_1; assumption.
-  (*}*)
+  }
 
-  (*{*)
+  {
   elim (Hmemp2); intro HInp2; [apply HSS with s1|apply HSS with s2];
   try (apply SSWP.FM.mem_1; assumption);
   do 2 (rewrite andb_true_iff);
   repeat split; apply SWP.FM.mem_1; assumption.
-  (*}*)
+  }
 
-  (*{*)
+  {
   elim (Hmemp3); intro HInp3; [apply HSS with s1|apply HSS with s2];
   try (apply SSWP.FM.mem_1; assumption);
   do 2 (rewrite andb_true_iff);
   repeat split; apply SWP.FM.mem_1; assumption.
-  (*}*)
+  }
 Defined.
 
 Lemma test_col_ok : forall ss sp interp p1 p2 p3,

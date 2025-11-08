@@ -27,10 +27,10 @@ apply (bet_conga__bet B1 B B2); auto.
 destruct HTrisuma as [D1 [E1 [F1 []]]].
 apply (suma2__conga D1 E1 F1 C A B); auto.
 assert (CongA A B B2 C A B).
-  (*{*)
+  {
   apply conga_left_comm, AIA; Side.
   apply par_symmetry, (par_col_par _ _ _ B1); Col; Par.
-  (*}*)
+  }
 apply (conga3_suma__suma B1 B A A B B2 B1 B B2); try (apply conga_refl); auto;
 [exists B2; repeat (split; CongA); Cop; apply l9_9; auto|].
 apply (suma2__conga A B C B C A); auto.

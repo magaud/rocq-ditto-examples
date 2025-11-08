@@ -341,20 +341,7 @@ Cong.
   assert (~ Bet B C A) by Between.
   repeat split;Between.
 
-intro;treat_equalities;assert_cols;
- assert (HCol:Definitions.Col A B C) by ColR;
- unfold Definitions.Col in HCol;
- tauto.
-
-intro;treat_equalities;assert_cols;
- assert (HCol:Definitions.Col A B C) by ColR;
- unfold Definitions.Col in HCol;
- tauto.
-intro;treat_equalities;assert_cols;
- assert (HCol:Definitions.Col A B C) by ColR;
- unfold Definitions.Col in HCol;
- tauto.
-intro;treat_equalities;assert_cols;
+ all:intro;treat_equalities;assert_cols;
  assert (HCol:Definitions.Col A B C) by ColR;
  unfold Definitions.Col in HCol;
  tauto.
@@ -777,4 +764,3 @@ apply Euclid5.
 Qed.
 
 End Euclidean.
-

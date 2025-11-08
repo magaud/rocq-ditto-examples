@@ -1409,65 +1409,65 @@ assert(Bet a' O b').
     assumption.
   Between.
 assert(Cong a b a' b').
-(*{*)
+{
   apply (l2_11 a o b a' O b'); Cong.
-(*}*)
+}
 assert(Cong a' b' A B) by (apply cong_transitivity with a b; Cong).
 assert(Bet A b' B) by eBetween.
 
 induction(eq_dec_points A a').
 treat_equalities.
 assert(b'=B \/ Midpoint A b' B).
-(*{*)
+{
   apply l7_20.
   Col.
   Cong.
-(*}*)
+}
 induction H1.
 treat_equalities.
 contradiction.
 unfold Midpoint in *.
 spliter.
 assert(b' = B).
-(*{*)
+{
   apply (between_cong A).
   Between.
   Cong.
-(*}*)
+}
 treat_equalities; tauto.
 
 assert(Bet B a' A) by eBetween.
 induction(eq_dec_points B b').
 treat_equalities.
 assert(a'=A \/ Midpoint B a' A).
-(*{*)
+{
   apply l7_20.
   Col.
   Cong.
-(*}*)
+}
 induction H2.
 treat_equalities.
 contradiction.
 unfold Midpoint in *.
 spliter.
 assert(a' = A).
-(*{*)
+{
   apply (between_cong B).
   Between.
   Cong.
-(*}*)
+}
 treat_equalities; tauto.
 
 assert(Bet a' A b' \/ Bet a' B b').
-(*{*)
+{
   apply(col_cong_bet A B a' b').
   Col.
   Cong.
   eBetween.
-(*}*)
+}
 induction H17.
 assert(A = a').
-(*{*)
+{
   apply(between_equality _ _ b').
     apply between_exchange4 with O.
       Between.
@@ -1475,10 +1475,10 @@ assert(A = a').
         assumption.
       assumption.
   assumption.
-(*}*)
+}
 treat_equalities; tauto.
 assert(b' = B).
-(*{*)
+{
   apply(between_equality _ _ a').
   Between.
   apply between_exchange4 with O.
@@ -1486,7 +1486,7 @@ assert(b' = B).
   apply between_inner_transitivity with A.
     Between.
   Between.
-(*}*)
+}
 treat_equalities; tauto.
 Qed.
 
@@ -1499,11 +1499,11 @@ split.
 unfold Lt in *.
 spliter.
 assert(Le o a O A).
-(*{*)
+{
   unfold Le.
   exists A.
   split; Between.
-(*}*)
+}
 apply(bet2_le2__le O o A B a b); auto.
 intro.
 

@@ -827,37 +827,37 @@ Lemma hilbert_s_version_of_pasch_aux : forall A B C I P, Coplanar A B C P ->
 Proof.
 intros A B C I P HCop HNC HNC' HBet HBI HIC HBC.
 assert (HTS : TS I P B C).
-  (*{*)
+  {
   assert_cols; split; try (intro; apply HNC'; ColR).
   split; try (intro; apply HNC'; ColR).
   exists I; Col.
-  (*}*)
+  }
 assert (HCop1 : Coplanar A P B I) by (assert_diffs; apply col_cop__cop with C; Cop; Col).
 elim (two_sides_dec I P A B); intro HTS'.
 
-  (*{*)
+  {
   destruct HTS' as [Hc1 [Hc2 [T [HCol HBet']]]].
   exists T; split; Col.
   left; split; Col.
   split; try (intro; treat_equalities; Col).
   split; intro; treat_equalities; Col.
-  (*}*)
+  }
 
-  (*{*)
+  {
   rename HTS' into HOS.
   assert (HTS' : TS I P A C).
-    (*{*)
+    {
     apply l9_8_2 with B; Col.
     unfold TS in HTS; spliter.
     apply cop_nts__os; Cop.
     intro; apply HOS; apply l9_2; Col.
-    (*}*)
+    }
   destruct HTS' as [Hc1 [Hc2 [T [HCol HBet']]]].
   exists T; split; Col.
   right; split; Col.
   split; try (intro; treat_equalities; Col).
   split; intro; treat_equalities; Col.
-  (*}*)
+  }
 Qed.
 
 Lemma hilbert_s_version_of_pasch : forall A B C P Q, Coplanar A B C P ->
@@ -876,7 +876,7 @@ Lemma two_sides_cases : forall O P A B,
 Proof.
 intros.
 assert(TS O A P B \/ OS O A P B).
-(*{*)
+{
   apply(cop__one_or_two_sides O A P B); Col.
     Cop.
   unfold OS in H0.
@@ -884,7 +884,7 @@ assert(TS O A P B \/ OS O A P B).
   unfold TS in H0.
   spliter.
   Col.
-(*}*)
+}
 induction H1.
 left; auto.
 right.

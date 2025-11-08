@@ -573,7 +573,7 @@ intro l; induction l.
       by (apply Permutation.Permutation_in with (a0 :: l'); apply Permutation.Permutation_sym in HPerm;assumption).
     clear HIna'; clear HIna0'; apply in_inv in HIna; apply in_inv in HIna0.
     elim HIna; clear HIna; intro HIna; elim HIna0; clear HIna0; intro HIna0;
-    try (rewrite HIna in * ); try (rewrite <- HIna0 in * ).
+    try (rewrite HIna in *); try (rewrite <- HIna0 in *).
 
       assert (HPerm' : Permutation.Permutation l l')
         by (apply Permutation.Permutation_app_inv_l with (a :: nil); simpl; assumption).

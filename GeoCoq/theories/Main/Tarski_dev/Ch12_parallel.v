@@ -2061,11 +2061,11 @@ Proof.
   assert_diffs.
   assert(HNCol2 : ~ Col B' B C ) by (apply per_not_col; Perp).
   assert(HNCol3 : ~ Col B B' A).
-  (*{*) intro.
+  { intro.
     apply (nlta A B C).
     apply acute_per__lta; auto.
     apply (l8_3 B'); Col; Perp.
-  (*}*)
+  }
   assert(HPars : Par_strict B B' A A').
     apply (par_not_col_strict _ _ _ _ A); Col; apply (l12_9 _ _ _ _ B C); Perp; Cop.
   assert(HNCol4 := par_strict_not_col_4 B B' A A' HPars).
@@ -2122,31 +2122,31 @@ Proof.
     apply coplanar_trans_1 with C; Cop; Col.
     apply coplanar_trans_1 with A; Cop.
   apply (acute_col_perp__out T); Col.
-  (*{*) apply acute_lea_acute with P' B A; trivial.
+  { apply acute_lea_acute with P' B A; trivial.
     assert (HNCol2 : ~ Col P' B A).
       intro.
       assert (Col P' B C) by (apply (col_conga_col P' B A); assumption).
       apply HNCol1; ColR.
     assert (Coplanar A B T P') by (apply coplanar_trans_1 with C; Cop; Col).
     destruct (col_dec T B P'); [|assert_diffs; destruct (cop__one_or_two_sides B P' A T); Col; Cop].
-    (*-*) apply l11_31_1; auto.
+    - apply l11_31_1; auto.
       apply col_one_side_out with A; Col.
       apply invert_one_side, inangle_one_side with C; Col.
       assert (~ Col B P T) by (apply per_not_col; auto).
       intro; assert_diffs; apply HNCol2; ColR.
-    (*-*) apply (l11_30 P' B T P' B C); CongA.
+    - apply (l11_30 P' B T P' B C); CongA.
       apply inangle__lea, (in_angle_trans2 A); trivial.
       apply os_ts__inangle; trivial.
       apply invert_one_side, inangle_one_side with C; Col.
       intro; apply HNCol1, bet_col, bet_in_angle_bet with T; trivial.
       apply col_two_sides_bet with P'; Col.
-    (*-*) apply lea_left_comm, inangle__lea.
+    - apply lea_left_comm, inangle__lea.
       destruct (col_dec B A T).
         apply out341__inangle; auto.
         apply col_one_side_out with P'; assumption.
       apply os2__inangle; trivial.
       apply invert_one_side, inangle_one_side with C; Col.
-  (*}*)
+  }
   apply perp_col with P; Col.
   apply perp_right_comm, per_perp; auto.
 Qed.

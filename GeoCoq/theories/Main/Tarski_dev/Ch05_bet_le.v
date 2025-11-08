@@ -19,21 +19,21 @@ Proof.
         Cong.
       apply cong_transitivity with C D; Cong.
     assert (Cong B B' B'' B).
-      (*{*)
+      {
       apply (l2_11 B C' B' B'' C B); Cong.
 
-        (*{*)
+        {
         assert (Bet A B C'); [|eBetween].
         induction (eq_dec_points B D); [treat_equalities; auto|].
         apply between_symmetry.
         apply outer_transitivity_between2 with D; eBetween.
-        (*}*)
+        }
 
-        (*{*)
+        {
         induction (eq_dec_points C D'); [treat_equalities; eBetween|].
         apply outer_transitivity_between2 with D'; eBetween.
-        (*}*)
-      (*}*)
+        }
+      }
     assert(B'' =  B').
       apply (construction_uniqueness A B B B''); Cong.
         apply between_exchange4 with D'; Between;
@@ -818,43 +818,43 @@ unfold Le in H1.
 ex_and H1 a''.
 
 assert(a' = a'').
-(*{*)
+{
   apply(construction_uniqueness B O a o a' a'' H4);
   eBetween.
   Cong.
-(*}*)
+}
 treat_equalities.
 
 assert(Le B a' B A).
-(*{*)
+{
   unfold Le.
   exists a'.
   split; eBetween; Cong.
-(*}*)
+}
 
 unfold Le in H2.
 ex_and H2 b''.
 
 assert(b' = b'').
-(*{*)
+{
   apply(construction_uniqueness A O b o b' b'' H3);
   eBetween.
   Cong.
-(*}*)
+}
 
 treat_equalities.
 
 assert(Le a' b' a' B).
-(*{*)
+{
   unfold Le.
   exists b'.
   split; eBetween; Cong.
-(*}*)
+}
 
 assert(Le a' b' A B).
-(*{*)
+{
   apply(le_transitivity a' b' a' B A B); auto using le_left_comm, le_right_comm.
-(*}*)
+}
 
 apply(l5_6 a' b' A B a b A B); Cong.
 apply (l2_11 a' O b' a o b);

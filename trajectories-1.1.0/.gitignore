@@ -1,0 +1,14 @@
+*.aux
+*.glob
+*~
+*.cache
+*.vo
+*.vok
+*.vos
+Makefile.coq
+Makefile.coq.conf
+.Makefile.coq.d
+www/*.cmo
+www/*.cmi
+www/*.bytes
+www/*.js

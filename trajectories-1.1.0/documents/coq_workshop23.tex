@@ -1,0 +1,122 @@
+\documentclass{easychair}
+
+\usepackage{fullpage}
+
+\title{Safe smooth paths between straight line obstacles}
+\author{Yves Bertot}
+\institute{Inria Université Côte d'Azur}
+\begin{document}
+\maketitle
+We wish to present a comprehensive Coq program
+to compute trajectories for a point between obstacles that are given by straight
+line segments.  The Coq program contains four phases:
+\begin{enumerate}
+\item The obstacles are sorted in a sequence of {\em events}
+\item The working space is decomposed into cells that are guaranteed to not contain
+ any obstacle,
+\item Given a source and a target point, a straight line trajectory is generated,
+when possible
+\item The angles of the straight line trajectory are then rounded using Bezier curves
+\end{enumerate}
+This algorithm works under the assumptions that the only intersections between segments
+are at their extremities and there are no vertical obstacles.  preliminary reflexions
+indicate that the first assumption can be handled by an extra algorithm, while
+the second assumption can be handled by simple post processing of the available
+connections between cells.
+
+The algorithm receives as inputs the top and bottom edges, the sequence of segments,
+and two points describing the source and target of the expected trajectory.  All
+points used as obstacle extremities or as source and target for the trajectory are
+given by cartesian coordinates.  All computations can be done using rational numbers,
+but proofs require a more advanced number system (the field must at least
+be real closed).
+
+The result is either a sequence of trajectory elements or an exceptional value, called
+{\tt None} , based
+on the well-known {\tt option} datatype.  When the result is not {\tt None},
+the following properties are guaranteed:
+\begin{itemize}
+\item Each of the trajectory elements is either a segment or Bezier curve,
+\item The sequence of trajectory elements form a continuous path,
+\item None of the trajectory elements has an intersection with either
+the {\tt top} and {\tt bottom} edges or the obstracles.
+\end{itemize}
+This is work in progress and not all proofs have been completed.
+
+\section{events}
+The first and second phase combine to implement a {\em vertical cell decomposition}.
+The mental model used to explain this algorithm is that a sweeping line moves from
+left to right and stops every time an obstacle extremity is encountered.
+
+To mimick this sweeping operation, we pre-process the segments
+to obtain a sorted list of events, where each event is essentially the extremity
+of one of the segments describing the obstacles.  This consists in taking as input
+the list of obstacles and producing as output the sorted list of events.
+\section{Vertical cells}
+When processing the sequence of events, a sequence of open cells is maintained and a set
+of closed cells is produced.  The open cells are cells where
+the left-hand side is already known, but the right-hand side is not yet known because
+the right extremities of the cells below and above these cells have not been process
+yet.  The invariants that we expect for these collections are as follows:
+\begin{itemize}
+\item The open cells span the whole vertical line between the bottom and top edges
+and they are vertically sorted
+\item The high and low edges for each open cell encounter the sweeping line
+\item All obstacles whose left point is left of the sweeping line are covered by the
+top edge of one of the closed or open cells
+\item All cells, whether open or closed are pairwise disjoint
+\end{itemize}
+The processing works by decomposing the sequencce of open cells into three sub-sequences
+where the middle one contains all open cells that are in contact with the event being
+processed.  These contact cells are closed and a new subsequences of cells is produced by
+processing the list of obstacles whose left point is given by this event.  Special care
+is taken to guarantee that the closed cells are non-empty, the problem happens when
+two successive events are vertically aligned.
+\section{Broken line trajectory}
+Once the vertical cell decomposition is finished, we can start drawing trajectories
+between arbitrary points in the work space.  This is done by finding the cells containing
+the source and target points and then jumping from cell to neighboring
+cell.  This is performed with a simple breadth-first search algorithm in the discrete graph
+where the nodes are the cells and the edges connect neighbors.
+
+We call {\em doors} the vertical boundaries between two
+adjacent cells, and we can easily transform a discrete path from cell to cell into a discrete
+path between doors.  Special care must be taken when entering and leaving a cell
+through the same vertical.  In this case, we add a visit to the cell center.
+
+The result is a sequence of straight line segments going from
+door center to door center, with an occasional visit to a cell center.
+The correctness of this trajectory is based on the property that it is
+safe to move from a door into a cell to a door out of the cell.
+\section{Making a smooth trajectory}
+We use Bezier curves to smoothen each change of direction, and we verify that
+the Bezier curves still remain in safe territory.
+
+Each Bezier curve is defined by a sequence of control points, with the properties that 
+the curve connects the first and last control point, it is contained in the convex hull
+of the control points, and it is tangent to the segments
+given by the first two and last two control points.  The first property helps guaranteeing
+that the curves are trajectory still connects the same source and taget, the second property
+is used to prove that the trajectory does collide with the obstacles.
+
+In our program, we first produce a candidate Bezier curve for each corner, and
+we then check whether this curve is safe.  If not, we produce Bezier curves,
+that are closer to the broken line and repeatedly check their safety.  After a limited number
+of iterations, the program falls back to the initial broken line corner if need be.
+We only wish to prove that the checking procedure is correct.
+
+Many of the elementary components were developed by collaborators: Thomas Portet
+worked on the vertical cell decomposition algorithm and Quentin Vermande worked on
+the general properties of Bezier curves and collisions with a convex hull.  Some
+parts of the program also rely on finite maps provided by the Coq standard library.
+
+\section{Exploiting the program and visual feedback}
+This program can be run inside Coq, using rational numbers for the numbers system.
+The output can be displayed by simply traversing the output data structure and generating
+simple postscript commands for each of the straight line or Bezier curve segment.  Our
+program uses quadratic Bezier curves, while postscript supports cubic Bezier curves, but
+converting from one to the other is easy.  A Javascript user-interface for this geometric
+program is also under study.
+\end{document}
+
+

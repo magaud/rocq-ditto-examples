@@ -1,0 +1,2083 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300.919mm"
+   height="223.661mm"
+   version="1.2"
+   id="svg2"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="bern6.svg">
+  <metadata
+     id="metadata728">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="726"
+     id="namedview726"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="368.12421"
+     inkscape:cy="456.28643"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title4">Qt Svg Document</title>
+  <desc
+     id="desc6">Generated with Qt</desc>
+  <defs
+     id="defs8">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 396.24979 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1066.2484 : 396.24979 : 1"
+       inkscape:persp3d-origin="533.12421 : 264.16652 : 1"
+       id="perspective730" />
+    <inkscape:perspective
+       id="perspective4217"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4257"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4301"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4341"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4381"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4381-8"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <g
+     vector-effect="non-scaling-stroke"
+     id="g10"
+     transform="translate(14,53)"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel">
+    <g
+       vector-effect="non-scaling-stroke"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g12"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans" />
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g14"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#aeaeae;stroke-width:0.283465;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <polyline
+         points="22.3684,633 22.3684,0 "
+         id="polyline16"
+         style="fill:none" />
+      <polyline
+         points="55.6887,633 55.6887,0 "
+         id="polyline18"
+         style="fill:none" />
+      <polyline
+         points="89.009,633 89.009,0 "
+         id="polyline20"
+         style="fill:none" />
+      <polyline
+         points="122.329,633 122.329,0 "
+         id="polyline22"
+         style="fill:none" />
+      <polyline
+         points="155.65,633 155.65,0 "
+         id="polyline24"
+         style="fill:none" />
+      <polyline
+         points="188.97,633 188.97,0 "
+         id="polyline26"
+         style="fill:none" />
+      <polyline
+         points="222.29,633 222.29,0 "
+         id="polyline28"
+         style="fill:none" />
+      <polyline
+         points="255.611,633 255.611,0 "
+         id="polyline30"
+         style="fill:none" />
+      <polyline
+         points="288.931,633 288.931,0 "
+         id="polyline32"
+         style="fill:none" />
+      <polyline
+         points="322.251,633 322.251,0 "
+         id="polyline34"
+         style="fill:none" />
+      <polyline
+         points="355.572,633 355.572,0 "
+         id="polyline36"
+         style="fill:none" />
+      <polyline
+         points="388.892,633 388.892,0 "
+         id="polyline38"
+         style="fill:none" />
+      <polyline
+         points="422.212,633 422.212,0 "
+         id="polyline40"
+         style="fill:none" />
+      <polyline
+         points="455.532,633 455.532,0 "
+         id="polyline42"
+         style="fill:none" />
+      <polyline
+         points="488.853,633 488.853,0 "
+         id="polyline44"
+         style="fill:none" />
+      <polyline
+         points="522.173,633 522.173,0 "
+         id="polyline46"
+         style="fill:none" />
+      <polyline
+         points="555.493,633 555.493,0 "
+         id="polyline48"
+         style="fill:none" />
+      <polyline
+         points="588.814,633 588.814,0 "
+         id="polyline50"
+         style="fill:none" />
+      <polyline
+         points="622.134,633 622.134,0 "
+         id="polyline52"
+         style="fill:none" />
+      <polyline
+         points="655.454,633 655.454,0 "
+         id="polyline54"
+         style="fill:none" />
+      <polyline
+         points="688.775,633 688.775,0 "
+         id="polyline56"
+         style="fill:none" />
+      <polyline
+         points="722.095,633 722.095,0 "
+         id="polyline58"
+         style="fill:none" />
+      <polyline
+         points="755.415,633 755.415,0 "
+         id="polyline60"
+         style="fill:none" />
+      <polyline
+         points="788.736,633 788.736,0 "
+         id="polyline62"
+         style="fill:none" />
+      <polyline
+         points="822.056,633 822.056,0 "
+         id="polyline64"
+         style="fill:none" />
+      <polyline
+         points="0,614.901 852,614.901 "
+         id="polyline66"
+         style="fill:none" />
+      <polyline
+         points="0,590.136 852,590.136 "
+         id="polyline68"
+         style="fill:none" />
+      <polyline
+         points="0,565.37 852,565.37 "
+         id="polyline70"
+         style="fill:none" />
+      <polyline
+         points="0,540.605 852,540.605 "
+         id="polyline72"
+         style="fill:none" />
+      <polyline
+         points="0,515.839 852,515.839 "
+         id="polyline74"
+         style="fill:none" />
+      <polyline
+         points="0,491.073 852,491.073 "
+         id="polyline76"
+         style="fill:none" />
+      <polyline
+         points="0,466.308 852,466.308 "
+         id="polyline78"
+         style="fill:none" />
+      <polyline
+         points="0,441.542 852,441.542 "
+         id="polyline80"
+         style="fill:none" />
+      <polyline
+         points="0,416.776 852,416.776 "
+         id="polyline82"
+         style="fill:none" />
+      <polyline
+         points="0,392.011 852,392.011 "
+         id="polyline84"
+         style="fill:none" />
+      <polyline
+         points="0,367.245 852,367.245 "
+         id="polyline86"
+         style="fill:none" />
+      <polyline
+         points="0,342.48 852,342.48 "
+         id="polyline88"
+         style="fill:none" />
+      <polyline
+         points="0,317.714 852,317.714 "
+         id="polyline90"
+         style="fill:none" />
+      <polyline
+         points="0,292.948 852,292.948 "
+         id="polyline92"
+         style="fill:none" />
+      <polyline
+         points="0,268.183 852,268.183 "
+         id="polyline94"
+         style="fill:none" />
+      <polyline
+         points="0,243.417 852,243.417 "
+         id="polyline96"
+         style="fill:none" />
+      <polyline
+         points="0,218.651 852,218.651 "
+         id="polyline98"
+         style="fill:none" />
+      <polyline
+         points="0,193.886 852,193.886 "
+         id="polyline100"
+         style="fill:none" />
+      <polyline
+         points="0,169.12 852,169.12 "
+         id="polyline102"
+         style="fill:none" />
+      <polyline
+         points="0,144.355 852,144.355 "
+         id="polyline104"
+         style="fill:none" />
+      <polyline
+         points="0,119.589 852,119.589 "
+         id="polyline106"
+         style="fill:none" />
+      <polyline
+         points="0,94.8233 852,94.8233 "
+         id="polyline108"
+         style="fill:none" />
+      <polyline
+         points="0,70.0577 852,70.0577 "
+         id="polyline110"
+         style="fill:none" />
+      <polyline
+         points="0,45.2921 852,45.2921 "
+         id="polyline112"
+         style="fill:none" />
+      <polyline
+         points="0,20.5265 852,20.5265 "
+         id="polyline114"
+         style="fill:none" />
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g116"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#282828;fill-opacity:1;stroke:#282828;stroke-width:0.56692898;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <polyline
+         points="1.41732,317.714 850.583,317.714 "
+         id="polyline118"
+         style="fill:none" />
+      <path
+         d="m 852,317.714 -5.556,1.984 0,-3.968 5.556,1.984"
+         id="path120"
+         style="fill-rule:evenodd" />
+      <polyline
+         points="422.212,631.583 422.212,1.41732 "
+         id="polyline122"
+         style="fill:none" />
+      <path
+         d="m 422.212,0 -1.984,5.55591 3.968,0 L 422.212,0"
+         id="path124"
+         style="fill-rule:evenodd" />
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g126"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#aeaeae;stroke-width:0.283465;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans" />
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g128"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#282828;stroke-width:0.85039401;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <polyline
+         points="22.3684,316.297 22.3684,319.131 "
+         id="polyline130"
+         style="fill:none" />
+      <polyline
+         points="55.6887,316.297 55.6887,319.131 "
+         id="polyline132"
+         style="fill:none" />
+      <polyline
+         points="89.009,316.297 89.009,319.131 "
+         id="polyline134"
+         style="fill:none" />
+      <polyline
+         points="122.329,316.297 122.329,319.131 "
+         id="polyline136"
+         style="fill:none" />
+      <polyline
+         points="155.65,316.297 155.65,319.131 "
+         id="polyline138"
+         style="fill:none" />
+      <polyline
+         points="188.97,316.297 188.97,319.131 "
+         id="polyline140"
+         style="fill:none" />
+      <polyline
+         points="222.29,316.297 222.29,319.131 "
+         id="polyline142"
+         style="fill:none" />
+      <polyline
+         points="255.611,316.297 255.611,319.131 "
+         id="polyline144"
+         style="fill:none" />
+      <polyline
+         points="288.931,316.297 288.931,319.131 "
+         id="polyline146"
+         style="fill:none" />
+      <polyline
+         points="322.251,316.297 322.251,319.131 "
+         id="polyline148"
+         style="fill:none" />
+      <polyline
+         points="355.572,316.297 355.572,319.131 "
+         id="polyline150"
+         style="fill:none" />
+      <polyline
+         points="388.892,316.297 388.892,319.131 "
+         id="polyline152"
+         style="fill:none" />
+      <polyline
+         points="422.212,316.297 422.212,319.131 "
+         id="polyline154"
+         style="fill:none" />
+      <polyline
+         points="455.532,316.297 455.532,319.131 "
+         id="polyline156"
+         style="fill:none" />
+      <polyline
+         points="488.853,316.297 488.853,319.131 "
+         id="polyline158"
+         style="fill:none" />
+      <polyline
+         points="522.173,316.297 522.173,319.131 "
+         id="polyline160"
+         style="fill:none" />
+      <polyline
+         points="555.493,316.297 555.493,319.131 "
+         id="polyline162"
+         style="fill:none" />
+      <polyline
+         points="588.814,316.297 588.814,319.131 "
+         id="polyline164"
+         style="fill:none" />
+      <polyline
+         points="622.134,316.297 622.134,319.131 "
+         id="polyline166"
+         style="fill:none" />
+      <polyline
+         points="655.454,316.297 655.454,319.131 "
+         id="polyline168"
+         style="fill:none" />
+      <polyline
+         points="688.775,316.297 688.775,319.131 "
+         id="polyline170"
+         style="fill:none" />
+      <polyline
+         points="722.095,316.297 722.095,319.131 "
+         id="polyline172"
+         style="fill:none" />
+      <polyline
+         points="755.415,316.297 755.415,319.131 "
+         id="polyline174"
+         style="fill:none" />
+      <polyline
+         points="788.736,316.297 788.736,319.131 "
+         id="polyline176"
+         style="fill:none" />
+      <polyline
+         points="822.056,316.297 822.056,319.131 "
+         id="polyline178"
+         style="fill:none" />
+      <polyline
+         points="420.795,614.901 423.629,614.901 "
+         id="polyline180"
+         style="fill:none" />
+      <polyline
+         points="420.795,590.136 423.629,590.136 "
+         id="polyline182"
+         style="fill:none" />
+      <polyline
+         points="420.795,565.37 423.629,565.37 "
+         id="polyline184"
+         style="fill:none" />
+      <polyline
+         points="420.795,540.605 423.629,540.605 "
+         id="polyline186"
+         style="fill:none" />
+      <polyline
+         points="420.795,515.839 423.629,515.839 "
+         id="polyline188"
+         style="fill:none" />
+      <polyline
+         points="420.795,491.073 423.629,491.073 "
+         id="polyline190"
+         style="fill:none" />
+      <polyline
+         points="420.795,466.308 423.629,466.308 "
+         id="polyline192"
+         style="fill:none" />
+      <polyline
+         points="420.795,441.542 423.629,441.542 "
+         id="polyline194"
+         style="fill:none" />
+      <polyline
+         points="420.795,416.776 423.629,416.776 "
+         id="polyline196"
+         style="fill:none" />
+      <polyline
+         points="420.795,392.011 423.629,392.011 "
+         id="polyline198"
+         style="fill:none" />
+      <polyline
+         points="420.795,367.245 423.629,367.245 "
+         id="polyline200"
+         style="fill:none" />
+      <polyline
+         points="420.795,342.48 423.629,342.48 "
+         id="polyline202"
+         style="fill:none" />
+      <polyline
+         points="420.795,317.714 423.629,317.714 "
+         id="polyline204"
+         style="fill:none" />
+      <polyline
+         points="420.795,292.948 423.629,292.948 "
+         id="polyline206"
+         style="fill:none" />
+      <polyline
+         points="420.795,268.183 423.629,268.183 "
+         id="polyline208"
+         style="fill:none" />
+      <polyline
+         points="420.795,243.417 423.629,243.417 "
+         id="polyline210"
+         style="fill:none" />
+      <polyline
+         points="420.795,218.651 423.629,218.651 "
+         id="polyline212"
+         style="fill:none" />
+      <polyline
+         points="420.795,193.886 423.629,193.886 "
+         id="polyline214"
+         style="fill:none" />
+      <polyline
+         points="420.795,169.12 423.629,169.12 "
+         id="polyline216"
+         style="fill:none" />
+      <polyline
+         points="420.795,144.355 423.629,144.355 "
+         id="polyline218"
+         style="fill:none" />
+      <polyline
+         points="420.795,119.589 423.629,119.589 "
+         id="polyline220"
+         style="fill:none" />
+      <polyline
+         points="420.795,94.8233 423.629,94.8233 "
+         id="polyline222"
+         style="fill:none" />
+      <polyline
+         points="420.795,70.0577 423.629,70.0577 "
+         id="polyline224"
+         style="fill:none" />
+      <polyline
+         points="420.795,45.2921 423.629,45.2921 "
+         id="polyline226"
+         style="fill:none" />
+      <polyline
+         points="420.795,20.5265 423.629,20.5265 "
+         id="polyline228"
+         style="fill:none" />
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g230"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#282828;stroke-width:0.85039401;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="837"
+         y="335.703"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text232"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#282828;fill-opacity:1;stroke:none;font-family:DejaVu Sans">x</text>
+      <text
+         x="407.203"
+         y="18"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text234"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#282828;fill-opacity:1;stroke:none;font-family:DejaVu Sans">y</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(465.853,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g236"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text238"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.2</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(532.493,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g240"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text242"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.4</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(599.134,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g244"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text246"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.6</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(665.775,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g248"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text250"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.8</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(732.415,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g252"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text254"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+1.0</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(332.572,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g256"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text258"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.2</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(265.931,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g260"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text262"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.4</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(199.29,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g264"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text266"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.6</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(132.65,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g268"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text270"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.8</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(66.009,325.714)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g272"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text274"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−1.0</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,602.901)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g276"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text278"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−1.2</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,578.136)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g280"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text282"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−1.1</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,553.37)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g284"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text286"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−1.0</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,528.605)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g288"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text290"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.9</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,503.839)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g292"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text294"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.8</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,479.073)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g296"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text298"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.7</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,454.308)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g300"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text302"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.6</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,429.542)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g304"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text306"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.5</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,404.776)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g308"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text310"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.4</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,380.011)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g312"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text314"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.3</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,355.245)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g316"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text318"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.2</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,330.48)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g320"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text322"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">−0.1</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,280.948)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g324"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text326"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.1</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,256.183)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g328"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text330"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.2</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,231.417)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g332"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text334"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.3</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,206.651)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g336"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text338"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.4</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,181.886)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g340"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text342"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.5</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,157.12)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g344"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text346"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.6</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,132.355)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g348"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text350"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.7</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,107.589)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g352"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text354"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.8</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,82.8233)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g356"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text358"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+0.9</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,58.0577)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g360"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text362"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+1.0</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,33.2921)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g364"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text366"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+1.1</text>
+    </g>
+    <g
+       vector-effect="non-scaling-stroke"
+       transform="translate(372.212,8.52646)"
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g368"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#141312;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <text
+         x="4"
+         y="16"
+         font-size="9"
+         font-weight="400"
+         font-style="normal"
+         id="text370"
+         style="font-size:9px;font-style:normal;font-weight:400;fill:#141312;fill-opacity:1;stroke:none;font-family:DejaVu Sans">+1.2</text>
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g372"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#282828;stroke-width:0.85039401;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans" />
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g374"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#ffffff;fill-opacity:1;stroke:#191970;stroke-width:1.98424995;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <polyline
+         points="422.212,317.714 428.853,294.945 "
+         id="polyline376"
+         style="fill:none" />
+      <polyline
+         points="428.853,294.945 435.493,275.768 "
+         id="polyline378"
+         style="fill:none" />
+      <polyline
+         points="435.493,275.768 441.743,260.71 "
+         id="polyline380"
+         style="fill:none" />
+      <polyline
+         points="441.743,260.71 447.993,248.289 "
+         id="polyline382"
+         style="fill:none" />
+      <polyline
+         points="447.993,248.289 453.853,238.823 "
+         id="polyline384"
+         style="fill:none" />
+      <polyline
+         points="453.853,238.823 459.712,231.271 "
+         id="polyline386"
+         style="fill:none" />
+      <polyline
+         points="459.712,231.271 465.181,225.791 "
+         id="polyline388"
+         style="fill:none" />
+      <polyline
+         points="465.181,225.791 470.65,221.684 "
+         id="polyline390"
+         style="fill:none" />
+      <polyline
+         points="470.65,221.684 476.118,218.818 "
+         id="polyline392"
+         style="fill:none" />
+      <polyline
+         points="476.118,218.818 481.587,217.07 "
+         id="polyline394"
+         style="fill:none" />
+      <polyline
+         points="481.587,217.07 487.056,216.321 "
+         id="polyline396"
+         style="fill:none" />
+      <polyline
+         points="487.056,216.321 492.915,216.502 "
+         id="polyline398"
+         style="fill:none" />
+      <polyline
+         points="492.915,216.502 499.165,217.678 "
+         id="polyline400"
+         style="fill:none" />
+      <polyline
+         points="499.165,217.678 506.197,220.036 "
+         id="polyline402"
+         style="fill:none" />
+      <polyline
+         points="506.197,220.036 514.009,223.721 "
+         id="polyline404"
+         style="fill:none" />
+      <polyline
+         points="514.009,223.721 523.384,229.3 "
+         id="polyline406"
+         style="fill:none" />
+      <polyline
+         points="523.384,229.3 535.103,237.53 "
+         id="polyline408"
+         style="fill:none" />
+      <polyline
+         points="535.103,237.53 552.681,251.265 "
+         id="polyline410"
+         style="fill:none" />
+      <polyline
+         points="552.681,251.265 581.587,273.843 "
+         id="polyline412"
+         style="fill:none" />
+      <polyline
+         points="581.587,273.843 596.822,284.411 "
+         id="polyline414"
+         style="fill:none" />
+      <polyline
+         points="596.822,284.411 610.493,292.675 "
+         id="polyline416"
+         style="fill:none" />
+      <polyline
+         points="610.493,292.675 623.384,299.283 "
+         id="polyline418"
+         style="fill:none" />
+      <polyline
+         points="623.384,299.283 635.884,304.563 "
+         id="polyline420"
+         style="fill:none" />
+      <polyline
+         points="635.884,304.563 648.384,308.765 "
+         id="polyline422"
+         style="fill:none" />
+      <polyline
+         points="648.384,308.765 661.275,312.053 "
+         id="polyline424"
+         style="fill:none" />
+      <polyline
+         points="661.275,312.053 675.337,314.576 "
+         id="polyline426"
+         style="fill:none" />
+      <polyline
+         points="675.337,314.576 690.962,316.316 "
+         id="polyline428"
+         style="fill:none" />
+      <polyline
+         points="690.962,316.316 709.712,317.336 "
+         id="polyline430"
+         style="fill:none" />
+      <polyline
+         points="709.712,317.336 737.056,317.703 "
+         id="polyline432"
+         style="fill:none" />
+      <polyline
+         points="737.056,317.703 755.025,317.714 "
+         id="polyline434"
+         style="fill:none" />
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g436"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#282828;stroke-width:0.85039401;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans" />
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g438"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:1.41732001;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <polyline
+         points="422.212,70.0577 431.587,102.992 "
+         id="polyline440"
+         style="fill:none" />
+      <polyline
+         points="431.587,102.992 440.962,132.325 "
+         id="polyline442"
+         style="fill:none" />
+      <polyline
+         points="440.962,132.325 450.337,158.361 "
+         id="polyline444"
+         style="fill:none" />
+      <polyline
+         points="450.337,158.361 459.322,180.484 "
+         id="polyline446"
+         style="fill:none" />
+      <polyline
+         points="459.322,180.484 468.306,200.078 "
+         id="polyline448"
+         style="fill:none" />
+      <polyline
+         points="468.306,200.078 477.29,217.367 "
+         id="polyline450"
+         style="fill:none" />
+      <polyline
+         points="477.29,217.367 486.275,232.561 "
+         id="polyline452"
+         style="fill:none" />
+      <polyline
+         points="486.275,232.561 495.259,245.856 "
+         id="polyline454"
+         style="fill:none" />
+      <polyline
+         points="495.259,245.856 504.243,257.436 "
+         id="polyline456"
+         style="fill:none" />
+      <polyline
+         points="504.243,257.436 513.618,267.876 "
+         id="polyline458"
+         style="fill:none" />
+      <polyline
+         points="513.618,267.876 522.993,276.817 "
+         id="polyline460"
+         style="fill:none" />
+      <polyline
+         points="522.993,276.817 532.759,284.717 "
+         id="polyline462"
+         style="fill:none" />
+      <polyline
+         points="532.759,284.717 542.525,291.345 "
+         id="polyline464"
+         style="fill:none" />
+      <polyline
+         points="542.525,291.345 552.681,297.063 "
+         id="polyline466"
+         style="fill:none" />
+      <polyline
+         points="552.681,297.063 563.618,302.064 "
+         id="polyline468"
+         style="fill:none" />
+      <polyline
+         points="563.618,302.064 575.337,306.295 "
+         id="polyline470"
+         style="fill:none" />
+      <polyline
+         points="575.337,306.295 587.837,309.745 "
+         id="polyline472"
+         style="fill:none" />
+      <polyline
+         points="587.837,309.745 601.9,312.573 "
+         id="polyline474"
+         style="fill:none" />
+      <polyline
+         points="601.9,312.573 617.915,314.75 "
+         id="polyline476"
+         style="fill:none" />
+      <polyline
+         points="617.915,314.75 637.056,316.313 "
+         id="polyline478"
+         style="fill:none" />
+      <polyline
+         points="637.056,316.313 662.056,317.286 "
+         id="polyline480"
+         style="fill:none" />
+      <polyline
+         points="662.056,317.286 701.509,317.687 "
+         id="polyline482"
+         style="fill:none" />
+      <polyline
+         points="701.509,317.687 755.025,317.714 "
+         id="polyline484"
+         style="fill:none" />
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g486"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#282828;stroke-width:0.85039401;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans" />
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g488"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#ffffff;fill-opacity:1;stroke:#ff1493;stroke-width:1.98424995;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <polyline
+         points="422.212,317.714 426.9,317.244 "
+         id="polyline490"
+         style="fill:none" />
+      <polyline
+         points="426.9,317.244 431.978,315.768 "
+         id="polyline492"
+         style="fill:none" />
+      <polyline
+         points="431.978,315.768 437.837,312.999 "
+         id="polyline494"
+         style="fill:none" />
+      <polyline
+         points="437.837,312.999 444.478,308.727 "
+         id="polyline496"
+         style="fill:none" />
+      <polyline
+         points="444.478,308.727 452.681,302.183 "
+         id="polyline498"
+         style="fill:none" />
+      <polyline
+         points="452.681,302.183 463.618,292.029 "
+         id="polyline500"
+         style="fill:none" />
+      <polyline
+         points="463.618,292.029 495.259,261.063 "
+         id="polyline502"
+         style="fill:none" />
+      <polyline
+         points="495.259,261.063 506.587,251.579 "
+         id="polyline504"
+         style="fill:none" />
+      <polyline
+         points="506.587,251.579 516.353,244.702 "
+         id="polyline506"
+         style="fill:none" />
+      <polyline
+         points="516.353,244.702 525.337,239.613 "
+         id="polyline508"
+         style="fill:none" />
+      <polyline
+         points="525.337,239.613 533.54,236.086 "
+         id="polyline510"
+         style="fill:none" />
+      <polyline
+         points="533.54,236.086 541.353,233.759 "
+         id="polyline512"
+         style="fill:none" />
+      <polyline
+         points="541.353,233.759 549.165,232.449 "
+         id="polyline514"
+         style="fill:none" />
+      <polyline
+         points="549.165,232.449 556.978,232.142 "
+         id="polyline516"
+         style="fill:none" />
+      <polyline
+         points="556.978,232.142 564.79,232.806 "
+         id="polyline518"
+         style="fill:none" />
+      <polyline
+         points="564.79,232.806 572.993,234.494 "
+         id="polyline520"
+         style="fill:none" />
+      <polyline
+         points="572.993,234.494 581.587,237.268 "
+         id="polyline522"
+         style="fill:none" />
+      <polyline
+         points="581.587,237.268 590.962,241.345 "
+         id="polyline524"
+         style="fill:none" />
+      <polyline
+         points="590.962,241.345 601.509,247.047 "
+         id="polyline526"
+         style="fill:none" />
+      <polyline
+         points="601.509,247.047 614.009,254.996 "
+         id="polyline528"
+         style="fill:none" />
+      <polyline
+         points="614.009,254.996 631.197,267.237 "
+         id="polyline530"
+         style="fill:none" />
+      <polyline
+         points="631.197,267.237 662.837,290.012 "
+         id="polyline532"
+         style="fill:none" />
+      <polyline
+         points="662.837,290.012 676.9,298.782 "
+         id="polyline534"
+         style="fill:none" />
+      <polyline
+         points="676.9,298.782 688.618,304.96 "
+         id="polyline536"
+         style="fill:none" />
+      <polyline
+         points="688.618,304.96 699.556,309.63 "
+         id="polyline538"
+         style="fill:none" />
+      <polyline
+         points="699.556,309.63 710.103,313.064 "
+         id="polyline540"
+         style="fill:none" />
+      <polyline
+         points="710.103,313.064 720.65,315.457 "
+         id="polyline542"
+         style="fill:none" />
+      <polyline
+         points="720.65,315.457 731.978,316.969 "
+         id="polyline544"
+         style="fill:none" />
+      <polyline
+         points="731.978,316.969 744.868,317.64 "
+         id="polyline546"
+         style="fill:none" />
+      <polyline
+         points="744.868,317.64 755.025,317.714 "
+         id="polyline548"
+         style="fill:none" />
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g550"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#282828;stroke-width:0.85039401;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans" />
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g552"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#ffffff;fill-opacity:1;stroke:#b111dd;stroke-width:1.98424995;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <polyline
+         points="422.212,317.714 442.525,317.219 "
+         id="polyline554"
+         style="fill:none" />
+      <polyline
+         points="442.525,317.219 454.243,315.917 "
+         id="polyline556"
+         style="fill:none" />
+      <polyline
+         points="454.243,315.917 465.181,313.684 "
+         id="polyline558"
+         style="fill:none" />
+      <polyline
+         points="465.181,313.684 475.728,310.485 "
+         id="polyline560"
+         style="fill:none" />
+      <polyline
+         points="475.728,310.485 486.275,306.23 "
+         id="polyline562"
+         style="fill:none" />
+      <polyline
+         points="486.275,306.23 497.603,300.54 "
+         id="polyline564"
+         style="fill:none" />
+      <polyline
+         points="497.603,300.54 510.103,293.078 "
+         id="polyline566"
+         style="fill:none" />
+      <polyline
+         points="510.103,293.078 524.947,282.986 "
+         id="polyline568"
+         style="fill:none" />
+      <polyline
+         points="524.947,282.986 555.806,260.431 "
+         id="polyline570"
+         style="fill:none" />
+      <polyline
+         points="555.806,260.431 571.431,249.897 "
+         id="polyline572"
+         style="fill:none" />
+      <polyline
+         points="571.431,249.897 583.15,243.125 "
+         id="polyline574"
+         style="fill:none" />
+      <polyline
+         points="583.15,243.125 593.306,238.35 "
+         id="polyline576"
+         style="fill:none" />
+      <polyline
+         points="593.306,238.35 602.681,235.037 "
+         id="polyline578"
+         style="fill:none" />
+      <polyline
+         points="602.681,235.037 611.275,233.051 "
+         id="polyline580"
+         style="fill:none" />
+      <polyline
+         points="611.275,233.051 619.478,232.18 "
+         id="polyline582"
+         style="fill:none" />
+      <polyline
+         points="619.478,232.18 627.29,232.339 "
+         id="polyline584"
+         style="fill:none" />
+      <polyline
+         points="627.29,232.339 635.103,233.498 "
+         id="polyline586"
+         style="fill:none" />
+      <polyline
+         points="635.103,233.498 642.915,235.672 "
+         id="polyline588"
+         style="fill:none" />
+      <polyline
+         points="642.915,235.672 651.118,239.042 "
+         id="polyline590"
+         style="fill:none" />
+      <polyline
+         points="651.118,239.042 659.322,243.491 "
+         id="polyline592"
+         style="fill:none" />
+      <polyline
+         points="659.322,243.491 668.306,249.522 "
+         id="polyline594"
+         style="fill:none" />
+      <polyline
+         points="668.306,249.522 678.072,257.297 "
+         id="polyline596"
+         style="fill:none" />
+      <polyline
+         points="678.072,257.297 689.79,267.964 "
+         id="polyline598"
+         style="fill:none" />
+      <polyline
+         points="689.79,267.964 709.322,287.394 "
+         id="polyline600"
+         style="fill:none" />
+      <polyline
+         points="709.322,287.394 723.775,301.159 "
+         id="polyline602"
+         style="fill:none" />
+      <polyline
+         points="723.775,301.159 732.759,308.444 "
+         id="polyline604"
+         style="fill:none" />
+      <polyline
+         points="732.759,308.444 740.181,313.215 "
+         id="polyline606"
+         style="fill:none" />
+      <polyline
+         points="740.181,313.215 746.431,316.055 "
+         id="polyline608"
+         style="fill:none" />
+      <polyline
+         points="746.431,316.055 751.9,317.447 "
+         id="polyline610"
+         style="fill:none" />
+      <polyline
+         points="751.9,317.447 755.025,317.711 "
+         id="polyline612"
+         style="fill:none" />
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g614"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#282828;stroke-width:0.85039401;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans" />
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g616"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#ffffff;fill-opacity:1;stroke:#008000;stroke-width:1.98424995;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <polyline
+         points="422.212,317.714 471.04,317.227 "
+         id="polyline618"
+         style="fill:none" />
+      <polyline
+         points="471.04,317.227 490.181,316.007 "
+         id="polyline620"
+         style="fill:none" />
+      <polyline
+         points="490.181,316.007 505.806,314.039 "
+         id="polyline622"
+         style="fill:none" />
+      <polyline
+         points="505.806,314.039 519.868,311.255 "
+         id="polyline624"
+         style="fill:none" />
+      <polyline
+         points="519.868,311.255 532.759,307.689 "
+         id="polyline626"
+         style="fill:none" />
+      <polyline
+         points="532.759,307.689 545.259,303.19 "
+         id="polyline628"
+         style="fill:none" />
+      <polyline
+         points="545.259,303.19 557.759,297.598 "
+         id="polyline630"
+         style="fill:none" />
+      <polyline
+         points="557.759,297.598 570.259,290.897 "
+         id="polyline632"
+         style="fill:none" />
+      <polyline
+         points="570.259,290.897 583.54,282.612 "
+         id="polyline634"
+         style="fill:none" />
+      <polyline
+         points="583.54,282.612 598.384,272.11 "
+         id="polyline636"
+         style="fill:none" />
+      <polyline
+         points="598.384,272.11 617.525,257.218 "
+         id="polyline638"
+         style="fill:none" />
+      <polyline
+         points="617.525,257.218 646.431,234.667 "
+         id="polyline640"
+         style="fill:none" />
+      <polyline
+         points="646.431,234.667 658.15,226.844 "
+         id="polyline642"
+         style="fill:none" />
+      <polyline
+         points="658.15,226.844 667.525,221.753 "
+         id="polyline644"
+         style="fill:none" />
+      <polyline
+         points="667.525,221.753 675.337,218.602 "
+         id="polyline646"
+         style="fill:none" />
+      <polyline
+         points="675.337,218.602 682.368,216.832 "
+         id="polyline648"
+         style="fill:none" />
+      <polyline
+         points="682.368,216.832 688.618,216.274 "
+         id="polyline650"
+         style="fill:none" />
+      <polyline
+         points="688.618,216.274 694.478,216.758 "
+         id="polyline652"
+         style="fill:none" />
+      <polyline
+         points="694.478,216.758 699.947,218.21 "
+         id="polyline654"
+         style="fill:none" />
+      <polyline
+         points="699.947,218.21 705.415,220.744 "
+         id="polyline656"
+         style="fill:none" />
+      <polyline
+         points="705.415,220.744 710.493,224.174 "
+         id="polyline658"
+         style="fill:none" />
+      <polyline
+         points="710.493,224.174 715.962,229.148 "
+         id="polyline660"
+         style="fill:none" />
+      <polyline
+         points="715.962,229.148 721.431,235.583 "
+         id="polyline662"
+         style="fill:none" />
+      <polyline
+         points="721.431,235.583 726.9,243.621 "
+         id="polyline664"
+         style="fill:none" />
+      <polyline
+         points="726.9,243.621 732.368,253.414 "
+         id="polyline666"
+         style="fill:none" />
+      <polyline
+         points="732.368,253.414 738.228,266.034 "
+         id="polyline668"
+         style="fill:none" />
+      <polyline
+         points="738.228,266.034 744.087,281.055 "
+         id="polyline670"
+         style="fill:none" />
+      <polyline
+         points="744.087,281.055 750.337,299.967 "
+         id="polyline672"
+         style="fill:none" />
+      <polyline
+         points="750.337,299.967 755.025,316.269 "
+         id="polyline674"
+         style="fill:none" />
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g676"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#282828;stroke-width:0.85039401;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans" />
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g678"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#ffffff;fill-opacity:1;stroke:#ff8c00;stroke-width:1.98424995;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans">
+      <polyline
+         points="422.212,317.714 518.306,317.22 "
+         id="polyline680"
+         style="fill:none" />
+      <polyline
+         points="518.306,317.22 544.868,316.04 "
+         id="polyline682"
+         style="fill:none" />
+      <polyline
+         points="544.868,316.04 564.4,314.21 "
+         id="polyline684"
+         style="fill:none" />
+      <polyline
+         points="564.4,314.21 580.415,311.738 "
+         id="polyline686"
+         style="fill:none" />
+      <polyline
+         points="580.415,311.738 594.478,308.567 "
+         id="polyline688"
+         style="fill:none" />
+      <polyline
+         points="594.478,308.567 606.978,304.73 "
+         id="polyline690"
+         style="fill:none" />
+      <polyline
+         points="606.978,304.73 618.306,300.231 "
+         id="polyline692"
+         style="fill:none" />
+      <polyline
+         points="618.306,300.231 628.853,294.995 "
+         id="polyline694"
+         style="fill:none" />
+      <polyline
+         points="628.853,294.995 639.009,288.836 "
+         id="polyline696"
+         style="fill:none" />
+      <polyline
+         points="639.009,288.836 648.775,281.719 "
+         id="polyline698"
+         style="fill:none" />
+      <polyline
+         points="648.775,281.719 658.15,273.629 "
+         id="polyline700"
+         style="fill:none" />
+      <polyline
+         points="658.15,273.629 667.134,264.571 "
+         id="polyline702"
+         style="fill:none" />
+      <polyline
+         points="667.134,264.571 676.118,254.083 "
+         id="polyline704"
+         style="fill:none" />
+      <polyline
+         points="676.118,254.083 685.103,241.999 "
+         id="polyline706"
+         style="fill:none" />
+      <polyline
+         points="685.103,241.999 694.087,228.146 "
+         id="polyline708"
+         style="fill:none" />
+      <polyline
+         points="694.087,228.146 702.681,213.067 "
+         id="polyline710"
+         style="fill:none" />
+      <polyline
+         points="702.681,213.067 711.275,196.022 "
+         id="polyline712"
+         style="fill:none" />
+      <polyline
+         points="711.275,196.022 720.259,175.897 "
+         id="polyline714"
+         style="fill:none" />
+      <polyline
+         points="720.259,175.897 729.243,153.195 "
+         id="polyline716"
+         style="fill:none" />
+      <polyline
+         points="729.243,153.195 738.228,127.673 "
+         id="polyline718"
+         style="fill:none" />
+      <polyline
+         points="738.228,127.673 747.212,99.0784 "
+         id="polyline720"
+         style="fill:none" />
+      <polyline
+         points="747.212,99.0784 755.025,71.506 "
+         id="polyline722"
+         style="fill:none" />
+    </g>
+    <g
+       font-size="9"
+       font-weight="400"
+       font-style="normal"
+       id="g724"
+       style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#282828;stroke-width:0.85039401;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:DejaVu Sans" />
+  </g>
+  <g
+     transform="translate(262.54374,-248.64614)"
+     id="g4161">
+    <text
+       id="text3798"
+       y="449.68341"
+       x="204.23729"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       xml:space="preserve"><tspan
+         y="449.68341"
+         x="204.23729"
+         id="tspan3800"
+         sodipodi:role="line">B</tspan></text>
+    <g
+       id="g4156">
+      <text
+         xml:space="preserve"
+         style="font-size:9px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         x="212.71185"
+         y="453.92072"
+         id="text3802"><tspan
+           sodipodi:role="line"
+           id="tspan3804"
+           x="212.71185"
+           y="453.92072">5, 0</tspan><tspan
+           sodipodi:role="line"
+           x="212.71185"
+           y="465.17072"
+           id="tspan3806" /></text>
+    </g>
+  </g>
+  <g
+     id="g4483"
+     transform="translate(11,-5)">
+    <g
+       id="g4169"
+       transform="translate(292.3979,84.930129)">
+      <g
+         id="g4286">
+        <text
+           id="text3808"
+           y="175.10715"
+           x="204.23729"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           xml:space="preserve"><tspan
+             y="175.10715"
+             x="204.23729"
+             id="tspan3810"
+             sodipodi:role="line">B</tspan><tspan
+             id="tspan3812"
+             y="192.60715"
+             x="204.23729"
+             sodipodi:role="line" /></text>
+        <text
+           id="text3814"
+           y="180.19189"
+           x="216.10168"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           xml:space="preserve"><tspan
+             y="180.19189"
+             x="216.10168"
+             id="tspan3816"
+             sodipodi:role="line">5,1</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g4183"
+       transform="translate(343.14491,8.8623193)">
+      <g
+         transform="translate(-34,-118)"
+         id="g4176">
+        <text
+           id="text3818"
+           y="369.17496"
+           x="242.37288"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           xml:space="preserve"><tspan
+             y="369.17496"
+             x="242.37288"
+             id="tspan3820"
+             sodipodi:role="line">B</tspan><tspan
+             id="tspan3822"
+             y="386.67496"
+             x="242.37288"
+             sodipodi:role="line" /></text>
+        <text
+           id="text3824"
+           y="374.2597"
+           x="252.54237"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           xml:space="preserve"><tspan
+             y="374.2597"
+             x="252.54237"
+             id="tspan3826"
+             sodipodi:role="line">5,2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g4197"
+       transform="translate(329.24127,72.64199)">
+      <g
+         id="g4367">
+        <text
+           id="text3828"
+           y="186.97156"
+           x="271.18643"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#800080;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           xml:space="preserve"><tspan
+             y="186.97156"
+             x="271.18643"
+             id="tspan3830"
+             sodipodi:role="line">B</tspan></text>
+        <text
+           id="text3832"
+           y="192.90376"
+           x="281.35593"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#800080;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           xml:space="preserve"><tspan
+             y="192.90376"
+             x="281.35593"
+             id="tspan3834"
+             sodipodi:role="line">5,3</tspan></text>
+      </g>
+    </g>
+    <g
+       style="fill:#008000"
+       id="g4197-6"
+       transform="translate(386.24127,72.64199)">
+      <g
+         style="fill:#008000"
+         id="g4367-9">
+        <text
+           id="text3828-7"
+           y="186.97156"
+           x="271.18643"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#008000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           xml:space="preserve"><tspan
+             y="186.97156"
+             x="271.18643"
+             id="tspan3830-2"
+             sodipodi:role="line">B</tspan></text>
+        <text
+           id="text3832-6"
+           y="192.90376"
+           x="281.35593"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#008000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           xml:space="preserve"><tspan
+             y="192.90376"
+             x="281.35593"
+             id="tspan3834-4"
+             sodipodi:role="line">5,3</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g
+     transform="translate(441.24127,13.218266)"
+     id="g4197-0"
+     style="fill:#ff6600">
+    <g
+       id="g4367-4"
+       style="fill:#ff6600">
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff6600;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         x="271.18643"
+         y="186.97156"
+         id="text3828-9"><tspan
+           sodipodi:role="line"
+           id="tspan3830-0"
+           x="271.18643"
+           y="186.97156">B</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:9px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff6600;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         x="281.35593"
+         y="192.90376"
+         id="text3832-5"><tspan
+           sodipodi:role="line"
+           id="tspan3834-5"
+           x="281.35593"
+           y="192.90376">5,3</tspan></text>
+    </g>
+  </g>
+</svg>

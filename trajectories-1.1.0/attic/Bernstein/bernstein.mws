@@ -1,0 +1,206 @@
+{VERSION 3 0 "IBM INTEL LINUX" "3.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 0 
+0 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 0 
+0 0 0 0 -1 0 }{PSTYLE "Maple Plot" 0 13 1 {CSTYLE "" -1 -1 "" 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 }3 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 475 "Les polynomes de Bernstei
+n sont definis pour un certain degre et pour un certain intervalle.  C
+es polynomes sont positifs a l'interieur de l'intervalle, seul le prem
+ier n'est pas nul en la borne inferieure de l'intervalle et seul le de
+rnier n'est pas nul en la borne inferieure.  Pour le degre p, le polyn
+ome de rang i atteint son maximum en i/p.  Les maxima de ces polynomes
+ ne sont pas alignes, mais la somme de tous les polynomes de Bernstein
+ donne le polynome constant 1." }}{PARA 0 "" 0 "" {TEXT -1 99 "L'expre
+ssion suivante permet de tracer les polynomes de Bernstein de degre 4 \+
+sur l'intervalle [0,1]" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "b
+ernstein0 := x -> (1-x)^4;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%+berns
+tein0GR6#%\"xG6\"6$%)operatorG%&arrowGF(*$),&\"\"\"F/9$!\"\"\"\"%\"\"
+\"F(F(F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "bernstein1 := x
+ -> binomial(4,1)*x*(1-x)^3;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%+ber
+nstein1GR6#%\"xG6\"6$%)operatorG%&arrowGF(*(-%)binomialG6$\"\"%\"\"\"F
+19$F1),&F1F1F2!\"\"\"\"$\"\"\"F(F(F(" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 45 "bernstein2 := x -> binomial(4,2)*x^2*(1-x)^2;" }
+{TEXT -1 0 "" }{MPLTEXT 1 0 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%+
+bernstein2GR6#%\"xG6\"6$%)operatorG%&arrowGF(*(-%)binomialG6$\"\"%\"\"
+#\"\"\")9$F1\"\"\"),&F2F2F4!\"\"F1F5F(F(F(" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 43 "bernstein3 := x -> binomial(4,3)*x^3*(1-x);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%+bernstein3GR6#%\"xG6\"6$%)operatorG
+%&arrowGF(*(-%)binomialG6$\"\"%\"\"$\"\"\")9$F1\"\"\",&F2F2F4!\"\"F2F(
+F(F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "bernstein4 := x -> \+
+x^4;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%+bernstein4GR6#%\"xG6\"6$%)o
+peratorG%&arrowGF(*$)9$\"\"%\"\"\"F(F(F(" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 97 "plot([bernstein0(x),bernstein1(x),bernstein2(x),berns
+tein3(x),bernstein4(x)],x=0..1,color=black);" }}{PARA 13 "" 1 "" 
+{INLPLOT "6*-%'CURVESG6#7S7$\"\"!$\"\"\"F(7$$\"1nmm;arz@!#<$\"1.SY*z3i
+:*!#;7$$\"1LL$e9ui2%F.$\"1nHpfZ]m%)F17$$\"1nmm\"z_\"4iF.$\"1Z*f\"*eL#Q
+xF17$$\"1mmmT&phN)F.$\"1.\"\\*)=MO0(F17$$\"1LLe*=)H\\5F1$\"1<,J.LU=kF1
+7$$\"1nm\"z/3uC\"F1$\"14\"QY6l(oeF17$$\"1++DJ$RDX\"F1$\"1XU%ztHwL&F17$
+$\"1nm\"zR'ok;F1$\"1#oRQX;r#[F17$$\"1++D1J:w=F1$\"1F/Hs#*ebVF17$$\"1LL
+L3En$4#F1$\"1yRG.<]2RF17$$\"1nm;/RE&G#F1$\"1x/g/:HUNF17$$\"1+++D.&4]#F
+1$\"1Y*Q88fC;$F17$$\"1+++vB_<FF1$\"1\\%4p5cE\"GF17$$\"1+++v'Hi#HF1$\"1
+P)eB7CQ]#F17$$\"1nm\"z*ev:JF1$\"1*pZ'*3zgC#F17$$\"1LLL347TLF1$\"1'H>K3
+&4m>F17$$\"1LLLLY.KNF1$\"1$\\%zZ<8]<F17$$\"1++D\"o7Tv$F1$\"1S7[yl'=_\"
+F17$$\"1LLL$Q*o]RF1$\"1t-IoC8R8F17$$\"1++D\"=lj;%F1$\"1^'*)G0H\"e6F17$
+$\"1++vV&R<P%F1$\"1cL(RL_M+\"F17$$\"1LL$e9Ege%F1$\"1.Qh!R89f)F.7$$\"1L
+LeR\"3Gy%F1$\"1.jz)4*y3uF.7$$\"1nm;/T1&*\\F1$\"1J[#y/;ZF'F.7$$\"1mm\"z
+RQb@&F1$\"1/SL\\@,S_F.7$$\"1***\\(=>Y2aF1$\"1giE#3u%[WF.7$$\"1mm;zXu9c
+F1$\"1!*3\">)y5)p$F.7$$\"1+++]y))GeF1$\"1h/()ya'p-$F.7$$\"1****\\i_QQg
+F1$\"1:Co\">RJY#F.7$$\"1***\\7y%3TiF1$\"1@Agq<T'*>F.7$$\"1****\\P![hY'
+F1$\"19.,P)G&f:F.7$$\"1LLL$Qx$omF1$\"1N(RlXN?B\"F.7$$\"1+++v.I%)oF1$\"
+1!z%>4!>PU*!#=7$$\"1mm\"zpe*zqF1$\"1Q$o`-h.F(F\\v7$$\"1+++D\\'QH(F1$\"
+1=bkbv(GO&F\\v7$$\"1KLe9S8&\\(F1$\"1<*GfJ^n$RF\\v7$$\"1***\\i?=bq(F1$
+\"1S-`*[];x#F\\v7$$\"1LLL3s?6zF1$\"1eiAy^i.>F\\v7$$\"1++DJXaE\")F1$\"1
+6)o)[W*=B\"F\\v7$$\"1nmmm*RRL)F1$\"1D1,k:#[q(!#>7$$\"1mm;a<.Y&)F1$\"1M
+<eMg4pWF`x7$$\"1LLe9tOc()F1$\"13m[.//#R#F`x7$$\"1+++]Qk\\*)F1$\"1B+$=C
+cr@\"F`x7$$\"1LL$3dg6<*F1$\"1^0I\\PM>Z!#?7$$\"1mmmmxGp$*F1$\"1Ewrh=V#e
+\"Fey7$$\"1++D\"oK0e*F1$\"1&fi7*)Rf4$!#@7$$\"1++v=5s#y*F1$\"1l3c+))zGA
+!#A7$F)F(-F$6#7in7$F(F(7$$\"1mmmT&)G\\aF\\v$\"1&\\2vavU9#F.7$$\"1LLL3x
+&)*3\"F.$\"1c-IPQW=UF.7$$\"1++]ilyM;F.$\"1%p#[TslBiF.7$F,$\"1C74n'f5;)
+F.7$$\"1++D\"y%*z7$F.$\"1%)\\'30?u8\"F17$F3$\"1-Xag[8R9F17$$\"1++voMrU
+^F.$\"1s*e$3qvb<F17$F8$\"1@xoJ)\\\"\\?F17$$\"1nmmm6m#G(F.$\"1,n5TO%=K#
+F17$F=$\"1$\\f_lFEd#F17$$\"1++v=ddC%*F.$\"1&y#[VoD,GF17$FB$\"1[r-G$[(4
+IF17$$\"1++v=JN[6F1$\"1SB&*=1s&=$F17$FG$\"1*4Og:NcM$F17$FL$\"1f,!z)oEG
+OF17$FQ$\"10x9%\\)=cQF17$FV$\"18ahoveBSF17$Fen$\"1jio_#y*QTF17$$\"1++D
+c#o%*=#F1$\"1(H<hvBH<%F17$Fjn$\"1k6;L\"*>(>%F17$$\"1LLe9r5$R#F1$\"1w)R
+$G+^8UF17$F_o$\"1Mdm$f\\(=UF17$$\"1+++]jB4EF1$\"1h<5ZS[8UF17$Fdo$\"1L*
+p\\Bs#)>%F17$$\"1+++Dg(=#GF1$\"1!y^<+`Z<%F17$Fio$\"1iI=6/1VTF17$F^p$\"
+1j\\eQCBmSF17$Fcp$\"1K$4QG')f%RF17$Fhp$\"1jKn_l&G#QF17$F]q$\"1pMavJ*)e
+OF17$Fbq$\"1c=S$\\Z#)\\$F17$Fgq$\"1;TLK(H&3LF17$F\\r$\"1:`&4,=x6$F17$F
+ar$\"1aOX(f=5\"HF17$Ffr$\"1w3*=9tnr#F17$F[s$\"1;3-\"*e$\\]#F17$F`s$\"1
+)4C\")\\`[G#F17$Fes$\"1$*>(=yL^4#F17$Fjs$\"1eeF,p(R*=F17$F_t$\"1.mDNO+
+#p\"F17$Fdt$\"1)oIEg\\<]\"F17$Fit$\"1:)\\#=0*eK\"F17$F^u$\"1Sx..PVT6F1
+7$Fcu$\"1#y.t8vQ')*F.7$Fhu$\"1\"*em=*y)G$)F.7$F^v$\"1Q+`&Q860(F.7$Fcv$
+\"1:+/d1%=y&F.7$Fhv$\"1E?yVa'=r%F.7$F]w$\"1JkN2U>BPF.7$Fbw$\"1%[z\\LdR
+)GF.7$Fgw$\"1haJX.XP@F.7$F\\x$\"1?!*49wjT:F.7$Fbx$\"1oeenas]5F.7$Fgx$
+\"1M0+)z.pt'F\\v7$F\\y$\"1f#oh'4N[TF\\v7$Fay$\"1y(z@X$z)3#F\\v7$Fgy$\"
+12[0py'GS*F`x7$F\\z$\"1/!pD!4UGGF`x7$Fbz$\"18CVhy&R,%FeyFgz-F$6#7YF[[l
+7$Fb[l$\"1`'fd#GCspF`x7$F,$\"1p_X()exFFF\\v7$F_\\l$\"1FE@B+44bF\\v7$F3
+$\"1'3i!o]Rt\"*F\\v7$F8$\"1?r=.4([.#F.7$F=$\"1uO\")p'='=NF.7$FB$\"1Adb
+a$HDH&F.7$FG$\"1OSn=PB_rF.7$FL$\"1r'4$*Q7([#*F.7$FQ$\"1lSc,v?b6F17$FV$
+\"1/hEsY$QR\"F17$Fen$\"1B&onriSk\"F17$Fjn$\"1\"*e#**QX\\'=F17$F_o$\"1*
+oRy/W/6#F17$Fdo$\"1$*)3)o[$*\\BF17$Fio$\"1[\"3))**43d#F17$F^p$\"1:/gg#
+=0w#F17$Fcp$\"1Kvr.J()pHF17$Fhp$\"1PH&eW&QJJF17$F]q$\"1-afTgy)H$F17$Fb
+q$\"1HC9s!epU$F17$Fgq$\"1a\"zZg8Wa$F17$F\\r$\"1+kK@9_KOF17$Far$\"1B4V4
+Rw)p$F17$Ffr$\"1V$)3g;'et$F17$$\"1+](=7O*))[F1$\"1([LuN+ju$F17$F[s$\"1
+eK3\"p#**\\PF17$$\"1m;/^7I0^F1$\"19#o;Bumu$F17$F`s$\"1(>8\"4f2OPF17$Fe
+s$\"1EJm@yN+PF17$Fjs$\"1wZfIO[POF17$F_t$\"1\"\\Mwu:na$F17$Fdt$\"14[7uC
+]LMF17$Fit$\"1V%RfbZ@I$F17$F^u$\"1c'*R/u%G8$F17$Fcu$\"1Nf\"3uT9'HF17$F
+hu$\"1IOyvOYgFF17$F^v$\"12CMY!HWc#F17$Fcv$\"1=k.w`dPBF17$Fhv$\"10\"[3X
+Z[6#F17$F]w$\"1)QJ&H2`v=F17$Fbw$\"1cPs%[G%Q;F17$Fgw$\"1.o]lCv!R\"F17$F
+\\x$\"1I')=2Mtc6F17$Fbx$\"1hu^%z>QE*F.7$Fgx$\"1l1\"Q(*R^6(F.7$F\\y$\"1
+gmp'e`>I&F.7$Fay$\"1>#)*yp%*oY$F.7$Fgy$\"1zfT+p?&4#F.7$F\\z$\"1c0%)zz1
+!p*F\\v7$$\"1+++]oi\"o*F1$\"1$RD$GIg+dF\\v7$Fbz$\"1c*ekK`3r#F\\v7$$\"1
++]P40O\"*)*F1$\"1<8]ND\\GpF`xFgz-F$6#7inF[[l7$F,$\"1'yn&3g<_SFey7$F3$
+\"1=h/+*>))f#F`x7$F8$\"1ex%H*4&3)*)F`x7$F=$\"1!fq&zF()Q@F\\v7$FB$\"1p5
+OVtJOTF\\v7$FG$\"1-)yPz8bz'F\\v7$FL$\"1Wgg;e!y/\"F.7$FQ$\"1\"pLS2\"3Q:
+F.7$FV$\"1j$)faV)f9#F.7$Fen$\"1\">\\$>cU-HF.7$Fjn$\"10:'f&=!Ho$F.7$F_o
+$\"1vjnzHD#p%F.7$Fdo$\"1-iM)H'*f%eF.7$Fio$\"1H;*RzN)*3(F.7$F^p$\"1#>oy
+7i#H$)F.7$Fcp$\"1*Hk#\\(4V$**F.7$Fhp$\"1MIwDR**R6F17$F]q$\"1QQD^8$=K\"
+F17$Fbq$\"1a^(*oR0#\\\"F17$Fgq$\"1T2)ol1wo\"F17$F\\r$\"1Qye8c.\")=F17$
+Far$\"1U$)>\\ku)3#F17$Ffr$\"1K))Hc!4KG#F17$F[s$\"1NW(*3T1&\\#F17$F`s$
+\"1Y5+O#H^r#F17$Fes$\"1m7:.dk/HF17$Fjs$\"1a=bl0)[5$F17$F_t$\"1FIT2+A/L
+F17$Fdt$\"1c`=<&\\*)[$F17$Fit$\"1&yI,]H^l$F17$F^u$\"1YLG(R+;#QF17$Fcu$
+\"1qxAh-j^RF17$Fhu$\"1\"=lCrei1%F17$F^v$\"1wZ(*e'e^9%F17$$\"1L$e9\"=\"
+p=(F1$\"1`Zo')e0xTF17$Fcv$\"1R$*e[AK+UF17$$\"1n;zp%*\\%R(F1$\"1-JM#yMQ
+@%F17$Fhv$\"1'p)>a$R(=UF17$$\"1mmT5hK+wF1$\"1ECu6%RT@%F17$F]w$\"1(3\\T
+VT!*>%F17$$\"1m;H2FO3yF1$\"1Im=:(yN<%F17$Fbw$\"1gif*)>)p8%F17$Fgw$\"1/
+qVig!=-%F17$F\\x$\"1B.Z[FYdQF17$Fbx$\"1bd,+],IOF17$Fgx$\"1s0Nru#)RLF17
+$$\"1m;H#e0I&))F1$\"1F_BVoT$=$F17$F\\y$\"1,$3(GZr6IF17$$\"1nmT5ASg!*F1
+$\"1e*f**)GS&z#F17$Fay$\"15>-OsUdDF17$$\"1++voTAq#*F1$\"1by7@0_DBF17$F
+gy$\"1)G)*o(f'\\2#F17$$\"1L$eRA5\\Z*F1$\"1$zjn<lly\"F17$F\\z$\"1I)*4:)
+eaZ\"F17$Fcam$\"14WUS-pb6F17$Fbz$\"1!)=<fv&o8)F.7$$\"1+D1k2/P)*F1$\"1B
+[pwc'[?'F.7$F[bm$\"1FR5_A[0UF.7$$\"1+voa-oX**F1$\"17Hv!=uv8#F.Fgz-F$6#
+7SF[[l7$F,$\"1G(orY^tD#Ffz7$F3$\"1mMF'==4w#F`z7$F8$\"1uSp1%yj[\"Fey7$F
+=$\"1G>IV,hv[Fey7$FB$\"16?bt(fA@\"F`x7$FG$\"1**))f?&>7U#F`x7$FL$\"1aH-
+kNb^WF`x7$FQ$\"1b7=XIWzwF`x7$FV$\"1u;#o80!R7F\\v7$Fen$\"15<jKlZ@>F\\v7
+$Fjn$\"16<jr'yts#F\\v7$F_o$\"1d$*z=H>7RF\\v7$Fdo$\"140rZfr`aF\\v7$Fio$
+\"1e(y]#))=KtF\\v7$F^p$\"1&Q5!Q)*RC%*F\\v7$Fcp$\"1BTFVb9Y7F.7$Fhp$\"1M
+F;zKKc:F.7$F]q$\"1R0EJ&Gi)>F.7$Fbq$\"1\"*G!=(*zgV#F.7$Fgq$\"1'Qj6`4K,$
+F.7$F\\r$\"1S4d,is_OF.7$Far$\"1Fqb[qHBWF.7$Ffr$\"1&=B%=BxK_F.7$F[s$\"1
+s+RTqNDiF.7$F`s$\"1&e#G=9S*R(F.7$Fes$\"1())p3&G:]&)F.7$Fjs$\"1NU'Q9\"[
+Q**F.7$F_t$\"1L)3=1kV:\"F17$Fdt$\"104*o[%[H8F17$Fit$\"1O(>'[7><:F17$F^
+u$\"1F#y:hl\"[<F17$Fcu$\"1V>dQpLx>F17$Fhu$\"1_EzHD:YAF17$F^v$\"1Ih(eM(
+f7DF17$Fcv$\"1'y8T`*GIGF17$Fhv$\"12dTP\"fe:$F17$F]w$\"1z&)o5>RDNF17$Fb
+w$\"1t(*RSv:<RF17$Fgw$\"1ef.$\\x8O%F17$F\\x$\"1MrOh_$R#[F17$Fbx$\"1J$R
+xPhSL&F17$Fgx$\"1p[)GX(*)yeF17$F\\y$\"1?&=nC*Q:kF17$Fay$\"1S:HDM_uqF17
+$Fgy$\"1))[+AA&fq(F17$F\\z$\"1#G+[7\"yC%)F17$Fbz$\"1zKB'3-)e\"*F17$F)F
+)-%'COLOURG6&%$RGBGF(F(F(-%+AXESLABELSG6$Q\"x6\"%!G-%%VIEWG6$;F(F)%(DE
+FAULTG" 2 378 378 378 2 0 1 0 2 6 0 4 2 1.000000 45.000000 45.000000 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 4861 0 0 0 0 0 0 }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 95 "Dans l'expression suivante, nous a
+dditionons les 5 polynomes pour obtenir le resultat escompte." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 78 "expand(bernstein0(x)+bernste
+in1(x)+bernstein2(x)+bernstein3(x)+bernstein4(x));" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#\"\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 354 "Suppo
+sons que nous voulons representer le polynome donne par les coefficien
+ts (a_i) dans cette base, il suffit d'effectuer les deux etapes suivan
+tes: retourner les coefficients, puis composer a droite avec le polyno
+me x+1.   Le polynome que l'on obtient contient les coefficients de Be
+rnstein multiplies par des coefficients binomiaux.  Voici un exemple.
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "P := x -> -30*x**4+40*x
+^2-20*x+2;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"PGR6#%\"xG6\"6$%)ope
+ratorG%&arrowGF(,**$)9$\"\"%\"\"\"!#I*$)F/\"\"#F1\"#SF/!#?F5\"\"\"F(F(
+F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "plot(P(x),x=0..1);" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 13 "" 1 "" {INLPLOT "6%-%
+'CURVESG6$7W7$\"\"!$\"\"#F(7$$\"1nmm;arz@!#<$\"1$)G!=yaIe\"!#:7$$\"1LL
+$e9ui2%F.$\"1-d$pQE6D\"F17$$\"1nmm\"z_\"4iF.$\"1iq0<%y$>\"*!#;7$$\"1mm
+mT&phN)F.$\"1p)*fio0mgF<7$$\"1LLe*=)H\\5F<$\"1>#yx<v<Q$F<7$$\"1nm\"z/3
+uC\"F<$\"1xx23)4L?\"F<7$$\"1++DJ$RDX\"F<$!1')*yg'>^[uF.7$$\"1nm\"zR'ok
+;F<$!1-P0O!)QRCF<7$$\"1++D1J:w=F<$!1//o`<'\\\"QF<7$$\"1LLL3En$4#F<$!1n
+\\\"H;Ng\"\\F<7$$\"1nm;/RE&G#F<$!1VX2QswLcF<7$$\"1+++D.&4]#F<$!1'QpJEa
+O<'F<7$$\"1+++vB_<FF<$!1'e5)\\3&oW'F<7$$\"1+++v'Hi#HF<$!1.77/(pHZ'F<7$
+$\"1nm\"z*ev:JF<$!1pk7[')p5jF<7$$\"1LLL347TLF<$!1+/3+\"*\\3fF<7$$\"1LL
+LLY.KNF<$!1Q.*)**ye3aF<7$$\"1++D\"o7Tv$F<$!1`LpC6\\nYF<7$$\"1LLL$Q*o]R
+F<$!1)[Wx;T-*QF<7$$\"1++D\"=lj;%F<$!1u2OCp`KHF<7$$\"1++vV&R<P%F<$!1()H
+;EHaW>F<7$$\"1LL$e9Ege%F<$!1k**p7#3(Q')F.7$$\"1LLeR\"3Gy%F<$\"157AL0Nl
+9F.7$$\"1nm;/T1&*\\F<$\"1>QV6%3`A\"F<7$$\"1mm\"zRQb@&F<$\"10:R24R)H#F<
+7$$\"1***\\(=>Y2aF<$\"1\\gJ$o!)G;$F<7$$\"1mm;zXu9cF<$\"1E)*>U<4\"*RF<7
+$$\"1+++]y))GeF<$\"1'[XsTb]p%F<7$$\"1****\\i_QQgF<$\"1'f\"yck9'>&F<7$$
+\"1***\\7y%3TiF<$\"1]$4M!R7naF<7$$\"1****\\P![hY'F<$\"1nN6uENwaF<7$$\"
+1LLL$Qx$omF<$\"1s5Q#)=P\"=&F<7$$\"1+++v.I%)oF<$\"1257>Ky.XF<7$$\"1mm\"
+zpe*zqF<$\"1,i?Aj;ENF<7$$\"1+++D\\'QH(F<$\"11u;`w(e,#F<7$$\"1KLe9S8&\\
+(F<$\"1AN=@<\"oH\"F.7$$\"1***\\i?=bq(F<$!1YlDQ\"y?P#F<7$$\"1LLL3s?6zF<
+$!1)p=fSs+R&F<7$$\"1++DJXaE\")F<$!1W;_U8J4#*F<7$$\"1nmmm*RRL)F<$!1OJBq
+N'yN\"F17$$\"1mm;a<.Y&)F<$!1G8EWTQ!)=F17$$\"1LLe9tOc()F<$!1Q*f'o&R)zCF
+17$$\"1+++]Qk\\*)F<$!1L%=MU0q5$F17$$\"1LL$3dg6<*F<$!1$4Q6$p\"=#RF17$$
+\"1++voTAq#*F<$!1Z')RN(e6K%F17$$\"1mmmmxGp$*F<$!1PT](*3,VZF17$$\"1L$eR
+A5\\Z*F<$!1Bhh/JK=_F17$$\"1++D\"oK0e*F<$!1>6Iahw?dF17$$\"1+++]oi\"o*F<
+$!1mw&zZDyA'F17$$\"1++v=5s#y*F<$!1AE#R3'>hnF17$$\"1+]P40O\"*)*F<$!1PV-
+iJ`ktF17$$\"\"\"F($!\")F(-%'COLOURG6&%$RGBG$\"#5!\"\"F(F(-%+AXESLABELS
+G6$Q\"x6\"%!G-%%VIEWG6$;F(Fh[l%(DEFAULTG" 2 378 378 378 2 0 1 0 2 9 0 
+4 2 1.000000 45.000000 45.000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+1 0 0 0 0 -8 0 0 0 0 0 0 }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 260 "Nous \+
+inversons les polynomes en effectuant les operations suivantes, compos
+er a droite par 1/x, puis multiplier par x^4 (4 est le degre).  En fai
+t, cette operation est aussi effectuee en echangeant simplement les co
+efficient de haut degre avec les coefficients" }}{PARA 0 "" 0 "" 
+{TEXT -1 13 "de bas degre." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+21 "simplify(x^4*P(1/x));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,*!#I\"\"
+\"*$)%\"xG\"\"#\"\"\"\"#S*$)F(\"\"$F*!#?*$)F(\"\"%F*F)" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "expand(subs(x=x+1,%));" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6#,,!\")\"\"\"*$)%\"xG\"\"#\"\"\"F$F(\"#G*$)F(\"
+\"$F*!#7*$)F(\"\"%F*F)" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 157 "Les co
+efficients binomiaux devraient etre (en reprenant les coeff. de ce pol
+ynome dans l'ordre inverse, puis en divisant par le coefficient binomi
+al adapte):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "2/binomial(4
+,0);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"#" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 18 "-12/binomial(4,1);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#!\"$" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "-8/binomial(4
+,2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6##!\"%\"\"$" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 17 "28/binomial(4,3);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "-8/
+binomial(4,4);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#!\")" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 39 "Le calcul suivant est une confirmation:" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 92 "simplify(2*bernstein0(x)-
+3*bernstein1(x)-4/3*bernstein2(x)+7*bernstein3(x)-8*bernstein4(x));" }
+{TEXT -1 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,**$)%\"xG\"\"%\"\"\"!
+#I*$)F&\"\"#F(\"#SF&!#?F,\"\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 15 "simplify(P(x));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,**$)%\"xG
+\"\"%\"\"\"!#I*$)F&\"\"#F(\"#SF&!#?F,\"\"\"" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 145 "Lorsque l'intervalle considere n'est pas (0,1), on com
+mence par se ramener sur cet intervalle par une translation et une con
+traction du polynome." }}}}{MARK "23 1" 0 }{VIEWOPTS 1 1 0 1 1 1803 }

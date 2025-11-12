@@ -1,0 +1,9 @@
+cmvt.vo: cmvt.v pol.vo
+cmvt.vi: cmvt.v pol.vo
+desc.vo: desc.v pol.vo cmvt.vo
+desc.vi: desc.v pol.vo cmvt.vo
+pol.vo: pol.v
+pol.vi: pol.v
+cmvt.html: cmvt.v pol.html
+desc.html: desc.v pol.html cmvt.html
+pol.html: pol.v

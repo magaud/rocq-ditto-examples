@@ -1,0 +1,869 @@
+\documentclass{llncs}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Safe smooth paths between straight line obstacles}
+\author{Yves Bertot
+\orcidID{0000-0001-5052-3019}}
+\authorrunning{Y. Bertot}
+\institute{Inria Université Côte d'Azur\\
+\email{yves.bertot@inria.fr}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We describe a collections of algorithm to compute smooth trajectories between
+obstacles, with the objective that the obtained trajectories should be
+smooth.  In particular, we use a vertical cell decomposition algorithm
+to avoid the obstacles, a best first search algorithm to obtain
+trajectory sketches and Bézier curves to implement smoothness.  We also
+provide some insights into the correctness arguments for these
+algorithms.  These correctness arguments are intended for use in a
+formal proof.  While we have running implementations of the full
+program, the formal proofs of correctness are still incomplete.
+\end{abstract}
+\section{Introduction}
+One benefit of formal verification is the removal of errors at early
+stages in the design of complex artifacts.  This is being used
+extensively for software with great success.  We wish to extend this
+to domains where the distance between formal models and the real
+application is bigger.  We choose to work on robotics.  For this
+field, there is a large distance between models and real
+implementations, because our knowledge of physics is incomplete, the
+world needs to be represented through geometrical abstractions, and
+there are limitations to what computers can compute accurately and
+what sensors and actuators can do in terms of precision.
+
+To begin with we will look only at a question involving geometry.  We
+wish to present a comprehensive Coq program to compute trajectories
+for a robot modeled as a point between obstacles that are given by
+straight line segments.  We aim for smooth trajectories, since such
+trajectories can be traveled by wheeled robots without a need to stop to
+change direction.    As an illustration of a robot able to exploit
+such a collection of trajectories, one may think of a gyropod (a
+two wheeled robot standing upward by active control, where the two
+wheels can rotate a different speeds).  Such a robot has no
+restriction on rotation radius, but of course the curves must be taken
+more and more slowly as the curve is tight.  For a sharp angle, such a
+robot can stop and change direction on the spot by having the two
+wheels rotate in opposite directions.
+
+The program we wish to describe formally receives as inputs
+descriptions of problems like this drawing, where the bottom and top
+straight lines delimit the workspace, the other straight lines
+represent obstacles, and the cross marks represent the starting and
+final extremities of the required trajectory:
+\begin{center}
+\includegraphics[,trim={0 0 0 8cm}, clip, width=0.3\textwidth]{empty_spiral.pdf}
+\end{center}
+The output of the program should be smooth trajectories like the curved
+line that appears in this picture, when such trajectories are possible:
+\begin{center}
+\includegraphics[,trim={0 0 0 8cm}, clip, width=0.3\textwidth]{smooth_spiral_bare.pdf}
+\end{center}
+Using straight line segments for obstacles may seem unrealistic at
+first thought, but these segments can be connected together to form
+polygons and these polygons can in turn be used to safely
+over approximate obstacles with more complex geometry.
+
+For trajectories, the most general way to describe them is to
+give a representation of the position of a point in time,
+as an interval of time \([0, T]\) and a continuous function \(f : {\mathbb R}
+\rightarrow {\mathbb R}^2\), such that \(f(0)\) is one of the given
+extremities, \(f(T)\) is the other given extremity.  the smoothness property
+could be expressed by the fact that the derivative is continuous and
+never 0 in the open interval \((0,T)\).
+
+For the purpose of this
+paper, we will rather describe trajectories as the concatenation of
+elementary fragments, where each fragment is connected to the next one
+by an extremity.  The elementary fragments we use here are either
+straight line segments or Bézier curves.  Obviously, each elementary
+segment can be traveled by a function from interval \([0,1]\) to
+\({\mathbb R}^2\), and thanks to a translation and scaling on inputs,
+a sequence of elementary fragments can be transformed into a
+trajectory represented by a single interval and continuous function.
+
+By combining this function \(f\) with a function \(g: {\mathbb R}
+\rightarrow {\mathbb R}\), we could guarantee more properties about
+the robot behavior, like limiting accelerations imposed on the
+payload, for instance.
+
+The main property that we want to prove is that the trajectory does
+not collide with the obstacles.  Since the obstacles are given as
+straight line segments, this main property is only about ensuring that
+there is no intersection between the set \(f([0,T])\) and the union of
+these segments, viewed as sets of points.  Making that the function
+\(f\) has indeed a continuous and nonzero speed in the open interval
+\((0,T)\) is an important guideline for our work, but obtaining a formal
+proof of this fact is beyond the scope of this article.  We will
+however discuss some approaches to this property as we study the
+various parts of the trajectory computation.
+
+Also, because of our limited time frame, we cannot address
+questions of optimality.  We wish to describe a program that produces
+trajectories with the stated properties, but we have to accept any
+algorithm that gives reasonable solutions.
+\section{A combination of algorithms}
+The Coq program contains four phases, where each corresponds to a
+different algorithm.  For the first two phases, the basic blocks are
+concerned with converting the geometry of the problem into a discrete
+problem, using sorting and a recursive treatment of the obtained
+sorted list.  The result of the first two phases consists in a
+collection of cells, where each cell has a single higher edge and a single
+lower edge, connected by two vertical sides.  The higher and lower
+edges are portions of obstacles, and one of the vertical sides may be
+reduced to a point.  So in the general case the cells have three
+sides, but in some cases they may have only three.  When not reduced
+to a point, the vertical sides are safe boundaries that can be crossed
+from one cell to its neighbors without collision with the
+obstacles.  a convex polygon connected to neighbors by safe boundaries
+that can be crossed without collision with the obstacles.
+
+For our running example, the result of these first two phases is
+described in the following picture, where safe boundaries are shown as
+dashed lines and cell numbers correspond to the order in which closed
+cells are added to the result.  There are 14 cells, numbered from 0 to 13.
+\begin{center}
+\includegraphics[,trim={0 0 0 8cm}, clip, width=0.3\textwidth]{cells_spiral2.pdf}
+\end{center}
+The problem becomes one of moving between cells. The collection of cells and
+safe boundaries is used to
+construct an abstract view of the trajectory, viewed simply as a path
+between the cross marks and cell boundaries.  For this phase, a simple
+graph algorithm is
+used.  A sketch of the trajectory is built as a broken line from the
+cross marks to centers of safe boundaries of the cells that contain
+them, and then
+between safe boundaries.  This broken line already represents a possible
+path, and we hope to prove that this path is safe thanks to the fact
+that cells are convex and the segments are each included in one
+cell at a time, except for their extremities which are members of a cell
+boundary or equal to one of the cross marks.
+\begin{center}
+\includegraphics[,trim={0 0 0 8cm}, clip, width=0.3\textwidth]{spiral_bline.pdf}
+\end{center}
+However, such a broken line is unsatisfactory
+as a robot trajectory, because each corner would impose that the robot
+stops to rotate and change direction.  A last phase is added to find
+smooth curved lines in the vicinity of the broken line, and extra proofs are
+required to show that the smooth trajectories still avoid collisions with
+the obstacles.  This phase can itself be decomposed in two parts, where one
+proposes a Bézier curve for testing, and the other checks that the given
+Bézier curve is safe.  When the test check fails, a curve that is closer
+to the initial broken line is proposed.  In the case where the
+repetitive process does not converge fast enough, it is possible to
+use the initial broken line as
+a fallback solution (but in this case, smoothness is not obtained).
+
+As a summary, the input to the program is composed of three parts:
+\begin{enumerate}
+\item a top and a bottom straight line segments forming a box in
+which all other obstacles have to be included,
+\item a sequence of segments describing the obstacles,
+\item and a pair of points describing the extremities that have to be
+joined by some trajectory.
+\end{enumerate}
+Given such an input, it may be that there exists no trajectory between
+the mandated extremities, for instance when an extremity is inside
+a closed polygon and the other extremity is outside.
+
+When a trajectory exists, the output is a sequence of trajectory
+fragments, where each trajectory
+fragment is either a straight line segment or a bounded quadratic Bézier
+curve given by three control points.  This sequence of fragments connects
+the two extremities (in the sense that one of the extremities of the
+first fragment is one of the input extremities, and one of the
+extremities of the last fragment is the other input extremity) and the
+fragments are connected, in the sense that two successive fragments of
+the sequence share an extremity.  Moreover, the connection is smooth,
+in the sense that the connected fragments have the same tangent at the
+point of connection, and this tangent is traveled in the same direction.
+
+The program that is described in this paper is fully implemented in
+the functional language provided inside Coq.  This implementation has
+to relinquish on one of the constraints.  In cases where making the
+trajectory smooth requires recursive computations whose termination is
+too hard to prove, a fallback solution constructed with
+adjacent segments that are not aligned is chosen.  The Coq
+program can be extracted and processed for running in other
+contexts as will be illustrated later in the paper.
+
+This project is currently in progress in the sense that the program
+computing the trajectories is fully implemented in Coq, but most of the
+formal proofs of correctness are currently being developed.
+
+For the property of obstacle avoidance, we plan to use the fact that
+each trajectory fragment and each straight line segment can be viewed
+as the image set of a function of type \(K \rightarrow K^2\), where \(K\) is
+the field used to
+represent coordinates, for the interval \([0,1]\).  So if an obstacle is
+represented by the function \(f_o\) and a trajectory fragment is
+represented by the function \(f_t\), we can state that this trajectory
+fragment avoids this obstacle with the following mathematical formula:
+\[\forall x y \in [0,1], f_o(x) \neq f_t(y)\]
+We can then state a general safety property by repeating this avoidance
+criterion for all obstacles and all trajectory fragments.
+
+\section{Producing a sequence of events}
+The first objective is to produce a collection of cells with the following
+properties:
+\begin{enumerate}
+\item The interior of each cell is free of obstacles
+\item The parts of the boundaries of these cells that can be crossed
+  safely to reach other cells are known precisely
+\end{enumerate}
+To achieve this objective, we took inspiration from an algorithm known as
+{\em vertical cell decomposition} \cite{Latombe91}.  The intuitive
+operational model of this algorithm is that a vertical line is
+sweeping the working space from left to right.  When the extremity of
+an obstacle segment or the intersection between two obstacle segments
+is encountered, some internal view of the cells is updated, ultimately
+producing a collection of closed cells.  To represent this sweeping
+operations, we chose to implement a sorting algorithm that takes as
+input the list of segments and produces as output a list of {\em
+  events}.  Each event corresponds to an obstacle extremity and is
+annotated with the sequence of segments that have this event as
+leftmost extremity.
+
+Here is an example with three segments and the corresponding list of events.
+For this example, we write \((a, [s_1;s_2])\) for an event whose location is
+given by point \(a\) and whose sequences contains \(s_1\) and \(s_2\).
+
+\begin{center}
+\includegraphics[,trim={0 5cm 0 12cm}, clip, width=0.3\textwidth]{sorting_input.pdf}
+\end{center}
+\[ (a, [s_2; s_1]); (d, [s_3]); (b, []); (c, []); (e,[])\]
+
+We chose to simplify the problem by assuming that segments only
+intersect at their extremities.  This assumption is not hard to
+satisfy, as it is possible to take a collection of segments which do
+not satisfy this assumption and produce a new collection of segments
+that cover exactly the same points of the plane but satisfy the
+assumption.  We implemented a naive program that performs this cleaning
+step by visiting all pairs of edges and, upon detecting an
+intersection, replacing the two edges either by three edges or four
+edges depending on whether the extremity of one edge is in the middle
+of the other or whether they cross in their middle.
+
+Another simplification to our presentation of the problem is that
+vertical segments are not allowed in our input.  Again, we think that
+it is possible to work around this limitation: If one wishes to add
+vertical obstacles, only their extremities should be added as events
+without outgoing edges in the sequence of events.  We expect the
+cells to be created where a safe boundary appears between the two
+events.  It is enough to remove this safe boundary from the cells to
+avoid collisions with the corresponding vertical obstacle.  This
+approach is not implemented in our current version of the algorithm.
+
+The sorting algorithm works as follows: every time a new segment is
+processed, two events are considered for addition in the sequence of events.
+The first event is for the leftmost extremity of the segment.  If an
+event already exists at the same location, then the current segment is
+simply added to the annotation of the existing event.  If no event exists
+with that location, the event is simply added, again with the current segment
+in the event annotation.  The second event for the rightmost extremity of the
+segment is added similarly, except that nothing is done for event annotations.
+
+For instance in our example, segments \(s_1\), \(s_2\), and \(s_3\) are
+processed in this order.  The sequence of events after processing \(s_1\) is
+\[ (a, [s_1]); (b, []).\]
+After processing \(s_2\), the sequence is
+\[ (a, [s_2; s_1]); (b, []); (c, []). \]
+We see that in this case, no new event is added for the leftmost extremity
+of \(s_2\), but \(s_2\) is added to the sequence of segments annotating the
+event at location \(a\).
+
+We assume we are working in some abstract ordered field to represent the
+coordinates of points.  For the algorithm itself, we shall only use the field
+operations and comparison functions.  For the proofs we need to use some
+properties of the order.
+The data types that we need to create to describe our algorithm are as
+follows:
+\begin{itemize}
+\item A datatype of points, which are ordered pairs of coordinates in the field,
+\item A datatype of edges (for the obstacles), which are ordered pairs of
+  points, with the invariant that the first coordinate of the first
+  point is strictly smaller than the first coordinate of the second point,
+\item A datatype of events, which have two components, the first is a
+  point and the second is sequence of edges, all of which have this
+  point as first extremity.
+\end{itemize}
+For this algorithm to be correct, we need to guarantee the following
+properties:
+\begin{itemize}
+\item The set of segments obtained by collecting all outgoing edges of
+  all events in the output must be the initial collection of obstacles.
+\item All segments attached to a given event have this event as first
+  extremity.
+\item All right points of outgoing edges in the output must be present
+  as locations of events in the output.
+\item The sequence of events is strictly sorted lexicographically, as
+  a consequence each edge appears as outgoing edge of a single event.
+\end{itemize}
+Most of these properties have already proved formally in our
+development.
+
+Processing the sorted list of events then implements the idea of the
+vertical line sweeping from left to right.  In our example, this means
+that the next phase of the algorithm will be processing events located at
+\(a\), \(d\), \(b\), \(c\), \(e\) in this order.
+
+\section{Producing cells}
+We add an extra constraint on the data: the whole working space is
+enclosed between a bottom and a top edge that do not cross and are
+long enough so that they define a quadrangle containing all obstacles,
+with no contact between the bottom and top edges and the obstacles.
+
+To understand how cells are produced, we can keep the mental model of a
+sweeping line, which is the vertical line passing through the location 
+of the current event.
+When producing cells, we distinguish between closed and open cells.
+The closed cells lie to the left of the sweeping line, they are
+complete and have well defined left and right sides.  The open cells
+intersect the sweeping line.  They have a well defined left side,
+but the right side is unknown, as it will be fixed when
+processing later events.
+The left and right sides of cells are vertical.  Cells also have a top
+side and a bottom, which fragments of edges (obstacles).
+
+The data structure for a cell thus has four components: a list of
+points for the left side, a list of points for the right side, a low
+edge and a high edge.  For the algorithms to work correctly, we guarantee
+the invariants that the high edge is above the low edge, points on
+each side are vertically aligned and ordered with respect to their
+vertical coordinate and the top (resp. low) point on each side belongs
+to the high (resp. low) edge of the cell.  The preservation of this
+invariant has already been proved in our development.
+
+The points that belong to each of the sides list correspond to unsafe
+points on the side of the cell.  The doors into the cell are the
+vertical segments between two successive points in one of the sides.
+It often happens that the high and low edge meet on one side of the
+cell.  In that case the side is restricted to only one point.
+
+
+At a given position of the sweeping line, there is an ordered sequence
+of open cells.  Two successive cells in this sequence are adjacent in
+the sense that the high edge of a cell is the low edge of the next
+cell.  This sequence of cells is also complete, in the sense that it
+covers the all vertical space between the bottom edge and the top
+edge.  All the open cells also have their left side well defined and
+lying to the left of the sweeping line, and sometimes the left side of
+a cell coincides with the position of the sweeping line.
+
+The processing of a new event works as follows:
+\begin{enumerate}
+\item The sequence of open cells is decomposed into three parts:
+a first sequence of untouched cells, a second sequence of cells in
+contact with the given event, and a third sequence of
+untouched cells
+\item All cells in contact are transformed into closed cells:
+their right side is
+  described and they are added to the collection of closed cells
+\item If the given event has \(n\) outgoing edges, then \(n+1\) new
+  open cells are created.  The outgoing edges are first sorted vertically.
+  The first cell has for its low edge a portion of the same obstacle that
+  was used for the low edge of the first cell in the contact cells, and
+  as high edge the first of the outgoing edges (after sorting).  The
+  last new cell is similar but with the last outgoing edge as a portion
+  of the same obstacle as the high edge of the last contact cell.
+  All other newly created cells have a
+  left side that is reduced to a single point, because the low and
+  high edges meet at the event that is being processed.
+\end{enumerate}
+
+Special care must be taken to handle the case where events are
+vertically aligned.  When this happens, a naive version of our
+algorithm produces cells that have the left side and the right side on the
+same vertical line.  These cells are flat and are unfit for our later needs.
+
+We modified our algorithm to memorize the
+position of the last processed event, together with the last opened
+cell and the last closed cell.  When the current event is vertically
+aligned with the last processed event, we can avoid creating a flat
+closed cell by updating the last opened cell and the last closed
+cell.  For the last closed cell, only the unsafe points on the right side
+need to be updated.  However, this adds complexity in the proofs about the
+algorithm.
+
+Thanks to Coq computation capability, this algorithm can be run on
+examples of small size.  However, a full formal proof of this program has
+not been achieved yet.  In the currently ongoing formal development, we
+proceed by showing that a collection of properties are invariant
+through the processing of events.  The properties that we have proved
+invariant so far are as follows:
+\begin{itemize}
+\item The sequence of open cells is sorted vertically, the cells are
+  adjacent, and they cover the whole space between the bottom and top
+  edges,
+\item All low and high edges of the current open cells contain a point
+that is vertically aligned with the currently processed event,
+\item All sets composed of the interior of a cell and its high edge
+are disjoint,
+\item The obstacles are covered by the high edges of existing cells,
+  closed or open and the outgoing edges of events that have not been
+  processed yet.
+\end{itemize}
+We have also been able to show the following main results formally, but only
+in the case where the first coordinate of two successive events are different.
+\begin{itemize}
+\item There is no intersection between the inside of closed cells and the
+obstacles,
+\item The only intersection between obtacles and left or right sides of cells
+are the points listed in these cells' sides.
+\item At the end of processing, there remains only one open cell whose
+higher edge is the top edge and the lower edge is the bottom edge.
+\end{itemize}
+Future work will include providing formal proofs of these invariants and
+main results also for the case when the vertical alignment between
+successive events is allowed.
+
+In what follows, we will describe algorithms that
+construct trajectory fragments that always
+intersect only two cells and a door between these cells.
+The absence of collision with obstacles is direct consequence of these
+main results.
+\section{Making a broken line trajectory between two points}
+With the graph of cells and doors between these cells, we can already
+construct safe trajectories between two given extremities, which we shall
+the source and target points for clarity.  We only need the source and
+target to be either inside the same polygon made of obstacles, or
+inside the work space and outside of any polygon.
+
+The first step is to find the two cells that contain the source and
+the target.  If the source and target are in the same cell, it is
+enough to draw a straight line segment from the source to the target.
+
+If the two cells are different, we can explore the cell graph to check for
+the existence of a path in this graph from the source cell to the
+target cell.  This path is composed of edges of the graph and each of
+the graph edges is actually a door between two cells.  To obtain a
+broken line trajectory, It is enough to
+construct a sequence of smaller trajectories between the middle points
+of each door that is an element of this path.
+
+If two successive doors are not on the same
+vertical line, these two doors are on both sides of a same cell.  A
+straight line segment from the middle of the first door to the middle of
+the second door is a safe trajectory in the interior of the cell (this
+property would not be satisfied if the cell had the same coordinate
+for the left vertical side and the right vertical side, hence our insistence
+on producing nonempty cells).  This illustrated in the following drawing,
+where obstacles are given by solid lines, doors by vertical dotted lines,
+and the trajectory fragment is given by the dashed line.
+
+\begin{center}
+\includegraphics[,trim={0 12cm 0 12cm}, clip, width=0.3\textwidth]{safe_straight_path.pdf}
+\end{center}
+
+Choosing to move from middle of doors to middle of doors is arbitrary
+and it may seem more efficient to choose a path that moves closer to
+one of the door extremities.  This is true and any point inside the
+door could be chosen instead, we only need this point to be chosen far
+enough from the door extremities to give enough space for the later
+smoothing process to succeed, because the smooth curves does not meet
+the door at the same point.
+
+When two successive doors are on the same vertical line, a straight
+line between the center of one door and the center of the other is
+most probably unsafe, because it will touch the lowest bound of the
+highest of the two doors, and this lowest bound is deemed unsafe.
+To avoid this collision, we build a trajectory composed of
+two straight line segments.  The first segment goes from the middle of
+the first door to the center of the cell.  The second segment goes
+from the center of the cell to the middle of the second door.  Such a
+two segment trajectory is safe because the two extremities are safe, and the
+interiors of these segments lie inside the interior of the cell, which is
+safe.
+
+Here again, choosing to move to the center of the cell is arbitrary,
+any other point inside the cell could be chosen.
+
+An example of safe trajectory between two doors on the same side of a cell is
+given in the following figure.  In this figure, solid lines represent
+obstacles, vertical dotted lines represent doors between cells, and
+the slanted dashed lines represent a broken line trajectory between
+the centers of two doors that are on the same vertical.
+\begin{center}
+\includegraphics[,trim={0 0 0 8cm}, clip, width=0.3\textwidth]{broken_safe_path.pdf}
+\end{center}
+
+For the rest of this article, we assume that this trajectory is
+correct.  The trajectory is described by a sequence of segments, where
+the two extremities of each segment are inside the doors of a cell or
+inside the cell itself, two successive segments share an extremity,
+and the first and last extremities are the requested source and target.
+
+\section{Making a smooth trajectory}
+The trajectory described in the previous section is given by a
+sequence of segments, where each segment shares an extremity with its
+predecessor and the other extremity with its successor.  We shall call
+these extremities the {\em corners} of the trajectory.  We wish to
+replace each corner with a smooth curve and to connect each curve fragment in
+a smooth fashion, in other words, so that a point can travel the curve with
+continuous nonzero speed.
+
+We expect that the smooth connection constraint can also be rephrased
+with the following sufficient criteria: the curve fragments are connected,
+their tangents at the connection are parallel, and these curves are
+locally on opposite sides of a straight line that crosses these
+tangents.  This is illustrated in the following figures, each where
+two curves connect at the point where several straight lines cross.
+These straight lines are the two tangents of the curves at the point of
+intersection (two distinct dashed lines) and the line crossing the
+tangents that separates locally the two curves (dotted line).  In the
+first figure the two connected curves are on both sides of the tangent.
+In the second figure, the two connected curves are on the same side of the
+tangent.
+
+\begin{center}
+\includegraphics[,trim={0 2cm 0 21cm}, clip, width=0.6\textwidth]{smooth_connect.pdf}
+\end{center}
+
+Such a property is easy to achieve with Bézier curves.  In our case,
+it is enough to use quadratic Bézier curves.  A quadratic Bézier curve
+is given by 3 points (in the same way that a polynomial of degree 2 is
+given by three coefficients).  Given three points \(A\), \(B\), \(C\)
+a point on the corresponding Bézier curve is given by choosing a
+parameter \(t\) between 0 and 1 and computing three more points:
+\(D\) is the barycenter of \(A\) with weight \(1 - t\) and \(B\) with
+weight \(t\), \(E\) is the barycenter of \(B\) with weight \(1 - t\)
+and \(C\) with weight \(t\), and \(F\) is the barycenter of \(D\) with
+weight \(1-t\) and \(E\) with weight \(t\).  The point \(F\) is the
+point on the Bézier curve for the parameter \(t\).  When \(t\) varies
+between \(0\) and \(1\), the point moves on the Bézier curve from \(A\)
+to \(C\), generally without passing through \(B\).  The curve
+is tangent to the segment \((A,B)\) in \(A\) and tangent to
+the segment \((B,C)\) in \(C\).
+
+\begin{center}
+\includegraphics[,trim={0 5cm 0 16cm}, clip, width=0.6\textwidth]{bezier_example3.pdf}
+\end{center}
+
+This construction has two advantages.  First it makes it clear that
+the Bézier curve can be traveled by a continuous function from
+interval \([0,1]\) to \({\mathbb R}^2\).  Second,
+it makes it obvious that the convex hull of
+the triangle \(A\), \(B\), \(C\) contains the points of the
+trajectory.  In other words, this convex hull is an over approximation of
+the trajectory.  To check the absence of collision, it is enough to check that
+this convex hull is included in the interior of cells or doors.
+
+%\subsection{From a broken line to a smooth sequence of Bézier curves}
+A broken line \(A\) \(B\) \(C\) \(D\) can be transformed into a sequence
+of smoothly connected Bézier
+curves by adding a point \(M\) on the segment between \(B\) and \(C\)
+and replacing the three segments \((A, B)\), \((B, C)\), and \((C,
+D)\) by the two Bézier curves given by points \(A\) \(B\) \(M\) on the
+one hand and \(M\) \(C\) \(D\) on the other hand.  These two curves
+connect in \(M\) so that their tangents are respectively parallel to
+the line \(BM\) and the line \(MC\), which are the same line.  Moreover,
+any line that crosses \(BC\) in \(M\) has \(B\) on one side and \(C\) on the
+other side.  Locally, the points of the first curve close to \(M\) are on the
+same side as \(B\) and the points of the second curve close to \(M\) are on
+the same side as \(C\).  We hope to be able to prove this thanks to the
+properties of Bernstein polynomials, which are useful in describing 
+Bézier curves.
+
+\begin{center}
+\includegraphics[,trim={0 5cm 0 16cm}, clip, width=0.3\textwidth]{small_bline.pdf}
+\includegraphics[,trim={0 5cm 0 16cm}, clip, width=0.3\textwidth]{small_curve.pdf}
+\end{center}
+
+%\subsection{Checking and repairing unsafe Bézier curves}
+Our Bézier curve construction starts with a broken line that is safe,
+but the curves stray away from the corners, and in doing so they may
+collide with the obstacles.  We designed two more algorithms, one to check
+that a Bézier curve stays in safe territory, and the other to repair
+trajectories whose Bézier curve do collide with the obstacles.
+
+The first algorithm is based on a strong property of Bézier curves,
+which we shall call the {\em dichotomy property}.  In the description above
+where we showed how to construct the point \(F\) which belongs to
+the Bézier curve, it turns out that the triplets \(A\) \(D\) \(F\) and
+\(F\) \(E\) \(C\) define two new Bézier curves that decompose the
+original Bézier curve in two complementary subsets.  The triplet
+\(A\) \(D\) \(F\) defines a curves that
+covers all the points of the curve defined by \(A\) \(B\) \(C\)
+for a parameter \(t' \leq t\), while the triplet \(F\) \(E\) \(C\) 
+defines a curves that covers all the points of the curve defined
+by \(A\) \(B\) \(C\) for a parameter \(t'\geq t\).  The two convex
+hulls for \(A\) \(D\) \(F\) and \(F\) \(E\) \(C\) 
+give over approximations of the Bézier curve that are much better than
+ \(A\) \(B\) \(C\) and the process can be repeated recursively.
+
+Our checking
+algorithm repeats this dichotomy operation until it gets enough
+information to conclude that there is a guarantee that the Bézier curve
+is included in the union of the interior of two cells and the door
+between these cells, or that there is a guarantee that the Bézier curve
+steps out of this union, in which case we have proved that the Bézier
+curve is unsafe.  A similar dichotomy argument is used to isolate the
+roots of a polynomial using Bernstein coefficient in
+\cite{basu:hal-01083587} and there exists a proof that that dichotomy
+process will eventually reach a conclusive answer, this proof was
+already implemented formally by Zsid\'o \cite{Zsido2014}.  It is still
+unsure whether this proof can be used to prove that the dichotomy
+process converges in our use case.  As an alternative which does not
+require a complex proof, we may also wish to stop checking after a
+fixed number of dichotomy steps and declare the trajectory to be
+unsafe, even if we have not detected an actual collision.
+
+When we have an unsafe Bézier curve, we can repair the situation by
+replacing the Bézier curve \(A\) \(B\) \(C\) by the composite path
+obtained by adding two new points \(M\) and \(N\) which are the
+centers of \((A,B)\) and \((B,C)\) respectively, and taking the
+segment \((A,M)\), the Bézier curve \(M\) \(B\) \(N\), and finally the
+segment \((N, C)\).  This composite path is smooth, because the
+junctions at \(M\) and \(N\) have the same tangent and direction, and
+it is also closer to the initial broken line trajectory.  
+This new trajectory needs to be checked again,
+and the replacement process can be repeated if need be.  Ultimately,
+if the replacement process were repeated indefinitely the limit of the
+smooth path would be the broken line path.
+
+Here again, there is an arbitrary choice in placing \(M\) and \(N\) at
+the centers of \((A,B)\) and \((B,C)\) respectively, any other choice
+of points in the interior of these segments will make the Bézier curve
+get closer to the initial trajectory sketch.  The only constraint is
+that repeating the process will eventually produce a satisfactory curve.
+
+The following figure illustrates the case where the faulty Bézier
+curve drawn as a dotted line is repaired into the trajectory composed of two
+straight line segments and a smaller Bézier curve.  The vertical
+dashed line represents a door and the solid straight line below
+represents an obstacle.
+
+\begin{center}
+\includegraphics[,trim={0 5cm 0 16cm}, clip, width=0.3\textwidth]{repair.pdf}
+\end{center}
+
+In our program, we first produce a candidate Bézier curve for each
+corner, and we then check whether this curve is safe.  If not, we
+produce new Bézier curves that are closer to the broken line and
+repeatedly check their safety.  To obtain a program that is executable
+in Coq, the number of iterations is limited.  When the limit is exceeded,
+the program falls back to the initial broken line corner.
+We only wish to prove that the checking procedure is correct.  For
+this program, we will not be able to prove that the resulting trajectory
+is smooth.
+
+\section{Exploiting the program and visual feedback}
+This program can be run inside Coq, using rational numbers for the
+number system.  To compute vertical cells, most computations are ring
+operations, except when we want to know the vertical projection of a
+point on an edge, where we use a division operation, so the exact
+division operation provided for rational numbers suffices.
+
+When defining Bézier curves, we only need to construct midpoints of
+existing points to define the new control points for the successive
+Bézier curves that we consider.  Working with rational numbers
+again suffices to have exact computation.
+
+The output can be displayed by simply traversing the
+output data structure and generating simple postscript commands for
+each of the straight line or Bézier curve segment.  Our program uses
+quadratic Bézier curves, while postscript supports cubic Bézier
+curves, but converting from one to the other is easy.  In the end,
+Postscript uses limited precision numbers instead of rational numbers.
+Approximations are
+needed, but these approximations are only useful for display purposes.
+
+The Coq system also provides an extraction facility, so the
+algorithmic part of our program can be translated to a conventional
+programming language.  We used this to produce OCaml code, which was
+later translated to Javascript, and we developed a hosting web page for
+this Javascript code, visible at the following link:
+\begin{center}
+\url{https://stamp.gitlabpages.inria.fr/trajectories.html}.
+\end{center}
+
+The minimal user interface provided on that page gives access to a 
+window with a board of 40 by 40 square tiles and two modes of operations, in
+the first mode of operation the user can add and remove obstacles, in the
+second mode of operation the user can add the source and target points.  Two
+modes of display are also also provided, one where the square tiles are
+visible (this is more practical for reproducing experiments), and one where
+the cells obtained after vertical cell decomposition are visible.
+
+The following illustration shows the result of running this program for
+a situation close to that used in our running example, where the display mode
+shows the cells.
+\begin{center}
+\includegraphics[width=0.3\textwidth]{illustration.png}
+\end{center}
+
+\section{Future work}
+We are planning several stages of future work concerning this program.  In
+the short term, we wish to have more proofs concerning the formal model.
+At the time of writing these lines, the formal proof of the vertical cell
+decomposition algorithm is not complete.  For instance, we have already
+proved that the vertical cell decomposition algorithm produces cells whose
+interior is safe, free of obstacles, but only for the case where events
+have different horizontal coordinates.  Some of the invariants for the
+case where events are vertically aligned have already been proved, but some
+invariants are still work in progress.
+
+For the other parts of the program, this article sketches the formal
+proof that we intend to develop, relying on already formalized
+knowledge that is scattered in previous work.  We shall describe some
+of this existing knowledge in the next section.
+
+Other future work relates to improvement of the program.  The current
+algorithm finds a safe solution and we work to equip it with a proof
+of safeness, but the solution is not very efficient.  An obvious
+reason for inefficiency is that the broken line path is only optimized
+with respect to the number of cells being traversed, irrespective of
+the length of the trajectory incurred.  It will happen that a long
+trajectory will be preferred to a short one because the long
+trajectory traverses less cells.   This raises the question of whether
+the program could be changed to obtain {\em optimal} trajectories for
+some criterion, like length or speed of traversal under some
+constraints like limited acceleration or curvature radius or both.
+
+We do not intend to address this problem of optimality, because we
+believe it is not practically relevant, and for the objective of
+applying formal methods to problems originated in real life, it is
+even counterproductive.  Finding a trajectory is already difficult,
+and as we see in this program four phases are composed, where several
+phases make arbitrary choices that may impact whether the found
+trajectory is optimal or not.  For
+instance, the first two phases implement vertical cell decomposition.
+There is an arbitrary choice of a vertical direction here.  If we were
+using a different sweeping direction, a different graph would be
+obtained, yielding different broken line trajectory sketches.
+Other examples of arbitrary choices concern the points in doors used
+for the broken line trajectory sketch and the points used for repairing
+faulty Bézier curves.  Rather than studying optimality, we intend to
+modify the program to make it easily configurable so that users can
+provide their own choice functions and inherit correctness from a
+generic proof.
+
+Still, there are a few improvements that will be considered for
+implementation and proof.  First, a study of the literature on
+algorithms shows that the current best first search in the cell graph
+could be replaced by a weighted best first search algorithm, like the
+one proposed by Dijkstra \cite{Dijkstra1959}.  However, it is not
+obvious how to assign a weight to each of the doors.  A second idea
+would be to replace trajectories going in the same direction through a
+sequence of doors in a broken line with a straight line, as soon as
+the final door is visible from the first one, thus avoiding a wavy
+effect that is already visible in our working example.
+However, optimally choosing which sequences of broken line patterns
+should be replaced by straight lines is a difficult problem.
+
+Another improvement that we intend to address is the question of
+progressive curvature.  Railway and road designers know that curves
+should be designed in a way that avoids lateral shocks for the payload
+of the vehicles.  To avoid such shocks, it is customary to use
+clothoids, curves where the radius of curvature is inversely
+proportional to the distance traveled along the curve.  On such
+curves, the acceleration felt by the payload only evolves in a
+continuous manner.  Replacing Bézier curves with clothoids is a
+practically relevant objective for applications in industrial
+contexts, but the mathematics behind this are more complex, because
+computing collisions between a clothoid and an obstacle is less elementary.
+
+Another direction of future work is to connect this Coq program to an
+implementation in a conventional programming language such as C, and
+its use as embedded code in a physical toy robot.  One of the
+questions raised is whether we can prove anything about the
+computations once they are done with floating point numbers, implying
+approximations at different stages of the algorithm.
+\section{Related work}
+In this section, we mostly concentrate on related work that entails formal
+verification.
+
+The computation of subareas of the plane is already studied in work
+on convex hulls \cite{PichardieBertot01} and triangulations
+\cite{DufourdBertot10,Bertot18}.  The algorithm we use to decompose
+the workspace into cells relies extensively on the orientation
+predicate taken from the work of Knuth \cite{KnuthAxiomsAndHulls}.
+
+We argued in this article that the program we designed only uses
+rational computations.  Up to the problem of reasoning about
+collisions between the broken line trajectories and the obstacles,
+rational numbers are sufficient.  However, smooth curves based on
+Bézier curve pose a new problem.  The coordinates of potential
+collision points are real algebraic numbers.  So while the program
+description can rely on rational numbers, the proofs concerning
+collision avoidance require working in a real closed field.  Work on
+the decidability of equality between algebraic numbers is related to
+the work done in CoRN on the fundamental theorem of Algebra
+\cite{GeuversWZ00}.  The Mathematical Components library also contains
+descriptions of procedures to decide problems with polynomials
+\cite{CohenMQERCF}.
+
+Bézier curves can actually be viewed as parametric curves, where the
+polynomials giving each coordinate are easily described from the
+control points using Bernstein polynomials as a basis of the vector
+space of polynomials, so this work is also related to previous work on
+Bernstein polynomials \cite{basu:hal-01083587,BertotMahboubiGuilhot,Zsido2014}.
+
+A piece of work whose motivation has many similarities with ours
+is an experiment combining a motion planner programmed in Matlab with
+a formal verification performed by Isabelle \cite{RizaldiISA18}.  This
+experiments describes a system that is more powerful than ours, as it
+relies on analysis, especially tools to reasons about solutions to
+differential equations, to check solutions that have been elaborated by a
+Matlab program.  However, our objective is to describe a program that
+is eventually independent from the interactive theorem prover being
+used (in our case Coq, in their case Isabelle).  To our understanding,
+their approach is to have Matlab and Isabelle being used at runtime to
+produce trajectories that are formally verified.  On the other hand,
+our work contains a formal verification of the computations that happen at
+the time of elaborating the trajectories, while their work receives
+the results of these computations as if they were provided by an oracle.
+
+\section{Conclusion}
+It is unfortunate that this presentation is more a description of work
+in progress than a statement of achievement.  At the time of writing
+these lines, the formal verification is focusing on proving the
+correctness of the vertical cell decomposition algorithm.  The naive
+solution seems rather easy to verify, but the constraint of obtaining
+nonempty cells adds a lot of complexity in the program, as we need to
+pay attention to the case where two successive events are vertically
+aligned.
+
+The full program can be seen on the public repository
+\begin{center}
+\url{https://github.com/math-comp/trajectories}.
+\end{center}
+The incomplete proofs of the first two phases can be seen on the public
+repository
+\begin{center}
+\url{https://github.com/ybertot/VerticalCells}.
+\end{center}
+
+In our section about future work, we showed a few directions that
+could be addressed as a continuation of this work.  This is a project
+of formal verification and one could be tempted to prove formally
+everything that could be said about the program, like smoothness and
+even optimality of the found trajectories.
+
+However, this case study is also an effort to make formal verification
+penetrate fields where this technique is seldom used.  From this
+perspective, one should avoid {\em proving too much}.  If formal
+methods are to be adopted widely, we need to show that there is a gain
+in productivity when using these techniques.  This gain of
+productivity cannot be achieved if we devote too much time proving
+properties that are not really required by the end user.  If absence
+of collision is required and smoothness is desired, we should prove
+absence of collision for an algorithm that provides smooth
+trajectories, but not necessarily prove smoothness, because doing the
+latter increases the cost of the project, and this increased cost may
+shed a bad light on the whole technique of formal verification.
+
+In this respect, proving that our program produces trajectories which
+are optimal in any well defined sense is both extremely difficult and
+counterproductive for our advocacy effort.
+\section*{Acknowledgments}
+The initial work on the vertical cell decomposition algorithms was
+done by Thomas Portet.  Studies of potential collisions between Bézier
+curves and straight line segments were done by Quentin Vermande.
+Laurent Théry added the possibility to visualize the results on a
+web page.
+
+\bibliographystyle{plain}
+\bibliography{FHG_paper}
+
+\end{document}

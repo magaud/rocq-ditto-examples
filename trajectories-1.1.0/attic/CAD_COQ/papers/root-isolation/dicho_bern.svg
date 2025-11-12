@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:docname="dicho_bern.svg"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:version="0.32"
+   id="svg4655"
+   height="1052.3622047"
+   width="744.09448819">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.28"
+     inkscape:cx="405.02997"
+     inkscape:cy="784.33193"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="726"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2918" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4657">
+    <marker
+       inkscape:stockid="DotM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="DotM"
+       style="overflow:visible">
+      <path
+         id="path3931"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;marker-end:none"
+         transform="scale(0.4) translate(7.4, 1)" />
+    </marker>
+    <marker
+       inkscape:stockid="DotS"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="DotS"
+       style="overflow:visible">
+      <path
+         id="path3934"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;marker-end:none"
+         transform="scale(0.2) translate(7.4, 1)" />
+    </marker>
+    <inkscape:perspective
+       id="perspective4663"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <metadata
+     id="metadata4660">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       id="path3078"
+       title="0* ( 1 - x)** 5 + 3 * 5 * x * (1 - x)**4 + 4 * 10 * x **2 * (1 - x)**3 +4 * 10 * x**3 * (1- x) ** 2 + 3 * 5 * x**4 * (1 - x) + 0 * x**5"
+       d=" M 0.0 552.362183 C 6.40144384615 536.337089852 12.8028876923 520.859223418 19.2043315385 505.908113067 C 25.6057753846 490.957002716 32.0072192308 476.534717916 38.4086630769 462.618701321 C 44.8101069231 448.702684725 51.2115507692 435.295984862 57.6129946154 422.377238495 C 64.0144384615 409.458492128 70.4158823077 397.030637557 76.8173261538 385.073499174 C 83.21877 373.11636079 89.6202138462 361.632773149 96.0216576923 350.603741786 C 102.423101538 339.574710423 108.824545385 329.002972634 115.225989231 318.870708612 C 121.627433077 308.73844459 128.028876923 299.048300855 134.430320769 289.783625777 C 140.831764615 280.518950699 147.233208462 271.682306506 153.634652308 263.258203257 C 160.036096154 254.834100009 166.43754 246.825022125 172.838983846 239.216634875 C 179.240427692 231.608247625 185.641871538 224.402964103 192.043315385 217.587598301 C 198.444759231 210.7722325 204.846203077 204.349132674 211.247646923 198.306255055 C 217.649090769 192.263377437 224.050534615 186.603011924 230.451978462 181.314250505 C 236.853422308 176.025489085 243.254866154 171.110569785 249.65631 166.559713864 C 256.057753846 162.008857943 262.459197692 157.824258038 268.860641538 153.997258198 C 275.262085385 150.170258357 281.663529231 146.703012312 288.064973077 143.587980416 C 294.466416923 140.47294852 300.867860769 137.712252083 307.269304615 135.299461279 C 313.670748462 132.886670476 320.072192308 130.823880677 326.473636154 129.105765395 C 332.87508 127.387650113 339.276523846 126.016285266 345.677967692 124.987441219 C 352.079411538 123.958597172 358.480855385 123.274336873 364.882299231 122.931521055 C 371.283743077 122.588705238 377.685186923 122.589390365 384.086630769 122.931521055 C 390.488074615 123.273651746 396.889518462 123.95928446 403.290962308 124.987441219 C 409.692406154 126.015597978 416.09385 127.388341724 422.495293846 129.105765395 C 428.896737692 130.823189066 435.298181538 132.88736857 441.699625385 135.299461279 C 448.101069231 137.711553989 454.502513077 140.47365526 460.903956923 143.587980416 C 467.305400769 146.702305572 473.706844615 150.170975903 480.108288462 153.997258198 C 486.509732308 157.823540492 492.911176154 162.009588457 499.31262 166.559713864 C 505.714063846 171.109839271 512.115507692 176.026234728 518.516951538 181.314250505 C 524.918395385 186.602266281 531.319839231 192.26414037 537.721283077 198.306255055 C 544.122726923 204.348369741 550.524170769 210.773014884 556.925614615 217.587598301 C 563.327058462 224.402181718 569.728502308 231.609051622 576.129946154 239.216634875 C 582.53139 246.824218128 588.932833846 254.83492778 595.334277692 263.258203257 C 601.735721538 271.681478734 608.137165385 280.519804406 614.538609231 289.783625777 C 620.940053077 299.047447149 627.341496923 308.739326393 633.742940769 318.870708612 C 640.144384615 329.002090831 646.545828462 339.575622485 652.947272308 350.603741786 C 659.348716154 361.631861088 665.75016 373.11730527 672.151603846 385.073499174 C 678.553047692 397.029693077 684.954491538 409.459471189 691.355935385 422.377238495 C 697.757379231 435.295005801 704.158823077 448.703700528 710.560266923 462.618701321 C 716.961710769 476.533702113 723.363154615 490.958057422 729.764598462 505.908113067 C 736.166042308 520.858168712 742.567486154 536.337089852 748.96893 552.362183"
+       style="fill:#000000;fill-opacity:0;stroke:#000074;stroke-width:3;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#DotM);marker-mid:url(#DotM);marker-end:url(#DotM)"
+       d="m -2.20621,551.55251 77.21735,-174.29059 77.21735,-174.2906 73.90803,-73.90803 73.90804,-73.908039 75.01114,0 75.01115,0 78.32045,73.908039 78.32046,73.90803 71.70182,175.3937 71.70183,175.3937"
+       id="path3089"
+       sodipodi:nodetypes="ccccccccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#DotM);marker-mid:none;marker-end:url(#DotM)"
+       d="m 74.050237,375.54301 75.531243,-123.6639 75.53124,-123.66389 74.79074,-36.284617 74.79074,-36.284616 77.01225,36.284616 77.01225,36.284617 74.79073,124.4044 74.79074,124.4044"
+       id="path5239"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-mid:url(#DotM);marker-start:url(#DotM);marker-end:url(#DotM)"
+       d="m 148.10047,251.13861 76.27174,-80.71476 77.75275,-80.714754 75.53125,-2.221506 66.64521,0.740502 83.67677,82.195768 73.30974,79.23375"
+       id="path5799"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-mid:none"
+       d="m 222.15071,172.64536 84.41727,-45.91114 72.56924,-35.544119 68.12622,34.063109 79.97426,44.43014"
+       id="path5987"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-mid:url(#DotM);marker-start:url(#DotM);marker-end:url(#DotM)"
+       d="m 308.04899,123.77221 70.34772,-0.7405 c 24.61848,-0.80113 67.87551,-2.87841 70.34773,3.70251"
+       id="path6175"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:18;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="26.658085"
+       y="551.78259"
+       id="text7482"><tspan
+         sodipodi:role="line"
+         id="tspan7484"
+         x="26.658085"
+         y="551.78259" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:'Times New Roman,'"
+       x="34.06311"
+       y="545.85858"
+       id="text7486"><tspan
+         sodipodi:role="line"
+         id="tspan7488"
+         x="34.06311"
+         y="545.85858" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="22.215071"
+       y="549.69287"
+       id="text7490"><tspan
+         sodipodi:role="line"
+         x="22.215071"
+         y="549.69287"
+         id="tspan7496">B0 = C0</tspan><tspan
+         sodipodi:role="line"
+         x="22.215071"
+         y="574.69287"
+         id="tspan7494" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="41.468132"
+       y="365.17599"
+       id="text7500"><tspan
+         sodipodi:role="line"
+         id="tspan7502"
+         x="41.468132"
+         y="365.17599" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="116.99938"
+       y="194.86043"
+       id="text7504"><tspan
+         sodipodi:role="line"
+         id="tspan7506"
+         x="116.99938"
+         y="194.86043" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="111.07536"
+       y="191.89842"
+       id="text7508"><tspan
+         sodipodi:role="line"
+         id="tspan7510"
+         x="111.07536"
+         y="191.89842">B1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="257.69482"
+       y="48.382565"
+       id="text7512"><tspan
+         sodipodi:role="line"
+         id="tspan7514"
+         x="257.69482"
+         y="48.382565">B2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="481.32654"
+       y="48.240963"
+       id="text7516"><tspan
+         sodipodi:role="line"
+         id="tspan7518"
+         x="481.32654"
+         y="48.240963">B3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="622.02197"
+       y="191.89842"
+       id="text7520"><tspan
+         sodipodi:role="line"
+         id="tspan7522"
+         x="622.02197"
+         y="191.89842">B4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="644.23706"
+       y="549.56104"
+       id="text7524"><tspan
+         sodipodi:role="line"
+         id="tspan7526"
+         x="644.23706"
+         y="549.56104">B5 = D5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="79.974251"
+       y="404.28101"
+       id="text7528"><tspan
+         sodipodi:role="line"
+         id="tspan7530"
+         x="79.974251"
+         y="404.28101">C1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="154.02449"
+       y="285.20172"
+       id="text7532"><tspan
+         sodipodi:role="line"
+         id="tspan7534"
+         x="154.02449"
+         y="285.20172">C2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="222.15071"
+       y="209.67049"
+       id="text7536"><tspan
+         sodipodi:role="line"
+         id="tspan7538"
+         x="222.15071"
+         y="209.67049">C3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="290.27695"
+       y="164.63168"
+       id="text7540"><tspan
+         sodipodi:role="line"
+         id="tspan7542"
+         x="290.27695"
+         y="164.63168">C4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="367.28918"
+       y="150.4303"
+       id="text7544"><tspan
+         sodipodi:role="line"
+         id="tspan7546"
+         x="367.28918"
+         y="150.4303">C5</tspan><tspan
+         sodipodi:role="line"
+         x="367.28918"
+         y="175.4303"
+         id="tspan7558"> = </tspan><tspan
+         sodipodi:role="line"
+         x="367.28918"
+         y="200.4303"
+         id="tspan7548">D0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="370.25119"
+       y="151.9113"
+       id="text7550"><tspan
+         sodipodi:role="line"
+         id="tspan7552"
+         x="370.25119"
+         y="151.9113"></tspan><tspan
+         sodipodi:role="line"
+         x="370.25119"
+         y="151.9113"
+         id="tspan7556" /><tspan
+         sodipodi:role="line"
+         id="tspan7554"
+         x="370.25119"
+         y="176.9113" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="428.01035"
+       y="164.64145"
+       id="text7560"><tspan
+         sodipodi:role="line"
+         id="tspan7562"
+         x="428.01035"
+         y="164.64145">D1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="490.21259"
+       y="209.81209"
+       id="text7564"><tspan
+         sodipodi:role="line"
+         id="tspan7566"
+         x="490.21259"
+         y="209.81209">D2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="561.30078"
+       y="285.20172"
+       id="text7568"><tspan
+         sodipodi:role="line"
+         id="tspan7570"
+         x="561.30078"
+         y="285.20172">D3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="636.83203"
+       y="404.29077"
+       id="text7572"><tspan
+         sodipodi:role="line"
+         id="tspan7574"
+         x="636.83203"
+         y="404.29077">D4</tspan><tspan
+         sodipodi:role="line"
+         x="636.83203"
+         y="429.29077"
+         id="tspan7576" /></text>
+  </g>
+</svg>

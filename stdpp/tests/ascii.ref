@@ -1,0 +1,8 @@
+"a"
+     : string
+"a"%char
+     : ascii
+"a"
+     : ascii
+"a"%stdpp
+     : string

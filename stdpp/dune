@@ -1,0 +1,20 @@
+(env
+ (_ ; Applies to all profiles (dev, release, ...).
+  (coq
+   ; Configure coqc flags.
+   (flags (:standard %{read-lines:flags.dune})))))
+
+(rule
+ (action
+  (with-stdout-to flags.dune
+   (pipe-stdout
+    (cat config/flags)
+    (bash "grep '^[^#]\\+'")))))
+
+(rule
+ (deps
+  (glob_files config/*))
+ (mode promote)
+ (action
+  (with-stdout-to _CoqProject
+   (run ./gen_CoqProject.sh))))
